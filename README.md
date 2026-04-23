@@ -233,6 +233,7 @@ python3 -c "import ctranslate2; print(ctranslate2.__version__)"
 - 默认模型为 `gpt-5.4-mini`，可通过 `AUTO_SUBTITLE_ATR_MODEL` 覆盖
 - 默认支持 `openai` 和 `packy` 两种 ATR provider，可通过 `AUTO_SUBTITLE_ATR_PROVIDER` 覆盖
 - 默认每次发送 `120` 条字幕，可通过 `AUTO_SUBTITLE_ATR_CHUNK_SIZE` 调整
+- 默认单线程校对，可通过 `AUTO_SUBTITLE_ATR_CONCURRENCY` 或 `--concurrency` 开启分块并发
 - 默认读取 `config/course_terms.json`，可通过 `AUTO_SUBTITLE_GLOSSARY_FILE` 或 `--glossary_file` 指向自定义词典
 - 默认自动回写 `config/course_terms.memory.json`，可通过 `AUTO_SUBTITLE_MEMORY_FILE` 或 `--memory_file` 改位置
 - 输出文件包括 `.atr.srt`、`.atr.txt` 与 `.atr_report.md`
@@ -253,6 +254,14 @@ python3 -c "import ctranslate2; print(ctranslate2.__version__)"
 python3 autosubtitle/refine_subtitles.py output/lecture.srt --chunk_size 20
 ```
 
+并发校对示例：
+
+```bash
+python3 autosubtitle/refine_subtitles.py output/lecture.srt --chunk_size 60 --concurrency 2
+```
+
+建议先从 `--concurrency 2` 开始；如果网关没有限速、错误率稳定，再尝试 `3` 或 `4`。
+
 ## 📚 课程术语词典
 
 - 默认词典文件为 `config/course_terms.json:1`
@@ -263,6 +272,7 @@ python3 autosubtitle/refine_subtitles.py output/lecture.srt --chunk_size 20
 - `hard_replacements` 用于做本地确定性规范化，适合课程代码、固定品牌名等低歧义项
 - `learned_pairs` 会记录 ATR 实际纠正过的 `from → to`、次数和时间，作为长期记忆来源
 - 建议把稳定规则手工整理到 `config/course_terms.json:1`，把自动学习结果留在本地 `config/course_terms.memory.json`
+- 如需清洗自动记忆中的普通短语，可运行 `python3 scripts/clean_term_memory.py`
 
 ## 📅 未来展望 (Future Work)
 

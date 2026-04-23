@@ -16,6 +16,7 @@ For GPU transcription, make sure your NVIDIA driver, CUDA runtime, cuDNN, and `c
 python3 -m py_compile autosubtitle/transcribe_faster.py autosubtitle/refine_subtitles.py
 bash -n scripts/workflow.sh
 bash -n scripts/workflow_fastwhisper_5090.sh
+bash -n scripts/process_input_output.sh
 ```
 
 ## Project Conventions
@@ -25,4 +26,4 @@ bash -n scripts/workflow_fastwhisper_5090.sh
 - Put shell automation under `scripts/`.
 - Put course-specific terminology under `config/`.
 - Put reference prompts and workflow notes under `docs/`.
-
+- Use `scripts/clean_term_memory.py` to clean noisy local ATR memory before promoting terms.

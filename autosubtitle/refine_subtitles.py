@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import json
 import os
@@ -99,6 +100,12 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=int(os.environ.get("AUTO_SUBTITLE_ATR_CHUNK_SIZE", "120")),
         help="Subtitle entries sent per request",
+    )
+    parser.add_argument(
+        "--concurrency",
+        type=int,
+        default=int(os.environ.get("AUTO_SUBTITLE_ATR_CONCURRENCY", "1")),
+        help="Number of ATR chunks to refine concurrently",
     )
     parser.add_argument(
         "--glossary_file",
@@ -485,6 +492,24 @@ def call_refiner(
     return call_openai(model, entries, glossary)
 
 
+def refine_chunk(
+    chunk_index: int,
+    chunk: list[dict[str, object]],
+    args: argparse.Namespace,
+    glossary: dict[str, object],
+) -> tuple[int, list[dict[str, object]], list[dict[str, str]]]:
+    refined_payload = call_refiner(
+        args.provider,
+        args.model,
+        chunk,
+        glossary,
+        args.packy_base_url,
+        args.max_tokens,
+    )
+    refined_entries, chunk_glossary = validate_chunk(chunk, refined_payload, glossary)
+    return chunk_index, refined_entries, chunk_glossary
+
+
 def apply_hard_replacements(text: str, glossary: dict[str, object]) -> str:
     normalized = text
     for item in glossary["hard_replacements"]:
@@ -503,15 +528,83 @@ def should_learn_pair(before: str, after: str) -> bool:
         return False
     if before.casefold() == after.casefold():
         return False
-    if len(before) > 80 or len(after) > 80:
+    if len(before) > 64 or len(after) > 64:
         return False
-    if len(before.split()) > 5 or len(after.split()) > 5:
+    compact_canonical = after.replace(" ", "")
+    compact_patterns = [
+        r"^COMP\d{4}$",
+        r"^L\d{2}$",
+        r"^\d+(?:\.\d+)+$",
+        r"^[A-Za-z]\+\+?$",
+    ]
+    max_words = 6 if any(re.match(pattern, compact_canonical) for pattern in compact_patterns) else 4
+    if len(before.split()) > max_words or len(after.split()) > 4:
         return False
     if "\n" in before or "\n" in after:
         return False
 
     safe_pattern = r"^[A-Za-z0-9][A-Za-z0-9 .#+:/&'_-]*$"
-    return bool(re.match(safe_pattern, before)) and bool(re.match(safe_pattern, after))
+    if not bool(re.match(safe_pattern, before)) or not bool(re.match(safe_pattern, after)):
+        return False
+
+    return looks_like_term(before, after)
+
+
+def looks_like_term(before: str, after: str) -> bool:
+    canonical = normalize_term(after)
+    variant = normalize_term(before)
+
+    term_patterns = [
+        r"(?<![A-Za-z0-9])COMP\d{4}(?![A-Za-z0-9])",
+        r"(?<![A-Za-z0-9])L\d{2}(?![A-Za-z0-9])",
+        r"(?<![A-Za-z0-9])MPhil(?![A-Za-z0-9])",
+        r"(?<![A-Za-z0-9])(?:PAs|TAs)(?![A-Za-z0-9])",
+        r"\b[A-Z]{2,}\b",
+        r"\b[A-Za-z]*[A-Z][a-z]+[A-Z][A-Za-z]*\b",
+        r"\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3}\b",
+        r"\b[A-Za-z]+\+\+?\b",
+        r"^[A-Za-z]\+\+?$",
+        r"\b\d+(?:\.\d+)+\b",
+        r"\b\d+-[A-Za-z]+\b",
+        r"\bLab\s+\d+\b",
+    ]
+    if any(re.search(pattern, canonical) for pattern in term_patterns):
+        return True
+
+    canonical_terms = {
+        "byte",
+        "bytes",
+        "data",
+        "zoom",
+        "canvas",
+        "piazza",
+        "putonghua",
+        "pseudocode",
+        "palindrome",
+        "algorithm",
+    }
+    if canonical.casefold() in canonical_terms:
+        return True
+
+    variant_cues = [
+        "comp",
+        "com one",
+        "com two",
+        "one o",
+        "two o",
+        "o two",
+        "hk usd",
+        "hong kong usd",
+        "nump",
+        "lump",
+        "math plot",
+        "pseudo",
+        "poland",
+        "paring",
+        "vs code",
+        "visual studio",
+    ]
+    return any(cue in variant.casefold() for cue in variant_cues)
 
 
 def known_variants(glossary: dict[str, object], canonical: str) -> set[str]:
@@ -732,21 +825,36 @@ def main() -> int:
     print(f"🔌 ATR provider: {args.provider}")
     print(f"📝 ATR model: {args.model}")
     print(f"📦 chunks: {len(chunks)} chunk_size={args.chunk_size}")
+    print(f"🧵 concurrency={args.concurrency}")
     print(f"📚 glossary_file={glossary['path'] or 'none'}")
     print(f"🧠 memory_file={glossary['memory_path']}")
     print("======================================")
 
-    for index, chunk in enumerate(chunks, start=1):
-        print(f"🔄 refining chunk {index}/{len(chunks)}")
-        refined_payload = call_refiner(
-            args.provider,
-            args.model,
-            chunk,
-            glossary,
-            args.packy_base_url,
-            args.max_tokens,
-        )
-        refined_entries, chunk_glossary = validate_chunk(chunk, refined_payload, glossary)
+    results: dict[int, tuple[list[dict[str, object]], list[dict[str, str]]]] = {}
+    concurrency = max(1, args.concurrency)
+
+    if concurrency == 1 or len(chunks) == 1:
+        for index, chunk in enumerate(chunks, start=1):
+            print(f"🔄 refining chunk {index}/{len(chunks)}")
+            _, refined_entries, chunk_glossary = refine_chunk(index, chunk, args, glossary)
+            results[index] = (refined_entries, chunk_glossary)
+    else:
+        print(f"🚀 refining with {concurrency} concurrent workers")
+        with ThreadPoolExecutor(max_workers=concurrency) as executor:
+            futures = {
+                executor.submit(refine_chunk, index, chunk, args, glossary): index
+                for index, chunk in enumerate(chunks, start=1)
+            }
+            completed = 0
+            for future in as_completed(futures):
+                index = futures[future]
+                refined_entries, chunk_glossary = future.result()[1:]
+                results[index] = (refined_entries, chunk_glossary)
+                completed += 1
+                print(f"✅ refined chunk {index}/{len(chunks)} ({completed}/{len(chunks)} done)")
+
+    for index in range(1, len(chunks) + 1):
+        refined_entries, chunk_glossary = results[index]
         all_refined_entries.extend(refined_entries)
         all_glossary.extend(chunk_glossary)
 

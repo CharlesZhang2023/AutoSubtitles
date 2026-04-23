@@ -1,0 +1,492 @@
+1
+00:00:00,820 --> 00:00:39,980
+Hello everyone. Hello, hello. Welcome. First of all, welcome to COM22 Chopsticks, 2211. I don't know how many of you noticed that the course name has been changed. In the past, COM2211, the name should be Exploring Artificial Intelligence. But now, the name is
+
+2
+00:00:39,980 --> 00:01:14,770
+Introduction to Artificial Intelligence. I don't think the name is really that important. The most important thing is you learn well. So if you will be able to learn a lot of useful stuff for you to start something cool about AI, machine learning, that would be amazing. I think all you guys are L2 students, correct? L2.
+
+3
+00:01:14,770 --> 00:01:46,260
+You are lucky. The reason is probably we will further increase the quota to accommodate more students. But for L1, I apologize. We cannot find a larger venue. How many of you are CSE students? Wow, okay, welcome. How many of you are doing extended major in AI?
+
+4
+00:01:46,770 --> 00:02:20,210
+Wow, very good. Other students? They're still welcome. Many students ask how many sports we are going to add for each section. L1, zero. L2, hopefully, 30. L3, another 30. So all together, we will add 60 sports.
+
+5
+00:02:20,820 --> 00:03:08,260
+Yeah, how many of you are still on the waiting list? Okay, good luck. Yeah. All right. So we have to start something important. Okay, let me do this. Hey, hi. All right, once again, welcome back. Did you enjoy your winter break? You have to say yes, right? Yeah, winter break is something very important for Hong Kong USD students.
+
+6
+00:03:08,260 --> 00:03:39,700
+because you worked really hard last semester. So you deserve a cool break. How many of you took my COM1023 sessions? Yeah, thank you. But I apologize. I need to introduce myself again. So Yifeng, you know me very well, but this is the first time that I see everyone, right? So I will introduce myself one more time.
+
+7
+00:03:40,910 --> 00:04:12,750
+Okay, same pictures. This is what I've been telling my students. I took these pictures 20 years ago. Yeah, very young. I'm still very young. And if you want to say, Desmond, you should update your pictures. Then I will say no, because you are going to encounter the same trouble in the near future. It's very difficult for us to take good pictures, right?
+
+8
+00:04:13,010 --> 00:04:42,850
+So keep all the good pictures and reuse them. Only show people good pictures. Don't show them bad pictures. Okay, I'm Desmond. Desmond Choi. Don't call me Dr. Choi. Call me Desmond. And this is my personal website. If you want to know more about me, go through the page. And this is really cool. My email, desmond.
+
+9
+00:04:42,850 --> 00:05:12,270
+CSE.us.t.hk. So basically the idea is if you remember me, you should be able to drop me emails. But I want to emphasize another thing. Don't send me emails using desmond.cse.us.t.hk. Use the email without CSE. Don't get me wrong. It doesn't mean that I don't love CSE. I love CSE. I love UST.
+
+10
+00:05:12,270 --> 00:05:44,060
+MIT in Asia. Okay, very good. All right, my office, 3553. This is palindrome. If you still remember, hey, palindrome, call 102 free students. You should know what palindrome is, right? If you read this from left to right or from right to left, exactly the same thing. Wow, absolutely amazing. Yeah, we'll stay there forever. Okay, my work phone. What is the use of it?
+
+11
+00:05:44,060 --> 00:06:13,810
+If you want to stop by my office and if you want to make sure that I am in my office, give me a call before coming. All right. Last but not least, office hours. I will fix the office hour later on because you know what I'm going to do, right? I'm going to check all your timetables and to find good time slots. What does it mean by a good time slot?
+
+12
+00:06:14,190 --> 00:06:49,090
+Many of you are available to come. All right. So if I fix the office hour at this point, and then only five of you are available, then what's the point? No use, right? I will do it at a later time. So far so good. Am I going too fast? Hello, I'm Desmond. Hey, hi. Okay, good. All right. This slide, I taught in many different institutions in the...
+
+13
+00:06:49,090 --> 00:07:22,460
+last 20 years. So the message is, if you want to seek advice, please approach me. Please reach out to me. And let's say you want to find an internship, you want to do further study, you want to seek opinions, let me know. Apart from 2211 staff, you are also welcome to talk to me. To ask questions. Okay, teaching assistant.
+
+14
+00:07:22,460 --> 00:07:53,170
+I do think that teaching assistants are also very important. And you expect your instructor will be able to tell you something cool, explain all the ideas clearly. So we also hope that our teaching assistant could do a good job. Let me say it here. If you observe that our teaching assistant do not do a good job, tell me.
+
+15
+00:07:53,230 --> 00:08:22,060
+I will talk to them. I will ask them to come to my office and I'm going to talk to them for like four hours. Keep talking. Don't stop me. We have a full-time instructional assistant. That means he works full-time. Gary, Gary Jung, who is a very nice guy. So if you have any question, problem, talk to him.
+
+16
+00:08:22,130 --> 00:08:53,150
+So apart from full-time instructional assistant, we have eight postgraduate teaching assistants. And what does it mean by postgraduate TA? They are all doing M.Phil or PhD, Master of Philosophy or Doctor of Philosophy. In other words, they are all good. And from my understanding, all of them are doing machine learning or AI-related research. Ah, this is good. For those of you,
+
+17
+00:08:53,150 --> 00:09:24,660
+Who would like to do Europe? Who would like to do research in the future? Talk to them. Get some advice. And we also recruit three undergraduate TAs. That means your seniors. They are all good. So how many people in the teaching team? Two instructor, one full-time TA, eight postgraduate TA, and together with three UGTA. It's a big team.
+
+18
+00:09:24,720 --> 00:09:55,490
+and not as big as 1023 team. Desmond, stop talking about 1023. I hate it. No, no, no, 1023 is cool, you know. Can I share with you something cool? Please say yes. Hi. For students enrolled in my 1023 sections, I conducted a survey at the very beginning of the semester. Basically, I asked them,
+
+19
+00:09:55,490 --> 00:10:28,690
+Do you have any programming background? I think some of you fill up the questionnaire, correct? I collect your student ID. I collect your programming background. And then at the end of the day, that means once your grades confirmed, then I do cross-checking. Good news. Among all the students who claim that they don't come with any programming background, 70% of them,
+
+20
+00:10:29,260 --> 00:11:02,960
+Got A or B? Desmond, come on. No one got A+, right? No? Some A+. How about B+, yes. How about Desmond D? Yes, as well. All right? So I would like to tell you, 102.3 is doable. And what you have learned from 102.3 will be very important for you to do a good job in 2-2 chopsticks. Believe me.
+
+21
+00:11:02,960 --> 00:11:38,480
+Lumpoy, Pandas, Oku. Okay, next slide. Aha! We are computer scientists. We know how to build our own website. So we don't really use Canvas. This is the official course website. Alright? I believe all of you took 102.3. Or most of you took 102.3. So if you change the course code to COM2211,
+
+22
+00:11:38,480 --> 00:12:16,540
+That means same link, change comb1023 to comb2211, then you should see this page. This is where we put all the lecture notes, lab materials, and tutorial notes, all right? Similar to what we did for two, oh no, similar to what we did for 102.3. Okay, but we still use Canvas for two purposes. One, did I scare him? Oh no my goodness, how come?
+
+23
+00:12:16,540 --> 00:12:57,340
+We use Canvas for two things. One, welcome, no problem. We use Canvas for two things. One is for you to check your grades. Another one is for you to post your questions on Piazza. Otherwise, you shouldn't go to Canvas. What's the point? Our webpage looks better. Good? Okay. And for those of you who took my course last semester,
+
+24
+00:12:57,340 --> 00:13:26,030
+you know that I have a supplementary website. This time for 2211. All right. Is password protected? The login is COM2211. What's the password? Everyone? Ah, now I will be able to see whether you enrolled in my COM123 section, right? And what's the password?
+
+25
+00:13:28,880 --> 00:13:59,790
+Ah, you guys never visit my supplemental website. Last time, huh? The password is com2211, Desmond, all lowercase letters. Bear this in mind. It doesn't mean that you are not supposed to share the password with other students. No, feel free. You are welcome to share the password to L3 students. How about L1? No need. They know already.
+
+26
+00:14:00,980 --> 00:14:31,150
+Okay? This is where I post some announcements only for my students. This is where I post extra materials only for my students. This is where I put all my lecture videos. Hey, by the way, apart from our VC videos, I will also do Zoom recording. So for each lecture, I give you how many videos? Two. Zoom video and our VC video.
+
+27
+00:14:31,150 --> 00:15:05,620
+Which one is better? I don't know. For those of you who don't care about me, you watch Zoom video, right? Because you are unable to see me. You just see the lecture slide and the bad guy keep talking, right? But if you care about me, then you watch RBC. Then you see the same bad guy keep walking, right? Roaming around and chat. Oh, very good. Yeah, very good. Very nice website, right? Wow, even better.
+
+28
+00:15:05,620 --> 00:15:39,120
+Okay, this is what I have been doing. I want to make sure that the lecture is interactive. Feel free to stop me and ask questions. Good? Okay, next one. Who are they? This guy, this guy, this guy. Desmond. I took this picture 30 years ago. Very young. Of course, 30 years ago.
+
+29
+00:15:41,300 --> 00:16:13,140
+The other one, the instructor of L3, Hui Ru, also very young. But she is really very young. Okay, and this is not the main point. I just want to tell you, we offer free lecture sections for 2211 this time. L1, the one that we conduct this morning. L2, this one. And L3 will be taught by Hui Ru. Okay, message.
+
+30
+00:16:13,200 --> 00:16:48,620
+If you are not available to come to the lecture, let's say for L2, right? Then you may want to join L1. I don't mind because you are going to see the same guy but different hairstyle. Okay? But does it mean that you are not supposed to join L3? I don't know. It's not a good idea to encourage you to join L3, right? You better ask Hui Ru. If Hui Ru agree, I don't mind. Yay! Good.
+
+31
+00:16:48,980 --> 00:17:23,390
+Xu is Hui Wu. He is Desmond. A lot of he. Very good. Okay, three lab sections. LA1, LA2, LA3. Hey, hey, hey, hey, hey. So then, you need to attend the registered lab section. You are not allowed to join other sections. What's the point, Desmond? Why? The reason is really simple.
+
+32
+00:17:23,390 --> 00:17:58,780
+If all the people join the same lab sections, then your TA's will be GG'd. They are unable to handle a lot of students, right? So, to play safe, you should join the registered section. Don't scare your TA. They are the ones to mark your papers, right? Be kind. Good? Okay. Important announcements. Everyone, pay attention. The first lab starts.
+
+33
+00:17:58,780 --> 00:18:33,980
+this week. But for the labs in the first two weeks, we will not take attendance. Yeah, I'm going to enjoy my life. I'm going to skip all the lessons. No. For those of you who did not take 1023 or 1028, you should attend or you are highly recommended to attend the lab sessions in the first two weeks.
+
+34
+00:18:33,980 --> 00:19:06,320
+Because during those sections, the TAs would go through some Python programming skills with you. Do you know what I'm saying? Because for 102.3 students, they learned NumPy or Lumpy already. They learned Pandas, not Turtle. Then it's time for you to pick up all those. Do you know what I'm saying? But for other students, let's say, Desmond, I finished 102.3 already.
+
+35
+00:19:06,830 --> 00:19:37,200
+Can I still join the lab sections? No problem. You are welcome. But if you believe that you are good, enjoy your life. Enjoy. Is it okay? No problem? All right. And we are going to release the tutorial videos later on. So that means that even you are not available to attend those sections for good reason, you could watch the videos later on. Good?
+
+36
+00:19:38,450 --> 00:20:09,940
+All right, attention, this is very important. Those materials covered during the first two weeks' labs will be in the coverage of the exams. Do you know what I'm saying, everyone? Why? The reason is very straightforward. If we say, ah, what you are going to learn in the tutorial, we will not cover them in the exam. That means we cannot give you programming questions.
+
+37
+00:20:10,860 --> 00:20:43,250
+But obviously, this is a course where you need to make good use of Python to implement AI stuff, right? Then it makes sense for us to give you some programming questions in the exams. Okay, so remember, what we cover in the first two weeks, lab sections, will be in the examinations. Is it clear? Good? All right, what else? Ha-ha, yeah, yeah, yeah.
+
+38
+00:20:43,310 --> 00:21:17,890
+Week three, no laps. Why? New Year Festival. Oh, sorry. I forgot, right? I speak English. I speak普通话. And Cantonese. Hi,大家好. Okay, very good. And feel free to talk to me. All right, and the first...
+
+39
+00:21:17,890 --> 00:21:58,160
+Attendance required lab start in week four. Enjoy. But once you enjoyed your new year break, it's time for you to work harder, right? Remember, we are the MIT in Asia. We could do it. Oh, I scared you, huh? How many of you would like to join L3 instead? Okay, this is how we run the lab sections. Everyone, read all this.
+
+40
+00:21:58,160 --> 00:22:37,200
+And tell me, why? How come we run the lab sections in this way? Is it similar to what we did for 102.3? Yes, why? Because I created this course. I'm also the one who created 102.3. So that's why we do exactly the same thing. And remember, each lab section lasts for one hour, 15 minutes. The first hour, the TAs will do teaching.
+
+41
+00:22:37,620 --> 00:23:08,830
+Teach you something related to what you have learned in the lecture. Show you practical stuff. That means how you apply the knowledge. Okay? Yeah? And we are going to take attendance. But what about the remaining 50 minutes for Q&A? That means if you are good, if you are happy, enjoy your life. You could live. But let's say if you have...
+
+42
+00:23:08,830 --> 00:23:41,810
+something that you don't understand, you have some doubt, then that's the time you talk to the TAs. This is actually my trick. Originally, the lab section would be one hour. I purposely make it one hour, 50 minutes. For what? For you to interact with your TAs. First of all, all you guys and girls are available for sure. And your TAs, they have to be there. They cannot say bye-bye.
+
+43
+00:23:42,830 --> 00:24:15,500
+Stay there. Okay? Try to make good use of the time. You have to ask questions. Hey, but it doesn't mean that you are not allowed to talk to me or hui ru. Welcome. We are nice guy and girl. Why nice guy and girl? Guy? Girl, right? Good. Okay, the last thing is attendance will only be taken during the first 20 minutes of the lab. That means, huh?
+
+44
+00:24:15,500 --> 00:24:53,040
+If you come late, sorry, no. But 20 minutes, quite lenient, I believe. Question? Okay, one question. IPRS? No. No IPRS this time. We will only take the attendance during the first 20 minutes. And that's it. And then enjoy. Is it clear? Am I going too fast? So far so bad? So far so good?
+
+45
+00:24:54,770 --> 00:25:29,620
+Okay. The first one is you must attend your registered lab section. This is what I mentioned earlier. Okay, all together, how many lab sections you need to attend? Ten. You need to attend ten lab sections. One point for each. So all together, ten points for attendance.
+
+46
+00:25:30,610 --> 00:26:03,040
+All right? And then we will also give you some lab exercise. How many? Not many. 11. Why 11? 7-11. We will give you 11 exercise. But you are only required to submit five of them. Any five? Don't think too much. You have to submit lab 2, lab 4, lab 6, lab 8, and lab 10. Submit.
+
+47
+00:26:03,040 --> 00:26:37,520
+these five laps, we only pick the best four to calculate the overall score. Enjoy. If you get full marks for the first four, then you could do this, right? Are you working on lap 10? I don't need to. Sorry, sorry. Don't do it. Just kidding. All right. Okay, where did you submit your work to? Sink. How many of you used Sink before? Yeah.
+
+48
+00:26:37,650 --> 00:27:09,840
+But we are going to use a newer version of SYNC. SYNC 2.0. Better one, I suppose. Good luck. All right. Then how we calculate your overall lab scores? Your attendance points plus the best four lab scores divided by 50. Can anyone here tell me why we divide it by 50? Attendance. Maximum possible score will be 10.
+
+49
+00:27:10,130 --> 00:27:43,310
+Four laps, the maximum will be 40. So 10 plus 40 will be 50. So we divided by 50 times 10. Why times 10? 10% for the laps. Is it okay? Simple math. Oh, by the way, you may ask, Benjamin, do I need to do calculus in this course? No. Do we need to do algebra? A little bit. Simple one.
+
+50
+00:27:43,570 --> 00:28:19,040
+The most difficult math we are going to use will be conditional probabilities. And that's it. Other than that, only addition, subtraction, multiplication, and division. That's all. No worry. Okay? Yeah! So far, so good. Okay. Lastly, you are not expected to finish the lab before joining the lab section. But I do hope that you will read through the description.
+
+51
+00:28:19,040 --> 00:28:56,060
+and understand what you are supposed to deal with. Okay? Please. Hey, by the way, you guys look very tired. Yeah. But this is not a good sign, huh? Because the next time that I'm going to see you will be on Friday at 9 a.m. You guys are very brave, huh? 9 a.m., huh? Very good. Okay. Yeah. All right. Next. This course.
+
+52
+00:28:56,060 --> 00:29:30,030
+Three hours lectures per week, two hours lab per week. Remember, for a regular free credit course, normally three hours lecture, one hour lab. How come I make it five hours? What's the trick? The second hour of the lab will be for Q&A so that you get a chance to talk to your TAs. Is that good? So theoretically speaking, you only need to spend one hour. But if you want to,
+
+53
+00:29:30,030 --> 00:30:00,880
+ask questions. Okay, prerequisite. Starting from this semester, we require students to have taken 1023 or 1028. I know that some of you took 1021. No worry, we will help you to pick up. Yeah? But if you have taken any of the advanced or higher level of AI and machine learning courses, you are too good.
+
+54
+00:30:01,230 --> 00:30:39,260
+You shouldn't be here. How many of them? Many. You see I put dot, dot, dot here. That means, have you ever asked this question? Desmond, why you make this course only for year one or year two students? The reason is really simple. Because there are more and more AI machine learning courses in the university. We cannot put all of them in the exclusion list. So that's why.
+
+55
+00:30:39,260 --> 00:31:11,280
+Make it simple. Only for year one, year two students. Okay. Listen carefully. If your seniors talk to you saying, that's a bad guy. I want to take 2211, but now I'm in year three and year four. I cannot do it. Tell them, if they haven't taken any advanced level AI machine learning courses, they could do it. We will approve it. Okay. No worry.
+
+56
+00:31:11,280 --> 00:31:43,340
+This is the message. So that's why I need to show you this lie, right? Otherwise, you don't know why. We do something stupid. Okay, wow, all this boring stuff, but I still want to talk about it. Everyone, I want to tell you a story. The story is a good one. A few years ago, the department asked me to create a new AI machine learning course.
+
+57
+00:31:43,340 --> 00:32:14,640
+Desmond, I think you have to do something. You're too lazy. Please create a course for the students. Huh? Okay. Yeah. So that's why I created 2211 a couple of years ago. All right. And of course, I need to write up a proposal and submit it to the senior management for approval. The first thing that I need to put would be course objectives. That means what you want to do.
+
+58
+00:32:15,310 --> 00:32:49,260
+The objectives of this course will be the following. First, we will give you a gentle introduction to the basic elements of AI. That means simple stuff. That's my simple stuff. Then I can watch YouTube. Don't bother me. By the way, but those are fundamental stuff will be useful for you to tackle the subsequent AI machine learning courses. We will make sure that. All right. And what else?
+
+59
+00:32:49,260 --> 00:33:19,890
+We will teach all this concept through real-world examples. Easy to understand one, right? Okay, what else? Apart from technical details, we also tell you something about history of AI, social and ethical implications. For example, what does it mean by bias? For example, what does it mean by make good use of AI? As well as telling you the potential.
+
+60
+00:33:20,400 --> 00:33:58,640
+Problem of AI. Okay? So this is a very comprehensive course for you to get a taste of AI. Good? Next one. At the time that I am creating the course, they pass me all these topics. But I don't think this is doable. Everyone, one course. Can we finish everything like machine learning, computer vision, image processing, speech, language processing?
+
+61
+00:34:00,300 --> 00:34:32,750
+That's crazy, right? If I can do it, then what's the point for you to do AI? You shouldn't do Bachelor of Engineering in AI. Yeah? And so that's why later on, I came up with something more doable. These are all the topics we are going to do in this semester. But good news. In the past, we need to cover NumPy, Pandas, Yin, 2211.
+
+62
+00:34:32,780 --> 00:35:09,120
+Do we need to do it again? Please say, please say no. So that's why we have time to cover something new. Oh, something new, huh? What's new, everyone? This is new. We are going to talk a little bit about deep learning using PyTorch. This is good for those of you who want to do internship. This is something good for those of you
+
+63
+00:35:09,120 --> 00:35:47,100
+who want to do UROP, U-R-O-P. Also, if you want to do COM4211 machine learning course, this is something important. All right, what else? Another new one, exploring LLM, large language models, and generative AI. Hey, Desmond, I know what you're going to do. You will ask us to use ChatGPT. No, I think we don't need to do it, right?
+
+64
+00:35:47,100 --> 00:36:23,150
+Even if we don't ask you to do it, you will do it. And we have our own version of ChatGPT. How many of you have been using the ChatGPT developed by ITSO? Oh, you use PoE, huh? And something more sophisticated, right? Good, very good. Do you think this is good? I hope it is good. Yeah, I know what you're going to say. Desmond, I think this is good. If you don't put any of this in the exam.
+
+65
+00:36:25,230 --> 00:37:01,600
+You see, I know you guys very well. Yeah. But let's see. Any questions? Any questions so far? Okay. After we put down the course objectives, we also need to put intended learning outcomes. That means what we expect our students to achieve at the end of the day. I will not go through all this in details. Too boring. So basically, at the end of the day,
+
+66
+00:37:01,600 --> 00:37:33,580
+you should be able to do all this without any problem. Sorry, I have to do one. Let's say, demonstrate understanding of the basic elements of AI thinking. Ah, once you finish 2211, then it's almost guaranteed you could do the following. Ah, you can demonstrate the understanding of the basic elements of AI without any problem. If you cannot do any of this, blame me.
+
+67
+00:37:33,940 --> 00:38:17,140
+My bad. GG. Right? Okay. Textbooks. First message. Don't buy any textbook. If you are rich, buy something else. I know that you are going to get a lot of red pockets during the Chinese New Year break, right? But don't buy a textbook. Then, what's the point for you to put this? All these are e-books. Right? Only if you feel hungry.
+
+68
+00:38:17,460 --> 00:38:49,310
+Then you need to read more. Okay, the first one, AI Crash Course. What's the good thing about this textbook? This is actually for laymen, not Raymond. For laymen, that means for some people without technical background, then this is a good one because they wrote this textbook in plain English. Easy to understand words, right? You may want to read it if you have time. Okay, next one.
+
+69
+00:38:49,310 --> 00:39:20,820
+You know that Python is something very important for you to use to implement AI algorithms to solve AI-related problems, right? So we need to give you a textbook where you could learn how to use Python to solve this problem, how to use Python to solve that problem, this and that. Many different examples, many interesting stuff, right? Python. Do you think one Python...
+
+70
+00:39:20,820 --> 00:39:55,790
+Related textbook will be important enough? No. One more. We need two. Because for the first one, it covers something like A. This one covers something like B. You need to use two. In order to get a comprehensive understanding of all the content. Okay, image processing. Do you think image processing is important for you to do AI?
+
+71
+00:39:56,340 --> 00:40:36,560
+Please say yes. How many of you have been in Starbucks? Starbucks, very good. Latte? Tea? Very good. What's the point? In Starbucks, there is a robot. He's moving. And then when you block the robot, the robot will be... Okay? And then later... Okay, like this. So why the robot...
+
+72
+00:40:36,560 --> 00:41:11,220
+will not bombard you because there are cameras capture the environment and then the robot will realize some bad guy is blocking right the way then this is about image processing because if there are cameras you capture images you analyze the image then you see desmond bad guy okay better stop and crying that's the idea image processing you need to learn more okay what else
+
+73
+00:41:11,700 --> 00:41:38,640
+Self-test. You got something similar for 102.3, right? We also give you something similar for 2.2 chopsticks. One for each topic. And what else? I also give you the link to the COM1023 webpage where you could download all the lecture notes. You may want to do a revision. Yeah?
+
+74
+00:41:38,640 --> 00:42:09,390
+For example, I asked you to implement this using NumPy. Yeah, I forgot NumPy already. Let me check the lecture slide. This comprehension? This comprehension? Nothing about NumPy, huh? Broadcasting. Yeah, broadcasting. Very cool. But I don't like it. This is live. Okay. And this time, you are lucky. I give you some past papers. Sorry, I apologize.
+
+75
+00:42:09,490 --> 00:42:50,940
+And we didn't give you past paper last time, right? But now, we have two. Which two? The midterm exam and final exam papers for you guys. Now we will pass them to your peers. They should say thank you. Then what should you say? Welcome. Okay, okay. Good? All good? All right.
+
+76
+00:42:50,940 --> 00:43:22,500
+This is the tentative teaching schedule. So what does it mean by tentative? It's subject to change, depending on the teaching and learning progress. But at some point, you are going to enjoy your public holiday. And for L2, how many public holidays you are going to enjoy? L2? Yeah, only one, huh? Only one, Neighbor Day. But the good news is I will give you
+
+77
+00:43:22,500 --> 00:43:59,440
+A make-up class. You missed a lesson. I give you back one. So if you want me to give 10, no problem. Aya, Desmond, I think you are richer. You have been offering a lot of additional classes. I think you get a higher pay. No, no extra pay. Do you believe? If we get extra pay because of that, I would not be the only one who have been doing that.
+
+78
+00:43:59,440 --> 00:44:30,320
+Agree? Then all the professors will be, I need money. More classes. No, no, no, no, no. But I will not bother you. We will only give you an additional class or make a class if needed. Okay? Good? So all together, how many lectures do we have? 26. 13 weeks? Two per week? 26. I need 26 lectures to finish all the materials.
+
+79
+00:44:30,930 --> 00:45:09,840
+Okay? Please bear with me. Thank you. You see, I keep running. I'm still energetic. You use Python in COM 2211. Which version? 3.12.12. Is it the latest version of Python? No. Why we use an older version? This is even older than the one that we used in COM 102.3. What's the point, Desmond? It seems like you are getting old.
+
+80
+00:45:09,870 --> 00:45:43,570
+You better take a break. The reason is, we use Collaboratory, an online platform developed by Google. You don't use VS Code this time. You will use this online platform, Collaboratory. Desmond, I think we could use VS Code. Last semester, you mentioned a lot of good things about VS Code, right? But now, you are saying, don't use it. Are you stupid? The reason is,
+
+81
+00:45:43,570 --> 00:46:12,860
+This guy has GPU resources, Graphical Processing Unit, where you could speak up the computation. So if you use your laptop with VS Code, and let's say your computer is not for gaming, then no GPU, then good luck. You may need to spend four hours to finish running your program, and one small bug, fix it.
+
+82
+00:46:12,860 --> 00:46:48,850
+Another four hours. Okay, one more. Many students said, who cares about NumPy? This guy is stupid. Teach NumPy. Nobody use it. Not true. If you do not use NumPy, then your life will be once again. If you don't use NumPy, you keep using loops, right? Six hours or even more than that to finish executing a program. One small bug. Me seeing a symbol. Yay!
+
+83
+00:46:48,850 --> 00:47:24,640
+Another six hours. Okay. So NumPy is your good friend. Remember. You will see. All right. Good. Collaboratory. You need to create a Google account in order to use it. This is a match. Oh, sorry. I talk too much. I will not repeat the same thing again next time. All right. Okay. This is the most important part.
+
+84
+00:47:24,640 --> 00:47:56,270
+Assessment scheme, 40% on coursework, 60% on examination. Why? Why not the opposite? Because now AI is too good. I have to say, most students, they will do a good job for the coursework. And I know why, right? Okay, anyway, 40% on coursework, which consists of 10% for labs,
+
+85
+00:47:56,940 --> 00:48:31,100
+30% for programming assignments. How many? Two. PA1, PA2. Good. Okay. Sorry, there's a typo. Not 10 exercises. How many? 11. And you need to submit how many of them? Five. We pick the best. We are very good. You are going to get A+. Okay. And 60% on the examination. 20% on the midterm.
+
+86
+00:48:31,100 --> 00:49:07,410
+and 40% on the final examination. So which one is the most important component? Final examination. So even you do a good job in the midterm, you still need to do a good job in the final examination. Good? All together, 100. Oh, yeah. Drop this down on your calendar. The midterm examination will be conducted on...
+
+87
+00:49:07,410 --> 00:49:40,690
+April 14th, Tuesday, in the evening, 7.30 to 9.30, two hours examination. Drop this down on the calendar. We have a meeting with you. Okay, we are going to use LT Boy, LT Jade, and room 2304 for the exam. And we will show you the sitting plan.
+
+88
+00:49:40,690 --> 00:50:22,780
+before the exam. How about the coverage? Later, nah. Wow, I love this picture. You see? What we learned in class and what I studied. What actually on the test? Hey, no, no, no, no. Just kidding. Good luck. All right. This is the last part in this topic. But take it serious. Everyone, I will tell you another story. I will tell you what I saw.
+
+89
+00:50:22,780 --> 00:50:53,740
+Last semester. Okay, the first message is you have to finish the labs and assignments yourself. Don't copy the work from other people. All right? And it doesn't mean that we don't encourage you to discuss the idea with your peers. You're welcome to do discussion. But don't talk about the details. So what does it mean by the details? Don't say, put follow. For I enrange. Ha ha.
+
+90
+00:50:53,740 --> 00:51:27,250
+Even the variable name, you mention it and ask the one next to you, use ha-ha, ha-ha is a good variable name. Come on, what's the point? Don't do it. You could talk about the ideas. Once you understand the ideas, then it's time for you to do it using Python. Is it okay? All right. After you submitted your work, we are going to use a super crazy software to cross-check all the submissions.
+
+91
+00:51:27,790 --> 00:52:06,770
+This is too good. And then we are going to get a collection of similarity scores. But that means that if the program tells you 98% similar, then GG? No. We will do menu check and to confirm that. All right? Let me tell you something very interesting. Some students put their name in the PY file and the other student copied the work, right?
+
+92
+00:52:07,660 --> 00:52:44,270
+Keep the name. Very interesting. And then, of course, they were called. But they said, sorry, I accidentally submitted the work done by other people. Then my question is, how come you have that copy? I know you guys are good friends, right? But it doesn't mean that you should grab the assignment and check. No. Don't do it. This is not allowed. All right, another thing is,
+
+93
+00:52:47,380 --> 00:53:20,660
+Could you use AI? The official policy will be no AI. No AI for this course. But the follow-up question will be, Desmond, do you think you could check it? No. Then this is my suggestion. Everyone, I know that we cannot stop you from using that, right? So even we ask you, don't use it. You may still use it. But make sure you know what is going on.
+
+94
+00:53:20,660 --> 00:53:57,580
+Because if you don't know what is going on, in the examination, it will be, because during the examination, no AI, only Desmond, when I see you, I will say, AI, right? You know what I'm saying? So, I cannot stop you from using AI, but make sure you know what is going on. Learn from AI, so that you know what to do in the exam. This is my suggestions. Okay, another thing is the last one.
+
+95
+00:54:01,010 --> 00:54:39,470
+It is your responsibility to protect your code. Let me tell you another story. Last semester, a gentleman said that. Another Code 102 free student entered my room and sits at the back. We don't talk to each other. But somehow at the end of the day, his work looks exactly the same as mine. Then I think the other gentleman will be,
+
+96
+00:54:41,490 --> 00:55:26,190
+,
+
+97
+00:55:27,220 --> 00:55:59,460
+Okay, the last thing in this topic, let me give you some suggestions. You may wonder the following, how much time do I need to spend in order to get a good grade? This is our observation. For A-plus students, they typically spend one hour to pre-study the material. They spend two hours on lab exercises. They spend three hours to attend the lectures. And they also do...
+
+98
+00:55:59,460 --> 00:56:32,690
+post study. Okay, let me do another sharing. One student, one comm 1023 student, the student got 20-something in the midterm. 20-something in the midterm. But the student got 50-something in the final. Wow! It's a big improvement, right? And then I asked the student, what did you do? Yeah, very good. Amazing, right?
+
+99
+00:56:32,690 --> 00:57:02,030
+Basically, the student told me, Desmond, nothing really special. I just scan through the lecture notes one more time. That means what? You need to do revision. So even you understand all the concepts in class, it's still a good idea for you to read the materials one more time before tackling the labs, before tackling the assignments. Okay? So this is my suggestions.
+
+100
+00:57:02,190 --> 00:57:42,940
+Especially for those of you who aim for A plus or A++. How many of you are taking two old chopsticks at the same time? Good luck. The reason why I says that would be it's very easy to get confused. You do C++ in that course. You do Python in this course, right? Good luck. Different syntax.
+
+101
+00:57:42,940 --> 00:58:26,670
+For that one, for yins i equal 0, semicolon, i less than something, semicolon, i++. This one, for i in range, blah, blah. Different stuff. Hey, if you put C++ code in 2211 exam paper, that will be equivalent to pseudocode, right? English. All right. Hey, that's all for this part. Any questions? Once again, how many of you are going to join L3? Because I scare you, right?
+
+102
+00:58:27,340 --> 00:59:21,470
+I keep talking. No? No problem? Then it's time for us to do something real. Again, this one. The ratio, the width and height ratio of this line will be 16 to 9, right? Yes? How about this one? 4 to 3. Please ask why. The reason is really simple.
+
+103
+00:59:21,470 --> 00:59:56,290
+Because the course coordinator of this course says 16 to 9 is something very Desmond. Let's do 4 to 3. Okay, anyway. By the way, I'm not a coordinator of 2 to 1 to 1, but I created this course. You could tell, right? Because the assessment scheme will be exactly the same as home 102.3. But no worry, we work together very well. Yeah?
+
+104
+00:59:56,290 --> 01:00:34,830
+So the most important thing is you learn well. All right, let's do something more meaningful. Okay, this is topic number one. In other words, what we covered here may appear in the exams. Attention. But before I start doing this, let me emphasize one thing. No use for you to memorize a lot of details. Because the examination would not be something...
+
+105
+01:00:34,830 --> 01:01:10,700
+that requires you to memorize and recite the details. You have to understand the concept. Is it okay? All right. So in this topic, I will give you an introduction to AI and tell you some history. AI. Oh, hey. AI. Many, many different definitions. Maybe person A says that AI is B, C,
+
+106
+01:01:12,300 --> 01:01:42,780
+Different ways, right? Okay, from our understanding, we define AI as the science and engineering of making the machines smart, clever, or intelligent. Okay, so let me say one more time. Based on our understanding, we define AI as the science and technology or engineering to make the machines smart.
+
+107
+01:01:42,780 --> 01:02:15,120
+clever or intelligent. Is it clear? Okay, I want to emphasize two words, science and engineering. Why both? Science is something about theoretical stuff. Without a theoretical foundation, we have not much to do. But does it mean that theoretical stuff will be good enough? No. We have to be practical. Engineering will be something practical. So we need both.
+
+108
+01:02:15,120 --> 01:02:51,300
+Science and engineering. Okay? And you may also want to ask who came up with the idea of AI, the father of modern computer. Who is he? Alan Turing. Alan Turing came up with the main idea of AI. But at that point, no AI. He did not mention the term AI. He...
+
+109
+01:02:51,300 --> 01:03:20,960
+just said something related to AI, the main idea would be the AI. And then who coined the term AI? This guy, John McHavy. John McHavy defined the term AI. Let's do AI. AI is blah, blah, blah, blah, blah, blah, blah. So in the examination, if we ask you who coined the term AI, you should say John McHavy.
+
+110
+01:03:20,960 --> 01:03:52,850
+Don't say Alan Turing. But in terms of idea, who came up the idea? Not Desmond, come on. Alan Turing. Good enough? Okay, another thing that we want to emphasize would be most AI stuff, now is the day, the idea are actually borrowed from human beings. Can I show you one example? Let me pick a gentleman.
+
+111
+01:03:53,260 --> 01:04:33,220
+Hey, gentlemen, could you help? Let's say this gentleman is my kid. All right? And I want to teach you kind of what to do and what not to do, right? For example, this gentleman touched a glass of hot water. Better. This is negative reward. A negative reward. That means there should be something bad. Baba, papa, blame me. Okay.
+
+112
+01:04:33,220 --> 01:05:03,980
+Then the second time, he does the following. Smile. Hey, very good, very lovely. Why? Happy? Ah, this is positive reward, right? Then this guy knows. Papa wants us to smile all the time. Very happy. Positive reward. Actually, we use this idea to build up AI model. This is what we call reinforcement learning.
+
+113
+01:05:04,750 --> 01:05:34,290
+reinforcement learning will be something similar. That means we ask the AI to keep trying and then we define this is bad, this is good, this is bad, very bad, bad, good, good, good, good. At the end of the day, the AI will do all the good stuff, avoid doing all the bad stuff. Is it okay? Do you know what I'm saying? So this is AI. AI is not magical.
+
+114
+01:05:34,830 --> 01:06:11,950
+We have been applying the same thing for human beings, for AI. Okay? Oh, I scare you, huh? All right. And why you need to study AI? Why we bother you? Because if you know AI, you have a brighter career. Do you think so? Huh? Yeah. But I think most people believe that if you don't know AI, GG. Yeah?
+
+115
+01:06:11,950 --> 01:06:46,190
+If you know AI, then people will hire you. All right. More questions. If you are computer science students, do you think it's a good idea we don't offer you training on programming? Don't learn programming. Just use AI to generate the code. Yeah, happy. But do you think in that case, people will hire you? No, GG. But at the same time, we only train you.
+
+116
+01:06:46,610 --> 01:07:17,360
+to be a good programmer, but you don't know how to make good use of AI to increase the productivity. Do you think the employers like that? No, right? You need to do both. Okay, so what does it mean by practical future? You need to know what is AI, how AI works, and how to make good use of AI to make it more productive and spend more time on the things that you really need to spend time on. Do you know what I'm saying?
+
+117
+01:07:17,360 --> 01:07:48,750
+Good? Okay, AI is versatile. That means they're very powerful. You could use AI to solve something like healthcare problem, finance problem, and many, many different problems. Agree? One more. Most people believe that AI skills would be the skills of the century. And in the past, programming should be the skills of the century. But now, may not be.
+
+118
+01:07:48,880 --> 01:08:20,880
+The real skills will be AI skills. So remember, it's a good idea to take 2211 so that you could take the next one and next one and next one. Then you will be competent, right? Yeah, very good. Don't drop the course, please. Okay, this slide is very good one. When you talk about AI,
+
+119
+01:08:20,880 --> 01:08:52,400
+then most people would say this is only for computer guys, right? For computer scientists, not for me. I'm just a layman. Don't bother me. Not true. AI is interdisciplinary. That means many different fields are related to AI. All right? I'm not going to go through all this, but could you tell me one thing? Why all these are related to AI? Could you read the blue words?
+
+120
+01:08:52,400 --> 01:09:28,560
+And tell me why all these are related to AI. What's the point? Exactly. All these fields would help us to understand a lot more about human beings. If you know more about human beings, then you could apply the same thing on machines and make them act like a human. Do you know what I'm saying? Example, psychology. If you do psychology, then you know...
+
+121
+01:09:29,520 --> 01:10:01,490
+Why this guy does it in that way? Then essentially you know more about human being, right? Then you know what to apply on the machine and make it smart. Okay? How about math? If you don't know math, then you don't know how to build the AI model. That makes sense. And even I told you, math may not be very important in too old chopsticks, but later on, math is very important. All right? So, takeaway.
+
+122
+01:10:02,480 --> 01:10:37,740
+AI is interdisciplinary. All right, and now you should ask, Desmond, I really want to do a good job in AI. I want to know a lot more about AI. Then what should I do? You need to be good in these three things. Programming, mathematics, and the last one, algorithms. These three are the pillars of AI or machine learning. Okay? Yeah?
+
+123
+01:10:37,940 --> 01:10:46,830
+but i will not bother you here i will only give you um the support for doing like programming algorithm but not man
+
