@@ -91,6 +91,7 @@ MODEL="${AUTO_SUBTITLE_MODEL:-turbo}"
 LANGUAGE="${AUTO_SUBTITLE_LANGUAGE:-en}"
 DEVICE="${AUTO_SUBTITLE_DEVICE:-cuda}"
 COMPUTE_TYPE="${AUTO_SUBTITLE_COMPUTE_TYPE:-float16}"
+export HF_ENDPOINT="${AUTO_SUBTITLE_HF_ENDPOINT:-${HF_ENDPOINT:-https://hf-mirror.com}}"
 GLOSSARY_FILE="${AUTO_SUBTITLE_GLOSSARY_FILE:-$PROJECT_ROOT/config/course_terms.json}"
 MEMORY_FILE="${AUTO_SUBTITLE_MEMORY_FILE:-$PROJECT_ROOT/config/course_terms.memory.json}"
 
@@ -111,6 +112,7 @@ echo "🚀 RTX 5090 faster-whisper 自动处理"
 echo "📂 输入文件: $INPUT_FILE"
 echo "⚙️  模式: $MODE"
 echo "🧠 model=$MODEL device=$DEVICE compute_type=$COMPUTE_TYPE"
+echo "🌐 HF_ENDPOINT=$HF_ENDPOINT"
 echo "📦 batch_size=$BATCH_SIZE beam_size=$BEAM_SIZE"
 echo "📝 ATR 校对: $ENABLE_ATR"
 echo "🎞️  烧录字幕: $BURN_SUBS"
@@ -127,6 +129,7 @@ python3 "$PROJECT_ROOT/autosubtitle/transcribe_faster.py" \
     --language "$LANGUAGE" \
     --device "$DEVICE" \
     --model "$MODEL" \
+    --profile "$MODE" \
     --compute_type "$COMPUTE_TYPE" \
     --batch_size "$BATCH_SIZE" \
     --beam_size "$BEAM_SIZE"

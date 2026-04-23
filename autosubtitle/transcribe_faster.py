@@ -6,6 +6,14 @@ from pathlib import Path
 
 
 PROFILES = {
+    "speed": {
+        "batch_size": 48,
+        "beam_size": 1,
+        "compute_type": "float16",
+        "vad_filter": True,
+        "word_timestamps": False,
+        "condition_on_previous_text": False,
+    },
     "fast": {
         "batch_size": 48,
         "beam_size": 1,
@@ -15,15 +23,23 @@ PROFILES = {
         "condition_on_previous_text": False,
     },
     "balanced": {
-        "batch_size": 32,
+        "batch_size": 64,
         "beam_size": 3,
         "compute_type": "float16",
         "vad_filter": True,
         "word_timestamps": False,
         "condition_on_previous_text": False,
     },
+    "throughput": {
+        "batch_size": 96,
+        "beam_size": 1,
+        "compute_type": "float16",
+        "vad_filter": True,
+        "word_timestamps": False,
+        "condition_on_previous_text": False,
+    },
     "max": {
-        "batch_size": 64,
+        "batch_size": 96,
         "beam_size": 1,
         "compute_type": "float16",
         "vad_filter": True,

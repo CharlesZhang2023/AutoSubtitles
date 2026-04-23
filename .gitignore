@@ -20,3 +20,9 @@ env/
 *.atr.txt
 *.atr_report.md
 outputs/
+input/*
+!input/.gitkeep
+!input/README.md
+output/*
+!output/.gitkeep
+!output/README.md

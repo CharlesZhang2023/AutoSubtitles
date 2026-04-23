@@ -9,7 +9,7 @@
 ## 🌟 核心功能 (Core Features)
 
 - **高性能转录**: 采用 **Whisper Turbo (large-v3-turbo)** 与 **faster-whisper**，针对英文讲课环境优化，实现远超实时速度的文本提取。
-- **5090 优化档位**: 内置 `fast`、`balanced`、`max` 三个 profile，支持利用高显存 GPU 提高 batch 吞吐。
+- **5090 优化档位**: 内置 `speed` / `fast`、`balanced`、`throughput` / `max` 多个 profile，支持利用高显存 GPU 提高 batch 吞吐。
 - **ATR 自动校对**: 可选接入 OpenAI 模型进行学术语义校对，针对 **COMP2211** 等课程特性自动修正以下内容：
   - **术语纠错**: 修正口音引起的识别偏差，如 *NumPy*, *Matplotlib*, *Pandas*, *Palindrome*, *Pseudocode* 等。
   - **去噪处理**: 智能剔除口语语气词（uh, um, right）及无意义的重复，提升阅读体验。
@@ -44,6 +44,14 @@ chmod +x scripts/workflow.sh
 ./scripts/workflow.sh <path_to_lecture_video.mp4> balanced
 ```
 
+如果你希望直接把视频丢进 `input/`，再统一把字幕和文本写到 `output/`：
+
+```bash
+mkdir -p input output
+chmod +x scripts/process_input_output.sh
+./scripts/process_input_output.sh balanced
+```
+
 如需直接使用 `RTX 5090` 优化版 `faster-whisper` 自动脚本：
 
 ```bash
@@ -53,9 +61,9 @@ chmod +x scripts/workflow_fastwhisper_5090.sh
 
 可选 profile：
 
-- `fast`: 更低 beam，优先速度
+- `speed` / `fast`: 更低 beam，优先速度
 - `balanced`: 默认档，适合课程字幕正式产出
-- `max`: 更大 batch，适合高显存 GPU 压榨吞吐
+- `throughput` / `max`: 更大 batch，适合高显存 GPU 压榨吞吐
 
 如需启用 ATR：
 
@@ -67,6 +75,12 @@ chmod +x scripts/workflow_fastwhisper_5090.sh
 
 ```bash
 ./scripts/workflow_fastwhisper_5090.sh <path_to_lecture_video.mp4> throughput --atr
+```
+
+`input/` → `output/` 批处理脚本也支持：
+
+```bash
+./scripts/process_input_output.sh throughput --atr
 ```
 
 也可以单独调用转写入口：
@@ -102,17 +116,37 @@ AUTO_SUBTITLE_MEMORY_FILE=./config/course_terms.memory.json ./scripts/workflow.s
 ├── CONTRIBUTING.md            # Development and contribution notes
 ├── docs/                      # Prompt/skill documentation
 ├── examples/                  # Example transcript and subtitle outputs
+├── input/                     # Local drop folder for source videos
+├── output/                    # Local generated subtitle/transcript outputs
 ├── scripts/                   # End-to-end shell workflows
 ├── README.md
 └── requirements.txt
 ```
 
+## 📥 Input / Output Workflow
+
+- 把待处理视频放进 `input/`
+- 运行 `scripts/process_input_output.sh:1`
+- 生成的 `.srt` 和 `.txt` 会写到 `output/`
+- 如果加 `--atr`，还会额外生成 `.atr.srt`、`.atr.txt` 和 `.atr_report.md`
+- 默认不会压制视频，只做字幕和文本产出，更适合批量处理
+
 ## ⚙️ RTX 5090 调优建议
 
-- 首选 `balanced`，确认稳定后改用 `max`
+- 首选 `balanced`，确认稳定后改用 `throughput`
 - 默认使用 `cuda + float16 + vad_filter`
 - 长 lecture 先抽音频再转写，避免边解码边推理拖慢 GPU
 - 批量处理多节课时，优先排队给单个高吞吐 GPU worker，而不是多进程抢同一张卡
+- 如首次下载 `turbo` 模型较慢，可设置 `AUTO_SUBTITLE_HF_ENDPOINT=https://hf-mirror.com`
+
+## 🧪 RTX 5090 实测记录
+
+- 测试环境：`RTX 5090 32GB`、`CUDA 13` 驱动、`faster-whisper 1.2.1`、`ctranslate2 4.7.1`
+- 测试样本：120 秒英文课程音频，`turbo + cuda + float16`
+- `speed` (`batch_size=48`, `beam_size=1`)：热启动约 `14.5s`，首次包含模型初始化
+- `balanced` (`batch_size=64`, `beam_size=3`)：热启动约 `5.6s`
+- `throughput` (`batch_size=96`, `beam_size=1`)：热启动约 `5.4s`
+- 结论：这套 `96/1` 参数在 5090 上可稳定运行，适合批量任务；正式产出可优先保留 `balanced`
 
 ## 🧩 CUDA 注意事项
 
@@ -162,7 +196,9 @@ python3 -c "import ctranslate2; print(ctranslate2.__version__)"
 - `speed` 使用 `batch_size=48, beam_size=1`，适合快速草稿
 - `balanced` 使用 `batch_size=64, beam_size=3`，适合正式字幕
 - `throughput` 使用 `batch_size=96, beam_size=1`，优先榨干 `RTX 5090`
+- `fast` 兼容映射到 `speed`，`max` 兼容映射到 `throughput`
 - 可通过 `AUTO_SUBTITLE_5090_BATCH_SIZE`、`AUTO_SUBTITLE_5090_BEAM_SIZE` 覆盖默认值
+- 可通过 `AUTO_SUBTITLE_HF_ENDPOINT` 覆盖模型下载镜像
 - 可通过 `--no-burn` 仅输出字幕，通过 `--keep-wav` 保留中间音频
 
 ## 🧠 ATR 调优建议
