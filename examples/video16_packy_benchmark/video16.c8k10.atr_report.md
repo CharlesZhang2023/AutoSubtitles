@@ -1,0 +1,80 @@
+# ATR Glossary Report
+
+- `2011` → `COMP2011`
+- `turning` → `tuning`
+- `voice out` → `speak up`
+- `Europe` → `error in transcript`
+- `flattened layer` → `flatten layer`
+- `flatter layer` → `flatten layer`
+- `dance` → `dense`
+- `fine tune` → `fine-tune`
+- `fine tuning` → `fine-tuning`
+- `non-tringable` → `non-trainable`
+- `hyper parameters` → `hyperparameters`
+- `force` → `False`
+- `plot model function` → `plot model function`
+- `compile` → `compiled`
+- `atom` → `Adam`
+- `2011` → `COMP2211`
+- `multi-classes` → `multi-class`
+- `CCE` → `categorical cross entropy`
+- `yi` → `y_i`
+- `pi` → `p_i`
+- `categorical cross entropy equal to` → `categorical cross entropy is equal to`
+- `Hiya` → `Hi`
+- `one more time` → `it one more time`
+- `three categories, cats, dog, and bird` → `three categories: cats, dog, and bird`
+- `a cat in it, cat's image` → `there is a cat in it, a cat's image`
+- `in range` → `in the range`
+- `cross entropy laws` → `cross entropy loss`
+- `categorical cross entropy` → `categorical cross entropy`
+- `multi-class classification problem` → `multi-class classification problem`
+- `fit method` → `fit method`
+- `datetime` → `datetime`
+- `strftime` → `strftime`
+- `epoch` → `epochs`
+- `TensorBoard callback` → `TensorBoard callback`
+- `Desmond` → `Desmond Tsoi`
+- `Harris` → `history`
+- `e-pods` → `epochs`
+- `fat` → `fit`
+- `carriers` → `Keras`
+- `Cone 1023` → `COMP1023`
+- `laws` → `loss`
+- `rooms for in-Provment` → `room for improvement`
+- `rooms for improvement` → `room for improvement`
+- `epochs` → `epochs`
+- `source code online` → `source code`
+- `parameters` → `parameters`
+- `load them back in` → `load them back into`
+- `digits, recognition, MLP` → `digits_recognition_MLP`
+- `Model.save` → `Model.save method`
+- `low model` → `load_model`
+- `Amphidia` → `NVIDIA`
+- `Pandas data frame` → `Pandas DataFrame`
+- `data frame` → `DataFrame`
+- `r max` → `argmax`
+- `arc max` → `argmax`
+- `Panda Flames` → `Pandas`
+- `Math plot lib` → `Matplotlib`
+- `math plotlib` → `Matplotlib`
+- `show the test image` → `showing the test image`
+- `expected the result` → `expected result`
+- `want to see` → `wants to see`
+- `we come up this one` → `we come up with this one`
+- `do we put` → `do I put`
+- `PLT doc show` → `plt.show`
+- `mathplotlib` → `Matplotlib`
+- `show in` → `shows`
+- `Y test` → `Y_test`
+- `Seaborne` → `Seaborn`
+- `one thing is very bright` → `the one thing is very bright`
+- `small number` → `small numbers`
+- `will be off` → `will be laid off`
+
+## Memory Writeback
+
+- Memory file: `/root/autodl-tmp/AutoSubtitle-run16/config/course_terms.memory.json`
+- New learned variants: `1`
+- Skipped noisy pairs: `67`
+- Total learned pairs stored: `41`

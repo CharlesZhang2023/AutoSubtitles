@@ -1,0 +1,68 @@
+======================================
+🔌 ATR provider: packy
+📝 ATR model: gpt-5.4-mini
+📦 chunks: 7 chunk_size=20
+🧵 concurrency=8
+📚 glossary_file=/root/autodl-tmp/AutoSubtitle-run16/config/course_terms.json
+🧠 memory_file=/root/autodl-tmp/AutoSubtitle-run16/config/course_terms.memory.json
+======================================
+🚀 refining with 8 concurrent workers
+✅ refined chunk 3/7 (1/7 done)
+✅ refined chunk 1/7 (2/7 done)
+✅ refined chunk 4/7 (3/7 done)
+✅ refined chunk 2/7 (4/7 done)
+Traceback (most recent call last):
+  File "/root/autodl-tmp/AutoSubtitle-run16/autosubtitle/refine_subtitles.py", line 344, in parse_json_response
+    return json.loads(cleaned)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 1417 (char 1416)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/AutoSubtitle-run16/autosubtitle/refine_subtitles.py", line 874, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/autodl-tmp/AutoSubtitle-run16/autosubtitle/refine_subtitles.py", line 851, in main
+    refined_entries, chunk_glossary = future.result()[1:]
+                                      ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/AutoSubtitle-run16/autosubtitle/refine_subtitles.py", line 501, in refine_chunk
+    refined_payload = call_refiner(
+                      ^^^^^^^^^^^^^
+  File "/root/autodl-tmp/AutoSubtitle-run16/autosubtitle/refine_subtitles.py", line 491, in call_refiner
+    return call_packy(model, entries, glossary, packy_base_url, max_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/AutoSubtitle-run16/autosubtitle/refine_subtitles.py", line 479, in call_packy
+    return parse_json_response(output_text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/AutoSubtitle-run16/autosubtitle/refine_subtitles.py", line 349, in parse_json_response
+    return json.loads(cleaned[start : end + 1])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 1417 (char 1416)
+real 32.309\nuser 1.927\nsys 0.141

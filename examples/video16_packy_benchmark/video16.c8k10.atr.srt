@@ -1,0 +1,560 @@
+1
+00:00:01,390 --> 00:00:39,070
+Hello, good morning everyone. What happened today? How many of you need to take COMP2011 midterm examination this evening? One, two, three. Mmm, not easy. You know I am one of the invigilators. You may see me this evening. Yeah, but let's see. I know, COMP2011 is...
+
+2
+00:00:39,070 --> 00:01:15,070
+It's tricky. Good luck. Do your best. But this is what I have been reminding CSE students or CPAC students. Remember the toughest part of COMP2011 would be something about pointers. Pointers. In Cantonese, pointers. Yeah, yeah, somehow. Okay, do your best. Okay.
+
+3
+00:01:15,070 --> 00:01:45,860
+At the very beginning, I have to say thank you very much because you should have submitted programming assignment one and we will finish the grading very soon and let you do appeal. For all the programming assignments, we allowed you to appeal the grades. So don't worry. So if you say that, wait, I think you grade the test cases wrongly.
+
+4
+00:01:45,860 --> 00:02:17,970
+Then you could voice out and let us know the reason. And we will go through all the appeal cases one by one and handle them properly. No worry. Okay? Hey, for lab six, I guess some of you are dealing with lab six, right? The most important thing is the model. You may put in different layers, try out different layers and see what happened.
+
+5
+00:02:18,060 --> 00:02:49,620
+This is exactly what we expect you to do. It's just like MLP. Different problems, different number of layers, different number of neurons per layer. And then it takes you some time to fine-tune all the parameters, like weights and biases. Please do so. This is the only tedious part. And I don't think that you are going to spend a lot of time on debugging from now on.
+
+6
+00:02:49,620 --> 00:03:21,710
+Because you make good use of library, that means you call functions, right? It's very unlikely for you to get weird bug. But the tedious stuff will be tuning all the parameters. This is tedious. And for those of you who are going to do more AI and machine learning courses, this is what you're going to see. Yeah, keep tuning. Once, twice, three times, four times, etc. But don't give up. You could do it.
+
+7
+00:03:22,800 --> 00:04:07,490
+Aha, what else? I think we better continue our discussion about MLP. So today, we will show you how to build MLP using Keras. But in fact, we started talking about it last time, but we haven't yet finished it. So that's why today we need to continue our discussion. All right, ready? Okay, good. Hey, this is where I stopped last time.
+
+8
+00:04:07,490 --> 00:04:37,890
+Basically, when you print the summary for your AI model, you will see something on the left or you will see something on the right. The left-hand side shows you all the layers that you add, the output shape of each layer and also the number of parameters available in each layer. And what you see on the right will be something similar.
+
+9
+00:04:37,890 --> 00:05:05,840
+But in picture form. So which one is better? It depends. For some students, they would like to put the left one in the report. But for some other students, they put the right one in the report. But anyway, if you do Europe, or if you submit a project report, you should incorporate something like this. All right? And today, I will also show you how to do visualization. How to...
+
+10
+00:05:05,840 --> 00:05:36,980
+Make other people understand your result better. And this is more important because most computer science students or most engineering students, they are really good at doing coding, theoretical stuff, but we don't get used to presenting the materials in visual form. So we need to know how to do it better. All right. Okay. So let's see.
+
+11
+00:05:37,140 --> 00:06:06,860
+As mentioned last time in the exam, we may remove some of this or even all of them. But of course, we will give you enough information so that you could figure them out. All right. So let me tell you how to complete all this. And last time, we built an MLP like this. The first one, which is the input layer.
+
+12
+00:06:08,530 --> 00:06:39,100
+And this is indeed flatten layer. Okay? And then we add the first hidden layer, which is a dense layer. Add another hidden layer, which is also a dense layer. And finally, one more dense layer. But this is actually the output layer, if you still remember. Okay? One more time, we built an MLP with four layers.
+
+13
+00:06:39,100 --> 00:07:08,220
+Flatten layer and then hidden layer and then hidden layer and then output layer. All right. So question number one. What is the input shape? Or what is the shape of the input to flatten layer? 28 by 28, which is an image, right? 28 pixels times 28 pixels.
+
+14
+00:07:08,220 --> 00:07:40,670
+After we flatten the image, we get back something in 1D. So, everyone, what's the shape? 784. 784. How to get it? 28 times 28. 784. Okay, and all this should be connected to all the neurons in the next layer. And how many neurons?
+
+15
+00:07:40,670 --> 00:08:13,410
+in this layer, if you still remember 128. Yeah? Okay, if we have 128 neurons, then how many outputs will be produced? One neuron, one output. 128 neurons, 128 outputs. And then all of them need to connect to the neurons in the next layer. How many neurons here? Once again.
+
+16
+00:08:13,410 --> 00:08:44,110
+128. Same question. 128 neurons here. How many outputs will be produced? 128. And all of them need to connect to the neurons in the last layer. How many layers in the output? 10, because 10 digits. Right? 10 probability values for 10 digits. So 10.
+
+17
+00:08:44,560 --> 00:09:17,820
+So if I were you, I'm going to draw a picture like this and use it to figure out how many parameters in each layer. So let's do it. Flatten layer. This one. The output shape will be 784. So that's why you see this. But flatten layer, no parameter. So basically what it does will be to produce something in 1D.
+
+18
+00:09:17,820 --> 00:09:55,100
+So no parameter there, no weight, no biases. This is very simple. Okay, next layer, dense. This one, how many parameters involved? How many connections here? 784 times 128. Agree? But you have 128 neurons, one bias per one neuron. So in terms of parameters, you...
+
+19
+00:09:55,100 --> 00:10:30,530
+also need to add 128. So if you do calculation, 784 times 128 plus 128, you should get 100480. Okay? Then you get this number. Is it okay? And once again, why we get this number? Because the number of parameters for the first dense layer, which is this one, means all the weights here.
+
+20
+00:10:30,530 --> 00:11:02,770
+all the weights here, plus all the biases here. In terms of the number of weights here, we need to see how many connections. So, 784 times 128 connections. We have this amount of weights. And then plus all the biases here. Is it okay? Good. Do you need to bring a calculator with you for the exams? Yes, you have to. You must.
+
+21
+00:11:02,770 --> 00:11:33,410
+Okay, next one. Next dense layer. This one, how many parameters? Same thing. We need to figure out how many connections here. The number of connections here will be 128 times 128. This amount of weights plus 128, which is the number of biases. 128 times 128.
+
+22
+00:11:33,410 --> 00:12:13,820
+plus 128, then you should get 16512. 16512. Correct? Right? Okay, the last one should be the easiest. The third dense layer, which is also the output layer. How many parameters? How many connections here? 128 times 10, plus 10 biases here. So the answer should be,
+
+23
+00:12:13,820 --> 00:12:44,590
+1290 for sure. One more question for you. Why do we compute the number of parameters involved? Because we want to see how much time we need to spend to fine-tune the parameters. The more parameters you have, the more time you need to spend to fine-tune them.
+
+24
+00:12:44,590 --> 00:13:17,070
+How many parameters and biases, sorry, how many weights and biases do you need to fine-tune for this guy? You need to add up all this, right? So which is 118,000 something parameters. Is it a big number? No. Actually, that's not big. Yeah, normally, for real problem, you are going to get something even bigger.
+
+25
+00:13:17,300 --> 00:13:43,730
+All right? So don't get me wrong. You need to spend a lot of time tuning the parameters, right? It may take you like one hour or two hours to finalize all the weights and biases, okay? This is another thing that you may not like. For the first half, you need to spend time to do debugging, right? But for the second part,
+
+26
+00:13:43,730 --> 00:14:15,280
+Very likely, you need to spend time to fine-tune the parameters. Please check this with your TAs. If you see your postgraduate TAs, please ask them. Do you tune parameters every day? If they say no, GG. All right, I'm pretty sure they tune parameters every day, right? When they are talking to you, actually their machines are doing something.
+
+27
+00:14:15,440 --> 00:14:45,330
+at the same time in parallel. And they use many different machines to run different models and fine-tune different set of parameters. This is what you're going to see in the future. Good? 118,000 something parameters, which is something cool. Okay, but now you see the term trainable parameters. So what does it mean by trainable parameters? That means...
+
+28
+00:14:45,330 --> 00:15:17,890
+we could tune all these parameters automatically using the optimizer. Once we pick the optimizer, all this would be fine-tuned automatically. But there are something called non-trainable parameter. Non-trainable parameter, let me show you some example. Epoch. You need to determine the epoch. That is not a trainable parameter. Another one.
+
+29
+00:15:17,890 --> 00:15:48,940
+Learning rates. You need to adjust the learning rates from time to time. Of course, if you want to, but that is not a trainable parameter. And normally we call them hyperparameters. Hyperparameters. Good? Okay, one more time. What does he mean by trainable parameters here? Weights and the biases. That's all. Nothing else. Good? Okay.
+
+30
+00:15:49,710 --> 00:16:19,380
+Why do you need to put this in your report? Because your boss, your supervisor may want to know how many parameters that you need to fine-tune. Then how much time you need to spend for that? Then he or she may say, yeah, I give you one week to do it. Without knowing how many parameters you need to fine-tune, they have no idea how much time they need to give you. All right? If you...
+
+31
+00:16:19,470 --> 00:16:50,540
+Have a big number. Then they may give you one month. Yeah, if the model is very small, two days. Good? Happy? All right, next one. Wait, Desmond, why do we need to do this? Remember, if you want to come up with a pictorial description of the same thing, you call `plot model function`. By passing your model to it,
+
+32
+00:16:50,540 --> 00:17:22,430
+which is an MLP. And then also say that, show me the shapes of the outputs of each layer. And also show me the layer names. What does it mean by layer names? This one, right? Those are the layer names. So that we know what type of layer you add. Do you know what I'm saying? But if you put `False`,
+
+33
+00:17:22,430 --> 00:17:54,000
+For all this, then you are not going to see the output shape. You are not going to see the layer name. Up to you. It depends. Good. And once again, which one do you like? I don't know. For me, I love the left one because it's more comprehensive. But for some other people, they love the right one. So do check with them and see which one they like. So far so good? Build the model.
+
+34
+00:17:54,000 --> 00:18:34,030
+add those layers, print summary, and see whether it looks good. Hey, please stop me if I go too fast. Okay, this slide basically we just want to reiterate the formula that we use to compute the number of parameters in each layer. Hey, have you learned this? Please say yes. You know already the total number of parameters
+
+35
+00:18:35,380 --> 00:19:07,980
+of each layer will be the weights involved, the number of biases involved, right? But in terms of weights, then you take a look at the previous layer. How many nodes are there? Because the number of nodes in the previous layer will be the number of outputs that you received from the previous one. Agree? And then, times.
+
+36
+00:19:08,050 --> 00:19:38,400
+the number of neurons in the current layer. Because we have that amount of connections. Do you know what I'm saying? Let me say one more time. You need to check how many nodes or how many neurons in the previous layer. Why? Because that means the number of outputs that you are going to receive from the previous layer. And then multiply by the number of neurons in your current layer. Why?
+
+37
+00:19:38,400 --> 00:20:12,720
+Because you should have that amount of connections. But you also need to add the number of neurons in that layer. Why? Those are biases. Those are the number of biases. In other words, this part is for the weights. This part is for the biases. All right? Wow, you see, if you simplify that a little bit,
+
+38
+00:20:12,720 --> 00:20:44,060
+Then the formula becomes the number of neurons in the last layer plus 1. And then times the number of neurons in the current layer. So some students, they apply this formula. But some other students, they just draw a picture and based on the picture, try to figure out what is going on. In fact, I don't like this formula. I never memorize formulas. Never.
+
+39
+00:20:44,060 --> 00:21:13,500
+Even you memorize it, then that may be good for the exams, upcoming exams. But two years later, three years later, you forgot. For sure. Then what's the point? You need to understand the idea. You need to understand the meaning. Then if you need to compute all this, try to figure it out. Same thing for Python. Same thing for C++. You don't need to memorize.
+
+40
+00:21:13,500 --> 00:21:55,500
+You need to understand. Because I want you to understand all the concepts, then, two years later, try to figure it out. That means you learned. Good? So far, so good. Hello, good morning. 早,大家早。早安,大家精神一点先。 Yeah, midterm period. How many of you need to take exams during the weekend? Sunday? Sunday.
+
+41
+00:21:56,500 --> 00:22:33,470
+Tomorrow, do you need to take a midterm on Sunday? Math, right? Math course, I'm sure. Because it seems like only the math department offers their midterms on Sundays. Interesting. Okay, okay. Good luck. Have fun. Life is so difficult. Okay, now, next step, compile the model. Attention, especially for those of you who are taking
+
+42
+00:22:33,470 --> 00:23:03,090
+This compile has nothing to do with the compilation of C++ programs. Unrelated. So what does it mean to compile the model in AI or machine learning? If you say you want to compile the model, that means you need to specify the optimizer. You need to specify the loss function. Once again.
+
+43
+00:23:03,120 --> 00:23:32,020
+Compile in AI or machine learning means you need to figure out what optimizer to use. You need to figure out what the loss function is. Loss function means error function. Optimizer means which guy are you going to use to fine-tune the parameters. Okay, showtime. We use Adam as the optimizer.
+
+44
+00:23:32,180 --> 00:24:02,210
+Adam is a well-known algorithm that we use to fine-tune the parameters. But for details, you need to take COMP2211. In that course, they will tell you exactly what it does. So for this course, we just use it, Adam optimizer. So there is a class called Adam. We use it to...
+
+45
+00:24:02,210 --> 00:24:32,210
+creates an object. The name is Adam optimizer. Wow, you need to pass a parameter to __init__ of Adam class. The parameter is eta. That means learning rate. Zero point zero zero one. Wow, Desmond, very small, right? How come? Because we want to walk slowly towards the minimum point.
+
+46
+00:24:32,690 --> 00:25:04,480
+Because we don't want to skip the minimum. If we walk too fast, then we may skip the minimum. If we walk slowly, yeah, it takes more time to reach the minimum. But it's safe. Do you know what I'm saying, everyone? Yeah, that's the idea. Okay, now it's time to specify all this. Model.compile method. Wait, compile method.
+
+47
+00:25:04,480 --> 00:25:34,450
+I'm ready to specify the optimizer and loss function. Here they are. Optimizer, Adam, loss function, categorical cross entropy. This guy is used to handle multi-class classification. Everyone, what does he mean by multi-class classification? Definitely, it's a classification problem.
+
+48
+00:25:35,090 --> 00:26:05,100
+You are going to produce categories. But how come multi-class? That means more than two categories. Multi-class means more than two categories. Very true. Digit 0, digit 1, digit 2, digit 3, digit 9. 10 categories. 10 classes. So that's why we call this multi-class classification.
+
+49
+00:26:05,140 --> 00:26:39,980
+This guy, categorical cross entropy, is really for that. And I will give you more details in five minutes. All right. Okay. And then the last one, metrics. Metrics, that means, please show me the accuracy when you train the model. Because I care about the accuracy. I want to know the accuracy. Please tell me. Okay. Compile. Compile the model. Compile. Compile.
+
+50
+00:26:40,430 --> 00:27:25,870
+C++ guy, when you see compile, compilation error, don't think too much. You are safe. No worry. Here, compile means good. So far, so good. Okay, let's do this guy. Desmond, what is categorical cross entropy? The loss function, error function, this one. Whoa. CCE. First, C means
+
+51
+00:27:25,870 --> 00:28:04,460
+Categorical. The second C means cross. The last letter E means entropy. Categorical cross entropy is equal to minus the summation of y_i times log p_i. Wow, Desmond, so many symbols. What is y_i? Oopsie. Hold on. What's wrong? Hold on. Hi, my laptop.
+
+52
+00:28:06,260 --> 00:28:48,400
+Okay, again, what is y_i? y_i is the actual label. Actual label. That means the expected output. Actual label. Then what is p_i? p_i means the calculated result. For handwritten digit classification problem, p_i stands for the probability for a certain digit.
+
+53
+00:28:49,580 --> 00:29:18,350
+Okay, let me say it one more time. We have been dealing with the handwritten digit classification problem, all right? Then we are going to get 10 probability values for each input. Agree? Then p_i would be the probability value. y_i would be the expected output. Wait, Desmond, I don't understand you. Could you give me an example? Sure. Everyone, ready? Suppose now.
+
+54
+00:29:18,350 --> 00:30:00,510
+I use another example to demonstrate the idea. We have three categories: cats, dog, and bird. Okay, if you give me an input sample, and I know that there is a cat in it, the expected output should be 1, 0, 0. Do you agree? Let me say it one more time. Suppose,
+
+55
+00:30:00,510 --> 00:30:32,560
+we have an input sample and we know that there is a cat in it, a cat's image. Then the expected output will be 1 for cat, 0 for dog, 0 for bird. Agree? Okay, now I use my MLP to do prediction. Okay, the prediction will be this: 0.9, 0.05, 0.05.
+
+56
+00:30:32,560 --> 00:31:06,270
+Okay, everyone, is this good? Yeah, pretty good. 0.9. Wow. 90% chance would be a cat. 5% chance would be a dog. 5% chance would be a bird. Then, very likely, we say that cats would be the result. Agree? Pretty good. Pretty good. Then how to compute the cross entropy in this case? Showtime. This one means.
+
+57
+00:31:06,270 --> 00:31:56,050
+y_i, y_i means 1 log p_i 0.9 plus 0, 0 means this one, times log 0.05 plus y_i 0 times p_i 0.05 log 0.05. Okay? And then minus. Is it okay?
+
+58
+00:31:56,050 --> 00:32:33,600
+Next, what is this? Don't scare me. What is this? Zero. Zero. Then we only have this one. Please answer my question. Log 0.9. What's the answer? You don't have to tell me the exact answer. Just tell me whether it is positive or negative. Negative. If you take log for a number in zero and one.
+
+59
+00:32:33,600 --> 00:33:03,840
+then it is a negative value. Negative. But you are calculating error, right? How come the error is negative? So that's why we multiply minus to make it positive. So the first question is, how come for categorical cross entropy loss, you need to do minus? Because what you produce will be a negative value. I want to make it positive. So that's why I multiplied it by...
+
+60
+00:33:03,840 --> 00:33:41,900
+Minus 1. Okay? This is it. All right. Another one. Hey. Are you with me? This guy. If it is not 0.9, if I give a super small value in the range 0 and 1, instead of 0.9, if I get a super small value in the range 0 and 1, we take log. What happens? You are going to get minus.
+
+61
+00:33:42,290 --> 00:34:13,740
+A super big value minus a super big value. Agree? But `y_i` times minus one, that becomes a super big value. Super big value means what? Large error. Very bad. That's true. If the probability value is very small, that means no good, right? In this case, then what you get back will be something very big.
+
+62
+00:34:13,740 --> 00:35:10,960
+Wait Desmond, I don't understand you. Could you give me an example? Of course. Ready? Erase it. Suppose my MLP this time gets the following. Haha, yeah. Please calculate the CCE for me. Minus the whole thing. `y_i`? 1 times log `p_i`, log 0.05.
+
+63
+00:35:14,700 --> 00:35:56,050
+Plus `y_i` 0 times log 0.9. Plus `y_i` 0 times log 0.05. Everyone, what is this? Oh, sorry. What is this? 0. What is this? 0. We only need to calculate this one. Log a very, very small probability value.
+
+64
+00:35:56,400 --> 00:36:28,780
+Then you get back something like minus a super big value. And then you multiply it by minus one. That becomes a super big value. How come the error is so big? Yeah, of course. You see, the correct result is cat. But how come the probability of the cat is very low? It's very low. It doesn't make sense, right? We want to penalize it. Wow, your AI is so bad, huh?
+
+65
+00:36:29,040 --> 00:37:00,960
+You say that 0.05 for cats, a very low probability, right? You did a very bad job because the correct result should be one. How come you did so bad? I want to penalize it. That means I want to add a big error. So that's why, using this formula, we could penalize it. Okay? So everyone listen carefully. Why do we want to use cross entropy loss? Because...
+
+66
+00:37:00,960 --> 00:37:34,190
+If the AI prediction result is really bad, then the probability value will be very small. If we take log and do minus, the error will be super big. That means saying the AI is really bad. This is okay. Do you know what I'm saying? Okay, another question for you. Hey, this is what we may do in the exam. Some of your peers said that, wait, Desmond, we could simply do this, right?
+
+67
+00:37:34,610 --> 00:38:30,480
+Why don't we simply do this? Why do we have to take log? If I ask you this question in the exam, what would you say? Think about it. For that sample, your AI said 0.05 for cats. Then this is 0.05. First problem, you get a negative value, which is really bad. But even if I remove the minus, what's wrong? `p_i` is very small. Then...
+
+68
+00:38:30,480 --> 00:39:02,140
+The error will be very small. Do you think this is appropriate? No, right? Because if the probability is very small, that means big error. How come you say that it's very small? No. So that's why we need to take log. Because if you take log, a very small value in range 0 and 1, you get something like minus a super big one. And then times minus 1.
+
+69
+00:39:02,140 --> 00:39:32,430
+Become a very big one. This is what we want to do, right? We want to penalize it. We want to make sure that the error is big. So that's why taking log is a good idea. Do you know what I'm saying? Yeah? Hey, please think about it. Why do we want to take log? Because you need to make sure you do the following. If the probability is very small, then the error is very big. How to make it happen? Take log and then minus. This is the key.
+
+70
+00:39:32,430 --> 00:40:02,830
+This is the key. All right? But of course, for those of you who do math, you may have another interpretation. But I don't want to bother you. Why? Because this is a computer science course, right? I just want to show you the intuitive idea. This is the intuitive idea. Good? What we could do in the exam would be, suppose there is a student who proposed to make the error function like this.
+
+71
+00:40:02,830 --> 00:40:33,700
+Instead of categorical cross entropy. What do you think? Justify. Is it good? Is it bad? Nothing to memorize. You need to understand the concept. You need to understand the rationale. Okay? Good? All right, anyway. But I do want you to memorize one thing. If you deal with a multi-class classification problem, you should use categorical cross entropy.
+
+72
+00:40:33,700 --> 00:41:14,510
+You use this guy. Almost for sure. By the way, am I going too fast? Good. Oh, no worry. I will send you an email talking about this. I will send you a complete email so that you have the big picture. Okay, step six. Now we should train the model. So what does it mean to train the model?
+
+73
+00:41:14,670 --> 00:41:47,060
+You should call the fit method. You should call the fit method. Did I tell you what it means to fit? I think you have seen fit many times. When you do scikit-learn, you normally call fit. Fit, fit, fit, fit. What does it mean to fit? Fit is a method for you to specify the training input. And then the training...
+
+74
+00:41:47,060 --> 00:42:20,020
+expect the output, right? OK, but before doing this, you see, I define a variable called log directory. What does it mean by log directory? Directory means folder. Log means drop down something, drop down something. Wow, you need to tell me which directory, which folder you want to use to drop down some intermediate result.
+
+75
+00:42:20,050 --> 00:42:48,210
+Why intermediate result? When you fine-tune your model, you generate many intermediate weights and biases, right? You better keep all of them so that you know how to fine-tune the model in a better manner. Okay? So once again, what does it mean by log directory? You need to specify the folder that you want to use to keep the intermediate weights and biases.
+
+76
+00:42:49,710 --> 00:43:21,620
+And after you finish the training, you may want to revisit those intermediate values, plot a graph, and see how to improve the model. Okay, what folder to use? There is a folder called .logs. In this folder, there is another folder called .fits. Okay, and then I also specify the file name that I want to use to keep the intermediate data. File name, everyone.
+
+77
+00:43:21,620 --> 00:43:53,680
+Let's say for every epoch, I keep one set of data. Then you need to make sure that you use different files for that, right? Then what is the best file name to use? You need to make sure that they are not the same, right? Wow, the first epoch keeps all the intermediate data here. Another epoch keeps all the intermediate data in another file. Then how do you make sure that the files that you use will be different?
+
+78
+00:43:54,000 --> 00:44:29,390
+The best way is to use the current time. The current time. The current time. Okay, how to get the current time? datetime. datetime. Now. The function now would help you get the current time. But I also call strftime to specify the format. Wow, you give me the current time, right? But what format?
+
+79
+00:44:29,390 --> 00:45:03,150
+Do you want to get year, month, date, and then hyphen, hour, minute, and second? Give me the current time in that format. Which year, which month, which date, which hour, which minute, which second? Then it's very unlikely for you to get back exactly the same file name. Do you know what I'm saying? Okay, good. Wait, Desmond, then how do we fit Harris?
+
+80
+00:45:03,630 --> 00:45:32,910
+To keep all the intermediate weights and biases, then you need to create this guy, TensorBoard. TensorBoard is the tool that helps you keep track of all the intermediate weights and biases. So we need to use the TensorBoard class to create an object called TensorBoard callback. You need to specify which folder or files to keep those.
+
+81
+00:45:33,330 --> 00:46:13,840
+And then you also need to specify how frequently you want to keep the intermediate data. What does it mean by histogram frequency? Histogram frequency means what? How long would you like to get the intermediate result? One here means every one epoch. Every one epoch. Give me the intermediate data. Hey, suppose if I run
+
+82
+00:46:14,640 --> 00:46:51,220
+the MLP for 10 epochs, then I'm going to get 10 such files, each with the intermediate data after we finish that epoch. Do you know what I'm saying? Hey, but how come I only put one? Why not two? Because I want to get all the data for each epoch. And in fact, in our case, one is enough. Do you still remember why? For this MLP, how many epochs are we going to run? One.
+
+83
+00:46:51,220 --> 00:47:24,590
+Then definitely one, right? You shouldn't put two, huh? Okay, Desmond. Can I ask, is there a default value? Yes. The default value of histogram frequency is zero. So what does it mean by zero? You don't keep the intermediate data. Don't give me. I don't care. All right? Good? Okay, now it's time to do fit. Wait, Keras, let me give you all the training.
+
+84
+00:47:24,590 --> 00:47:50,380
+data, training inputs, training expected output, the number of epochs that I want to run. I also give you the test input and the test expected output. I also specify, well, this guy is going to keep all the intermediate weights and biases for me.
+
+85
+00:47:50,480 --> 00:48:28,100
+callbacks equal to this guy. That means this is the guy who is responsible for keeping all the data for me. Okay? Model.fit. Model.fit. Mmm. Train the model. Do you think all these are important for lab six? Yes. Yes. Yes. Yes. Why? Because lab six is about MLP. This is MLP using Keras. In lab six, you use Keras. Hey, by the way,
+
+86
+00:48:28,100 --> 00:49:10,610
+Don't build it from scratch, huh? This is what we encounter this semester for COMP1023. Many students, they write their code from scratch, even for the programming assignment. Oh no, my goodness. They don't realize we give them the skeleton. Interesting. So that's why they said, wow, it's very tough, Desmond. Then I said, how come?
+
+87
+00:49:10,610 --> 00:49:52,380
+You see? Wait. Oh, no, my goodness. How come you start from scratch? Why? I think we need to start from scratch, right? No, my goodness. But I think you get used to it. We have been providing you the skeleton code, right? COMP2011 students. Do we give you skeleton code? I think, yes, right? If not, I would talk to CC. I would say, come on. Yeah, makes sense. No worry. Okay.
+
+88
+00:49:52,380 --> 00:50:24,100
+This is the cool part. Step seven is time to evaluate the model accuracy because after we finish the training, then we should know the accuracy. Okay, show time. How to evaluate the model? Model.evaluate. Let me give you the test input and test expected output.
+
+89
+00:50:24,100 --> 00:51:00,130
+Then we get back two things. Validation loss and validation accuracy. This is clear. That means accuracy. What is validation loss? That means the error. The error rates. Okay, everyone. Attention. Let me ask you a very, very important question. Is it possible that the accuracy is very high, but the loss, that means the error is also very high? Yes.
+
+90
+00:51:00,130 --> 00:51:45,580
+How come? Showtime. Suppose this is your classification result. Class 1, the probability is 0.4. Class 2 and class 3, probability will be 0.3. At the end of the day, what would you say? What is the classification result? 1, 2, or 3? 1! Because that guy has the largest probability. Agree? But you are lucky, huh?
+
+91
+00:51:45,780 --> 00:52:18,290
+You see the probability is only 0.4, and the other two are 0.3. Very close, right? Ideal case: if the correct answer is class 1, then the probability of this guy should be 1, and these two will be 0. Do you know what I'm saying? Then the error is big. Why? This is the expected output. Now you only get 0.4? Actually, the error is...
+
+92
+00:52:18,610 --> 00:52:50,000
+0.6 here. It's big. But you're lucky you still give the correct result. The accuracy is still good because you are lucky. All right? So what's the point of getting back the validation loss? The reason is very simple. Even this one is very large, we also want to see whether the error is big. If the error is big, that means there is room for improvement.
+
+93
+00:52:50,160 --> 00:53:23,410
+There is room for improvement. You should do a better job. So the ideal, the ideal, the ideal case is what? The accuracy is large. At the same time, loss is very low. Then the AI is cool. The AI is smart. Do you know what I'm saying? Yeah? So that's why people get both. In order to see that, well, whether we really do a good job, just like multiple choice questions.
+
+94
+00:53:23,950 --> 00:53:57,140
+Suppose some exams give you multiple choice questions, right? Let's say you put A for all questions. Wow. Actually, 90% of the correct answer would be A. Wow. Wait. You got 90 something, but you are lucky. You are just lucky. Okay? Yeah? Do you know what I'm saying?
+
+95
+00:53:57,580 --> 00:54:27,700
+What I want to emphasize here is, what's the point of getting both? Many students thought that it is only important to get the accuracy. Who cares about the error? No, both are important. All right. So after we get validation loss, that means the error and the accuracy, we print both. You see, everyone, I think I demonstrated this last time, right? The accuracy is very high.
+
+96
+00:54:27,700 --> 00:54:59,390
+, withaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+97
+00:54:59,390 --> 00:55:34,510
+this MLP for a few more epochs yeah please do so yeah hey by the way if I'm not mistaken we did not post the source code online for you right? Did we? Did we post the source code for you? That's bad. Let me do it yeah. We should post all the source code, right? So that you could grab them and run
+
+98
+00:55:34,510 --> 00:56:12,180
+What's the point for you to do copy and paste? No need, right? So I will release the source code. Feel free to grab them, change the parameters, right? And run it. Okay, step eight. Make sense, huh? You have to save the finalized weights and biases, right? If some of you took a long time to train up your model, but you did not save it, interesting. You are funny.
+
+99
+00:56:12,460 --> 00:56:40,720
+Right? The most important thing that you get at the end of the day will be the finalized weights and biases, right? So you need to save them. So that later on, you could load them back into your program and do prediction. Okay? How to do it? The name of the file to store the finalized weights and biases will be digits_recognition_MLP. Very meaningful.
+
+100
+00:56:40,720 --> 00:57:14,030
+This is an MLP model that tackles digit recognition. The extension is H5. H5 is a well-known format to store the weights and the biases. What format? Hadouk, distributed file system. Hadouk, distributed file system. H5 is this guy. Okay, how to save? Model.save method.
+
+101
+00:57:14,450 --> 00:57:45,010
+This is the file that I'm going to use to save the finalized weights and biases. And you specify the format. It's H5. Please do it for me. Okay, this is joking. Hey. Actually, this line, we just want to tell you how to save it. But immediately, I load the finalized weights and biases back in. Immediately. Because I want to show you how to load them back in to your program.
+
+102
+00:57:45,260 --> 00:58:14,640
+You just need to call the function load_model. load_model, specify the file with the finalized weights and biases. Then this is the object. Consists of all the finalized weights and biases. Okay? Yeah, I know this is joking, right? Hey, Desmond, this slide, you only should mention about how you save it. How come you load it back in? Because I want to show you how to do it.
+
+103
+00:58:14,640 --> 00:58:45,810
+So that later on, you know how to make good use of the file. Hey, by the way, if you have a good friend, your friend took a long time to train up the model, right? Your friend may share the model with you. You just need to get H5 file from this guy. Yeah. Wow, so cool. Yeah, amazing. Hey, because some of your fellow classmates are rich, right? What does he mean by rich?
+
+104
+00:58:46,130 --> 00:59:54,980
+They have a lot of GPU server. So they serve people. They keep training many, many models, right? And share with you. Very good. Who? The CEO of NVIDIA. Jensen Wang, right? Oh, hey, by the way. No, no, no, no, no. There is a souvenir, the jacket. Oh, it's very expensive, you know? Okay, good. All right. Step nine.
+
+105
+00:59:54,980 --> 01:00:29,040
+Try to use the model. Loaded model is the one that we produce using the saved finalized weights and biases, all right? And we use it to call predict method. Predict method, let me pass you the test input. And please give me the predicted result. Predictions, store the predicted result. And you show the shape of the predictions. This is it.
+
+106
+01:00:30,220 --> 01:01:04,690
+Why? In the test set, 10,000 images, if you still remember, for each image, for each test image, you get 10 probability values, one for each digit. So that's why 10,000 images, you should get 10,000 times 10 probability values. Do you know what I'm saying, everyone? Yeah? One more time. How many images are in the test set? 10,000.
+
+107
+01:01:06,190 --> 01:01:41,310
+When you fit in one test image, you get back 10 probabilities. One for each digit. Digit zero, probability. Digit one, probability. Digit nine, probability, right? And then for 10,000 images, altogether, 10,000 times 10 probability values. Okay, show time. I show the prediction using Pandas DataFrame.
+
+108
+01:01:41,310 --> 01:02:20,560
+And what's the beauty of using this guy? If you show the data using a DataFrame, then you get a big, big table, right? And if you want to, you could see any row, any column. Okay, everyone, show time, huh? You are young, so please tell me the result. Let me zoom in a little bit. Oh, no, my goodness. For those at the back, could you see it? This is test image one.
+
+109
+01:02:20,560 --> 01:02:55,040
+test image one, you get 10 probabilities. Which probability value is the largest? Wow, you're young, huh? Seven. This guy is the largest among the remainings, right? Then we will say, for the first image, the digit should be seven. We just need to get back the index, because now the index means which digit?
+
+110
+01:02:55,040 --> 01:03:27,490
+Very true. For digit zero, for digit zero, this is the probability. For digit one, this is the probability. So for digit seven, this is the probability. So in other words, what you want to get back would not be the probability. Instead, would be the index. Because the index means the result. Wow, Desmond, now we need to do the following. We want to check which entry,
+
+111
+01:03:27,490 --> 01:04:00,030
+has the largest probability and then we want to get back the corresponding index then which function do you need to use you have used that before argmax argmax so what does he mean by argmax i want to get the one with the largest value but don't give me the largest value i want to know the corresponding index argmax okay when you do argmax for this guy
+
+112
+01:04:00,030 --> 01:04:29,300
+You need to do it along a certain axis. Do you need to do it horizontally or vertically? Horizontally. Why? For each row. For each row. Tell me which one has the largest probability. Agree? And then give me the corresponding index. Xiexie. Horizontally, x is equal to 2D, right?
+
+113
+01:04:30,060 --> 01:05:03,970
+X is equal to one. You need to do argmax along x is equal to one. Everyone, I know lab two is tough. Lab four is tough, tough. Lab six is, how about PA one? Wait, this is the trick. If I were you, I will try to plot some of your data using Pandas and see what happened.
+
+114
+01:05:03,970 --> 01:05:34,860
+and see what are they. And then determine what to put in your program to make it happen. Do you know what I'm saying? You need to do visualization. You need to see how to visualize the data or draw something on a piece of paper. Try to represent, wow, okay, this is the data that I get. Each row means, each column means, each layer means, something like that. Visualization. I know.
+
+115
+01:05:34,860 --> 01:06:13,780
+Wait, Desmond, if you give me 10D data, how to visualize. Okay, good luck. Right? Hey, but for this kind of thing, 2D, you could definitely visualize it. No problem. All right. Okay. Hey, do you get the idea? All right, we do this. Predictions would be the 2D table with all the probabilities. But I want to know for each image, what's the predicted result? So we do argmax.
+
+116
+01:06:14,100 --> 01:06:45,580
+of NumPy.argmax. NumPy.argmax. Let me give you the 2D table with all the probability values. Do argmax along x as equal to one horizontally. And then we get back the prediction result. Show it using a DataFrame again. Many students ask me, why you bother me, Desmond? Why you ask me to do Pandas? Pandas is something good for you to load up the CSV file.
+
+117
+01:06:45,780 --> 01:07:18,510
+Pandas is something cool for you to show data in a DataFrame. If possible, try to make good use of Pandas who process the data as well. Okay? Wow, you see you're young, huh? The first one is seven. You're correct. One more. Suppose this is your Europe project. Suppose this is your project for certain course or Europe. Should you show this?
+
+118
+01:07:18,510 --> 01:07:58,640
+Small table to your boss? Yes and no. Yes means show it. No means not enough. You need to show more, right? So how to show the result that you came up? This one. This is what I want to emphasize. You need to show the result using plots. Matplotlib, right? And you will see the beauty.
+
+119
+01:07:58,640 --> 01:08:35,040
+Before I show you the code, this is what I want to show to my boss. Okay, I show many, many images in one figure. Some of them are in green. Some of them are in red. Why? If you are the boss, what would you say? Green ones are those classified correctly. How about red one? Incorrectly. Then, he.
+
+120
+01:08:35,040 --> 01:09:17,620
+Do you think your boss will be happy? I think so, right? Wow, oh no, my goodness. Most of them are green. Good job. Bonus. Then he or she may check. Why this is wrong? Let's see. Amazing handwriting. I don't blame AI. You see? I think this one looks like six, right? But the correct answer should be five. Give me five. You know what I mean?
+
+121
+01:09:17,900 --> 01:09:47,760
+You need to show this to your boss so that we get a better idea of how well your AI performed. Don't show numbers. Come on. I know all these are numbers, but these are all the real results, right? Yeah? Visualization is very important. Even if you know math. Even if you know how to come up with a great AI model. But if you don't know how to present them,
+
+122
+01:09:48,430 --> 01:10:26,260
+No good. And for those of you who want to publish papers, all these are very important. Don't overwhelm the readers. Is it okay? Okay. By the way, what is this? Why do we put a number below each image? The number below each image is the predicted result. The predicted result. The predicted result. Okay. Let's see how we come up with this one.
+
+123
+01:10:27,630 --> 01:11:08,610
+Do you get the idea? Question number one, have you seen something similar? Please say yes. Last time, we explored the data. What does it mean to explore the data? Before I do the processing, I want to understand my data set a little bit more. So that's why I plot some of the digital images. So here, I do something similar. All right? So let me briefly talk about it. This time, I'm more aggressive.
+
+124
+01:11:08,610 --> 01:11:48,140
+I show 196 images at the same time. Small ones. And then I do this to calculate how many images per row. Wait, math guy. Oh no, CS guy. No. Okay, everybody. Square root of 196 is 14. 14, ah. 14. That means...
+
+125
+01:11:48,400 --> 01:12:20,850
+Each row has 14 images. Pretty good. Okay, I create a figure 10 inches times 10 inches. For I in range 196. Wow, that means we are going to repeatedly execute all this 196 times. How come? Because I want to show 196 images. Okay, I create a small...
+
+126
+01:12:20,940 --> 01:12:52,700
+Plots. This one, 14, 14. So why do I put 14, 14? Because I want to tell Matplotlib. Well, there are 14 rows. Each row, 14 images. And at the very beginning, i is 1. No, i is 0. 0 plus 1. That means at the very beginning, I put 1 here. So what does it mean by 1? The first image that I want to put would be at the top.
+
+127
+01:12:52,700 --> 01:13:26,480
+left corner. That means this one. Put it here. How about the next one? Here. How about the next one? Here. How about the next one? Okay. This is the one that we specify the location of the small image. Okay. And then I disable the X text, disable the Y text. What's the point for you to show the text? That means the coordinate stuff, right? What's the point for us to show the grid?
+
+128
+01:13:26,480 --> 01:14:00,610
+Don't overlay the grid on top of the image. Ugly. Remove it. Okay, this is the cool thing. What is this, everyone? 1, 0, 2, 3, ah? Conditional expression. By the way, this is not list comprehension, ah? No list. Conditional expression. Something very similar to if else, right? So, what we want to do is, if the prediction result is the same as the
+
+129
+01:14:00,610 --> 01:14:33,040
+expected result, the result will be green. Otherwise, the result will be red. This is how I set the color. If the prediction result is the same as the actual result, green one, otherwise red. OK, then it's time to show the small image. I am showing the test image. Use this color.
+
+130
+01:14:33,040 --> 01:15:09,230
+C-map, color map equal this guy. Use that color to show the image. And we also show the X label. What does it mean by X label? The number that you put under the image. Show the prediction result. Okay? And we repeat this 196 times. Everyone, if your boss wants to see 1,000 images, what to do? First of all, you need to say good luck.
+
+131
+01:15:09,870 --> 01:15:41,330
+Second thing, change this number. This is the beauty of putting a variable. Don't do hard coding, come on. Don't do it. Don't do hard coding. No hard coding. No, no, no, no, no. Why do we force you to use variables? No hard coding. Because if you hard code something in your program, your boss will be angry. If your boss is angry, he or she...
+
+132
+01:15:43,950 --> 01:16:16,620
+will be laid off. No, don't make your boss angry. Okay, try to impress your boss. Well, I think this is good. All right. Okay, and this night, I adjust the spacing a little bit. H space means the horizontal space. W space, the space in the other direction.
+
+133
+01:16:16,620 --> 01:16:47,200
+If I don't adjust the spaces, then you may see there are big gaps in between the small images, which looks bad. And don't forget to show the figure. This one is used to show the small one, but this is for the big one. Without showing the big one, you cannot see the small one. So `plt.show` is very important. Everyone.
+
+134
+01:16:47,200 --> 01:17:25,230
+Do you think `Matplotlib` is important? Whoa. Oh, no. Take care. Do you think `Matplotlib` is important? Yes. In terms of what? In terms of visualization, exactly. Your job. Okay. Let me see whether I can finish the next slide. Oh, no. Definitely. Done. Okay. Let me finish this. And I sip my mouth.
+
+135
+01:17:25,230 --> 01:17:59,580
+Confusion matrix. So what does it mean by confusion matrix? Once again, this is not something that confuses ourselves. This is something that shows in what situation the AI will be confused. So what does it mean? If you use the confusion matrix function and you specify `Y_test` first, prediction result next, that means what? This is the
+
+136
+01:17:59,580 --> 01:18:41,470
+vertical one. Vertical axis, we show you the actual result. Horizontal one, we show you the predicted result. Okay? Do you know what I'm saying, everyone? Yeah? `Y_test`. Vertical one. Prediction result. Horizontal one. What does it mean by this one? 966. Vertical axis means actual one, right? That means the actual result is zero.
+
+137
+01:18:41,470 --> 01:19:11,760
+The predicted result is also zero. Well done. 966 images are classified correctly. All right. How about this one? Oh, no, my goodness. The actual result is three, but the predicted result is five. 12 images. That should be three, but you classify them as five. Not so good.
+
+138
+01:19:11,760 --> 01:19:45,220
+So this is a confusion matrix. Shows you all the cases. All right. But one more. Apart from numbers, what do you see? Color. We use another library called Seaborn to make this guy in color. Why is color cool? You could immediately see the highlights. Oh, no. The one thing is very bright. It's a big number. Let's see what happened.
+
+139
+01:19:45,220 --> 01:20:17,300
+Those ones with small numbers, dark. This is something that you may want to do. You may make good use of color to draw the attention of people. All right. So next time I will show you how to do it using Seaborn library. All right. I will elaborate this piece of code because time is up. Okay, everyone. Good luck for your midterm examinations.
+
+140
+01:20:17,300 --> 01:20:21,580
+And I'll see you next week. Have a nice weekend. Thank you.
+

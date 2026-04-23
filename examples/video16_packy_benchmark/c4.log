@@ -1,0 +1,21 @@
+======================================
+🔌 ATR provider: packy
+📝 ATR model: gpt-5.4-mini
+📦 chunks: 7 chunk_size=20
+🧵 concurrency=4
+📚 glossary_file=/root/autodl-tmp/AutoSubtitle-run16/config/course_terms.json
+🧠 memory_file=/root/autodl-tmp/AutoSubtitle-run16/config/course_terms.memory.json
+======================================
+🚀 refining with 4 concurrent workers
+✅ refined chunk 2/7 (1/7 done)
+✅ refined chunk 1/7 (2/7 done)
+✅ refined chunk 3/7 (3/7 done)
+✅ refined chunk 4/7 (4/7 done)
+✅ refined chunk 5/7 (5/7 done)
+✅ refined chunk 6/7 (6/7 done)
+✅ refined chunk 7/7 (7/7 done)
+✅ wrote_refined_srt=/root/autodl-tmp/AutoSubtitle-run16/output/video16.c4.atr.srt
+✅ wrote_refined_txt=/root/autodl-tmp/AutoSubtitle-run16/output/video16.c4.atr.txt
+✅ wrote_report=/root/autodl-tmp/AutoSubtitle-run16/output/video16.c4.atr_report.md
+✅ wrote_memory=/root/autodl-tmp/AutoSubtitle-run16/config/course_terms.memory.json
+real 52.101\nuser 1.309\nsys 0.172
