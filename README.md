@@ -37,6 +37,22 @@ python3 -m pip install -r requirements.txt
 export OPENAI_API_KEY="your_api_key"
 ```
 
+如果使用 PackyAPI 的 `gpt-5.4-mini`，推荐复制本地配置文件：
+
+```bash
+cp config/packy.env.example config/packy.env
+```
+
+然后编辑 `config/packy.env`，填入：
+
+```bash
+PACKY_API_KEY="你的 PackyAPI key"
+AUTO_SUBTITLE_ATR_PROVIDER="packy"
+AUTO_SUBTITLE_ATR_MODEL="gpt-5.4-mini"
+```
+
+`config/packy.env` 会被 git 忽略，不会推到仓库。
+
 在终端中运行以下指令即可处理指定的课程视频：
 
 ```bash
@@ -137,16 +153,25 @@ AUTO_SUBTITLE_MEMORY_FILE=./config/course_terms.memory.json ./scripts/workflow.s
 - 默认使用 `cuda + float16 + vad_filter`
 - 长 lecture 先抽音频再转写，避免边解码边推理拖慢 GPU
 - 批量处理多节课时，优先排队给单个高吞吐 GPU worker，而不是多进程抢同一张卡
+- 当前仓库默认 `throughput` 为 `batch_size=96, beam_size=1`，更稳、更适合通用批处理
+- 如果目标是单卡极限吞吐，可手动设置 `AUTO_SUBTITLE_5090_BATCH_SIZE=160`
 - 如首次下载 `turbo` 模型较慢，可设置 `AUTO_SUBTITLE_HF_ENDPOINT=https://hf-mirror.com`
 
 ## 🧪 RTX 5090 实测记录
 
 - 测试环境：`RTX 5090 32GB`、`CUDA 13` 驱动、`faster-whisper 1.2.1`、`ctranslate2 4.7.1`
-- 测试样本：120 秒英文课程音频，`turbo + cuda + float16`
-- `speed` (`batch_size=48`, `beam_size=1`)：热启动约 `14.5s`，首次包含模型初始化
-- `balanced` (`batch_size=64`, `beam_size=3`)：热启动约 `5.6s`
-- `throughput` (`batch_size=96`, `beam_size=1`)：热启动约 `5.4s`
-- 结论：这套 `96/1` 参数在 5090 上可稳定运行，适合批量任务；正式产出可优先保留 `balanced`
+- 快速样本：120 秒英文课程音频，`turbo + cuda + float16`
+- `speed` (`batch_size=48`, `beam_size=1`)：约 `14.5s`，首次包含模型初始化
+- `balanced` (`batch_size=64`, `beam_size=3`)：约 `5.6s`
+- `throughput` (`batch_size=96`, `beam_size=1`)：约 `5.4s`
+- 完整流程样本：约 `80.5` 分钟健康 lecture 视频，从 `input/` 到 `output/` 全流程约 `29.0s`
+- 对应整链路速度约 `166x realtime`，已包含 `ffmpeg` 抽音频、转写和写出字幕文本
+- 仅转写基准：同一份完整 `WAV` 上，`beam_size=1` 时
+- `batch_size=96`：约 `24.332s`，约 `198.5x realtime`
+- `batch_size=128`：约 `28.046s`，约 `172.2x realtime`
+- `batch_size=160`：约 `22.950s`，约 `210.5x realtime`
+- `batch_size=192`：约 `28.776s`，约 `167.8x realtime`
+- 结论：仓库默认 `96/1` 是更稳妥的通用高吞吐档；若只追求单张 `5090` 的极限速度，当前实测最佳点是 `160/1`
 
 ## 🧩 CUDA 注意事项
 
@@ -195,30 +220,41 @@ python3 -c "import ctranslate2; print(ctranslate2.__version__)"
 - 专用脚本为 `scripts/workflow_fastwhisper_5090.sh:1`
 - `speed` 使用 `batch_size=48, beam_size=1`，适合快速草稿
 - `balanced` 使用 `batch_size=64, beam_size=3`，适合正式字幕
-- `throughput` 使用 `batch_size=96, beam_size=1`，优先榨干 `RTX 5090`
+- `throughput` 默认使用 `batch_size=96, beam_size=1`，兼顾稳定性和吞吐
 - `fast` 兼容映射到 `speed`，`max` 兼容映射到 `throughput`
 - 可通过 `AUTO_SUBTITLE_5090_BATCH_SIZE`、`AUTO_SUBTITLE_5090_BEAM_SIZE` 覆盖默认值
+- 如需压单卡极限吞吐，当前推荐手动覆盖 `AUTO_SUBTITLE_5090_BATCH_SIZE=160`
 - 可通过 `AUTO_SUBTITLE_HF_ENDPOINT` 覆盖模型下载镜像
 - 可通过 `--no-burn` 仅输出字幕，通过 `--keep-wav` 保留中间音频
 
 ## 🧠 ATR 调优建议
 
 - 默认模型为 `gpt-5.4-mini`，可通过 `AUTO_SUBTITLE_ATR_MODEL` 覆盖
+- 默认支持 `openai` 和 `packy` 两种 ATR provider，可通过 `AUTO_SUBTITLE_ATR_PROVIDER` 覆盖
 - 默认每次发送 `120` 条字幕，可通过 `AUTO_SUBTITLE_ATR_CHUNK_SIZE` 调整
 - 默认读取 `config/course_terms.json`，可通过 `AUTO_SUBTITLE_GLOSSARY_FILE` 或 `--glossary_file` 指向自定义词典
 - 默认自动回写 `config/course_terms.memory.json`，可通过 `AUTO_SUBTITLE_MEMORY_FILE` 或 `--memory_file` 改位置
 - 输出文件包括 `.atr.srt`、`.atr.txt` 与 `.atr_report.md`
 - 硬字幕压制时，若启用 ATR，会优先使用 `.atr.srt`
 
+**PackyAPI 配置**
+
+- 本地配置模板为 `config/packy.env.example:1`
+- 复制为 `config/packy.env` 后填入 `PACKY_API_KEY`
+- PackyAPI 当前建议走 `stream=true`，项目内已自动处理流式 `delta.content`
+- 如果 Python 报 TLS 证书校验失败，而 `curl` 可以访问，可临时在 `config/packy.env` 设置 `PACKY_API_SSL_VERIFY="0"`
+- `PACKY_API_SSL_VERIFY="0"` 只建议用于可信网络下的临时诊断
+
 ## 📚 课程术语词典
 
 - 默认词典文件为 `config/course_terms.json:1`
-- 自动积累词典为 `config/course_terms.memory.json:1`
+- 自动积累词典默认写入本地 `config/course_terms.memory.json`
+- 记忆词典模板为 `config/course_terms.memory.example.json:1`
 - `protected_terms` 用于告诉 ATR 哪些写法必须优先保留
 - `replacement_hints` 用于告诉 ATR 哪些常见误识别应该纠正成标准术语
 - `hard_replacements` 用于做本地确定性规范化，适合课程代码、固定品牌名等低歧义项
 - `learned_pairs` 会记录 ATR 实际纠正过的 `from → to`、次数和时间，作为长期记忆来源
-- 建议把稳定规则手工整理到 `config/course_terms.json:1`，把自动学习结果留在 `config/course_terms.memory.json:1`
+- 建议把稳定规则手工整理到 `config/course_terms.json:1`，把自动学习结果留在本地 `config/course_terms.memory.json`
 
 ## 📅 未来展望 (Future Work)
 
