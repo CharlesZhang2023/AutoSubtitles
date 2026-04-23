@@ -232,8 +232,8 @@ python3 -c "import ctranslate2; print(ctranslate2.__version__)"
 
 - 默认模型为 `gpt-5.4-mini`，可通过 `AUTO_SUBTITLE_ATR_MODEL` 覆盖
 - 默认支持 `openai` 和 `packy` 两种 ATR provider，可通过 `AUTO_SUBTITLE_ATR_PROVIDER` 覆盖
-- 默认每次发送 `120` 条字幕，可通过 `AUTO_SUBTITLE_ATR_CHUNK_SIZE` 调整
-- 默认单线程校对，可通过 `AUTO_SUBTITLE_ATR_CONCURRENCY` 或 `--concurrency` 开启分块并发
+- 默认每次发送 `10` 条字幕，可通过 `AUTO_SUBTITLE_ATR_CHUNK_SIZE` 调整
+- 默认使用 `8` 路并发校对，可通过 `AUTO_SUBTITLE_ATR_CONCURRENCY` 或 `--concurrency` 覆盖
 - 默认读取 `config/course_terms.json`，可通过 `AUTO_SUBTITLE_GLOSSARY_FILE` 或 `--glossary_file` 指向自定义词典
 - 默认自动回写 `config/course_terms.memory.json`，可通过 `AUTO_SUBTITLE_MEMORY_FILE` 或 `--memory_file` 改位置
 - 输出文件包括 `.atr.srt`、`.atr.txt` 与 `.atr_report.md`
@@ -257,10 +257,10 @@ python3 autosubtitle/refine_subtitles.py output/lecture.srt --chunk_size 20
 并发校对示例：
 
 ```bash
-python3 autosubtitle/refine_subtitles.py output/lecture.srt --chunk_size 60 --concurrency 2
+python3 autosubtitle/refine_subtitles.py output/lecture.srt --chunk_size 10 --concurrency 8
 ```
 
-建议先从 `--concurrency 2` 开始；如果网关没有限速、错误率稳定，再尝试 `3` 或 `4`。
+当前在 `Packy + video16` 上，`--chunk_size 10 --concurrency 8` 是速度和稳定性的较优折中；如果网关波动明显，可先回退到 `--chunk_size 20 --concurrency 4`。
 
 ## 📚 课程术语词典
 

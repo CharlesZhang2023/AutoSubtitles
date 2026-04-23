@@ -98,13 +98,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--chunk_size",
         type=int,
-        default=int(os.environ.get("AUTO_SUBTITLE_ATR_CHUNK_SIZE", "120")),
+        default=int(os.environ.get("AUTO_SUBTITLE_ATR_CHUNK_SIZE", "10")),
         help="Subtitle entries sent per request",
     )
     parser.add_argument(
         "--concurrency",
         type=int,
-        default=int(os.environ.get("AUTO_SUBTITLE_ATR_CONCURRENCY", "1")),
+        default=int(os.environ.get("AUTO_SUBTITLE_ATR_CONCURRENCY", "8")),
         help="Number of ATR chunks to refine concurrently",
     )
     parser.add_argument(
