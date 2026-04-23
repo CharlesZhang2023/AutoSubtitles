@@ -9,6 +9,9 @@ import sys
 from pathlib import Path
 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_GLOSSARY_FILE = PROJECT_ROOT / "config" / "course_terms.json"
+
 SYSTEM_PROMPT = """你是一位专业的学术助教，擅长将口语化的课堂转录稿转化为精准、易读的课程字幕。
 
 你必须遵守以下规则：
@@ -55,7 +58,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--glossary_file",
-        default=os.environ.get("AUTO_SUBTITLE_GLOSSARY_FILE", "course_terms.json"),
+        default=os.environ.get("AUTO_SUBTITLE_GLOSSARY_FILE", str(DEFAULT_GLOSSARY_FILE)),
         help="JSON glossary config for protected terms and replacement hints",
     )
     parser.add_argument(
@@ -203,7 +206,7 @@ def default_memory_path(glossary_path: Path) -> Path:
 
 
 def load_glossary(glossary_path_value: str, memory_path_value: str | None) -> dict[str, object]:
-    glossary_path = resolve_json_path(glossary_path_value, "course_terms.json")
+    glossary_path = resolve_json_path(glossary_path_value, str(DEFAULT_GLOSSARY_FILE))
     memory_path = resolve_json_path(memory_path_value, None) if memory_path_value else default_memory_path(glossary_path)
 
     base_default = {

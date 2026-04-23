@@ -40,15 +40,15 @@ export OPENAI_API_KEY="your_api_key"
 在终端中运行以下指令即可处理指定的课程视频：
 
 ```bash
-chmod +x workflow.sh
-./workflow.sh <path_to_lecture_video.mp4> balanced
+chmod +x scripts/workflow.sh
+./scripts/workflow.sh <path_to_lecture_video.mp4> balanced
 ```
 
 如需直接使用 `RTX 5090` 优化版 `faster-whisper` 自动脚本：
 
 ```bash
-chmod +x workflow_fastwhisper_5090.sh
-./workflow_fastwhisper_5090.sh <path_to_lecture_video.mp4> balanced
+chmod +x scripts/workflow_fastwhisper_5090.sh
+./scripts/workflow_fastwhisper_5090.sh <path_to_lecture_video.mp4> balanced
 ```
 
 可选 profile：
@@ -60,37 +60,51 @@ chmod +x workflow_fastwhisper_5090.sh
 如需启用 ATR：
 
 ```bash
-./workflow.sh <path_to_lecture_video.mp4> balanced --atr
+./scripts/workflow.sh <path_to_lecture_video.mp4> balanced --atr
 ```
 
-`workflow_fastwhisper_5090.sh` 也支持：
+`scripts/workflow_fastwhisper_5090.sh` 也支持：
 
 ```bash
-./workflow_fastwhisper_5090.sh <path_to_lecture_video.mp4> throughput --atr
+./scripts/workflow_fastwhisper_5090.sh <path_to_lecture_video.mp4> throughput --atr
 ```
 
 也可以单独调用转写入口：
 
 ```bash
-python3 transcribe_faster.py input.wav --output_dir . --profile max --language en
+python3 autosubtitle/transcribe_faster.py input.wav --output_dir . --profile max --language en
 ```
 
 也可以单独调用 ATR 校对：
 
 ```bash
-python3 refine_subtitles.py lecture.srt
+python3 autosubtitle/refine_subtitles.py lecture.srt
 ```
 
 如需指定自定义术语词典：
 
 ```bash
-AUTO_SUBTITLE_GLOSSARY_FILE=./course_terms.json ./workflow.sh lecture.mp4 balanced --atr
+AUTO_SUBTITLE_GLOSSARY_FILE=./config/course_terms.json ./scripts/workflow.sh lecture.mp4 balanced --atr
 ```
 
 如需指定术语记忆文件：
 
 ```bash
-AUTO_SUBTITLE_MEMORY_FILE=./course_terms.memory.json ./workflow.sh lecture.mp4 balanced --atr
+AUTO_SUBTITLE_MEMORY_FILE=./config/course_terms.memory.json ./scripts/workflow.sh lecture.mp4 balanced --atr
+```
+
+## 📁 Repository Layout
+
+```text
+.
+├── autosubtitle/              # Python transcription and ATR refinement entrypoints
+├── config/                    # Course glossary and auto-learned term memory
+├── CONTRIBUTING.md            # Development and contribution notes
+├── docs/                      # Prompt/skill documentation
+├── examples/                  # Example transcript and subtitle outputs
+├── scripts/                   # End-to-end shell workflows
+├── README.md
+└── requirements.txt
 ```
 
 ## ⚙️ RTX 5090 调优建议
@@ -144,7 +158,7 @@ python3 -c "import ctranslate2; print(ctranslate2.__version__)"
 
 ## 🚀 5090 专用脚本
 
-- 专用脚本为 `workflow_fastwhisper_5090.sh:1`
+- 专用脚本为 `scripts/workflow_fastwhisper_5090.sh:1`
 - `speed` 使用 `batch_size=48, beam_size=1`，适合快速草稿
 - `balanced` 使用 `batch_size=64, beam_size=3`，适合正式字幕
 - `throughput` 使用 `batch_size=96, beam_size=1`，优先榨干 `RTX 5090`
@@ -155,20 +169,20 @@ python3 -c "import ctranslate2; print(ctranslate2.__version__)"
 
 - 默认模型为 `gpt-5.4-mini`，可通过 `AUTO_SUBTITLE_ATR_MODEL` 覆盖
 - 默认每次发送 `120` 条字幕，可通过 `AUTO_SUBTITLE_ATR_CHUNK_SIZE` 调整
-- 默认读取 `course_terms.json`，可通过 `AUTO_SUBTITLE_GLOSSARY_FILE` 或 `--glossary_file` 指向自定义词典
-- 默认自动回写 `course_terms.memory.json`，可通过 `AUTO_SUBTITLE_MEMORY_FILE` 或 `--memory_file` 改位置
+- 默认读取 `config/course_terms.json`，可通过 `AUTO_SUBTITLE_GLOSSARY_FILE` 或 `--glossary_file` 指向自定义词典
+- 默认自动回写 `config/course_terms.memory.json`，可通过 `AUTO_SUBTITLE_MEMORY_FILE` 或 `--memory_file` 改位置
 - 输出文件包括 `.atr.srt`、`.atr.txt` 与 `.atr_report.md`
 - 硬字幕压制时，若启用 ATR，会优先使用 `.atr.srt`
 
 ## 📚 课程术语词典
 
-- 默认词典文件为 `course_terms.json:1`
-- 自动积累词典为 `course_terms.memory.json:1`
+- 默认词典文件为 `config/course_terms.json:1`
+- 自动积累词典为 `config/course_terms.memory.json:1`
 - `protected_terms` 用于告诉 ATR 哪些写法必须优先保留
 - `replacement_hints` 用于告诉 ATR 哪些常见误识别应该纠正成标准术语
 - `hard_replacements` 用于做本地确定性规范化，适合课程代码、固定品牌名等低歧义项
 - `learned_pairs` 会记录 ATR 实际纠正过的 `from → to`、次数和时间，作为长期记忆来源
-- 建议把稳定规则手工整理到 `course_terms.json:1`，把自动学习结果留在 `course_terms.memory.json:1`
+- 建议把稳定规则手工整理到 `config/course_terms.json:1`，把自动学习结果留在 `config/course_terms.memory.json:1`
 
 ## 📅 未来展望 (Future Work)
 

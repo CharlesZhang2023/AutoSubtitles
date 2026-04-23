@@ -2,10 +2,13 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
 usage() {
-    cat <<'EOF'
+    cat <<EOF
 💡 用法:
-  ./workflow_fastwhisper_5090.sh <视频文件路径> [speed|balanced|throughput] [--atr] [--no-burn] [--keep-wav]
+  $0 <视频文件路径> [speed|balanced|throughput] [--atr] [--no-burn] [--keep-wav]
 
 说明:
   - speed: 最低延迟，适合快速出字幕草稿
@@ -88,8 +91,8 @@ MODEL="${AUTO_SUBTITLE_MODEL:-turbo}"
 LANGUAGE="${AUTO_SUBTITLE_LANGUAGE:-en}"
 DEVICE="${AUTO_SUBTITLE_DEVICE:-cuda}"
 COMPUTE_TYPE="${AUTO_SUBTITLE_COMPUTE_TYPE:-float16}"
-GLOSSARY_FILE="${AUTO_SUBTITLE_GLOSSARY_FILE:-$(dirname "$0")/course_terms.json}"
-MEMORY_FILE="${AUTO_SUBTITLE_MEMORY_FILE:-$(dirname "$0")/course_terms.memory.json}"
+GLOSSARY_FILE="${AUTO_SUBTITLE_GLOSSARY_FILE:-$PROJECT_ROOT/config/course_terms.json}"
+MEMORY_FILE="${AUTO_SUBTITLE_MEMORY_FILE:-$PROJECT_ROOT/config/course_terms.memory.json}"
 
 DIRNAME=$(dirname "$INPUT_FILE")
 BASENAME=$(basename "$INPUT_FILE")
@@ -117,7 +120,7 @@ echo "🎯 步骤 1: 提取 16kHz 单声道 WAV..."
 ffmpeg -y -i "$INPUT_FILE" -vn -ac 1 -ar 16000 -c:a pcm_s16le "$AUDIO_FILE"
 
 echo "🎯 步骤 2: 使用 faster-whisper Turbo 转写..."
-python3 "$(dirname "$0")/transcribe_faster.py" \
+python3 "$PROJECT_ROOT/autosubtitle/transcribe_faster.py" \
     "$AUDIO_FILE" \
     --output_dir "$DIRNAME" \
     --basename "$FILENAME" \
@@ -140,7 +143,7 @@ fi
 
 if [ "$ENABLE_ATR" = "1" ]; then
     echo "🎯 步骤 3: ATR 学术校对..."
-    python3 "$(dirname "$0")/refine_subtitles.py" \
+    python3 "$PROJECT_ROOT/autosubtitle/refine_subtitles.py" \
         "$SRT_FILE" \
         --output_srt "$REFINED_SRT_FILE" \
         --output_txt "$REFINED_TXT_FILE" \

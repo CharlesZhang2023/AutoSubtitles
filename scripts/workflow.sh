@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
 if [ -z "${1:-}" ]; then
     echo "❌ 使用错误！"
     echo "💡 用法: $0 <视频文件路径> [fast|balanced|max] [--atr]"
@@ -52,8 +55,8 @@ TXT_FILE="${DIRNAME}/${FILENAME}.txt"
 REFINED_SRT_FILE="${DIRNAME}/${FILENAME}.atr.srt"
 REFINED_TXT_FILE="${DIRNAME}/${FILENAME}.atr.txt"
 ATR_REPORT_FILE="${DIRNAME}/${FILENAME}.atr_report.md"
-GLOSSARY_FILE="${AUTO_SUBTITLE_GLOSSARY_FILE:-$(dirname "$0")/course_terms.json}"
-MEMORY_FILE="${AUTO_SUBTITLE_MEMORY_FILE:-$(dirname "$0")/course_terms.memory.json}"
+GLOSSARY_FILE="${AUTO_SUBTITLE_GLOSSARY_FILE:-$PROJECT_ROOT/config/course_terms.json}"
+MEMORY_FILE="${AUTO_SUBTITLE_MEMORY_FILE:-$PROJECT_ROOT/config/course_terms.memory.json}"
 OUTPUT_FILE="${DIRNAME}/${FILENAME}_with_subs.mp4"
 ACTIVE_SRT_FILE="$SRT_FILE"
 
@@ -70,7 +73,7 @@ echo "🎯 步骤 1: 提取 16kHz 单声道音频..."
 ffmpeg -y -i "$INPUT_FILE" -vn -ac 1 -ar 16000 -c:a pcm_s16le "$AUDIO_FILE"
 
 echo "🎯 步骤 2: 使用 faster-whisper Turbo 生成字幕..."
-python3 "$(dirname "$0")/transcribe_faster.py" \
+python3 "$PROJECT_ROOT/autosubtitle/transcribe_faster.py" \
     "$AUDIO_FILE" \
     --output_dir "$DIRNAME" \
     --basename "$FILENAME" \
@@ -89,7 +92,7 @@ fi
 
 if [ "$ENABLE_ATR" = "1" ]; then
     echo "🎯 步骤 3: 使用 OpenAI ATR 校对字幕..."
-    python3 "$(dirname "$0")/refine_subtitles.py" \
+    python3 "$PROJECT_ROOT/autosubtitle/refine_subtitles.py" \
         "$SRT_FILE" \
         --output_srt "$REFINED_SRT_FILE" \
         --output_txt "$REFINED_TXT_FILE" \
