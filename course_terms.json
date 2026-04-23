@@ -1,0 +1,57 @@
+{
+  "protected_terms": [
+    "COMP1023",
+    "COMP2211",
+    "Python",
+    "VS Code",
+    "NumPy",
+    "Pandas",
+    "Matplotlib",
+    "Zoom",
+    "Desmond Tsoi",
+    "HKUST",
+    "Palindrome",
+    "Pseudocode",
+    "Byte"
+  ],
+  "replacement_hints": [
+    {
+      "canonical": "Zoom",
+      "variants": ["Soon", "Sun"]
+    },
+    {
+      "canonical": "NumPy",
+      "variants": ["Lumpie", "Numpi", "Num pi"]
+    },
+    {
+      "canonical": "Matplotlib",
+      "variants": ["Math plot lab", "Math for lip"]
+    },
+    {
+      "canonical": "Palindrome",
+      "variants": ["Polandrum"]
+    },
+    {
+      "canonical": "Pseudocode",
+      "variants": ["Pseudo cold"]
+    },
+    {
+      "canonical": "Byte",
+      "variants": ["Bite"]
+    }
+  ],
+  "hard_replacements": [
+    {
+      "pattern": "\\bCOMP\\s*1023\\b",
+      "replacement": "COMP1023"
+    },
+    {
+      "pattern": "\\bCOMP\\s*2211\\b",
+      "replacement": "COMP2211"
+    },
+    {
+      "pattern": "\\bVSCode\\b",
+      "replacement": "VS Code"
+    }
+  ]
+}

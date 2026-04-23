@@ -1,0 +1,5576 @@
+1
+00:00:06,700 --> 00:00:09,800
+Okay, everyone. Hello!
+
+2
+00:00:11,066 --> 00:00:12,700
+wow very good
+
+3
+00:00:13,600 --> 00:00:17,100
+Hey, welcome to Comp1023
+
+4
+00:00:18,533 --> 00:00:22,200
+introduction to python programming and for those of you
+
+5
+00:00:22,200 --> 00:00:25,400
+who are not supposed to be here oh
+
+6
+00:00:25,400 --> 00:00:29,300
+sorry hahaha sorry sorry
+
+7
+00:00:32,000 --> 00:00:32,700
+okay okay
+
+8
+00:00:32,700 --> 00:00:37,100
+because this is only for com one o two three students all right
+
+9
+00:00:37,100 --> 00:00:38,400
+so once again
+
+10
+00:00:39,133 --> 00:00:40,600
+uh welcome
+
+11
+00:00:41,466 --> 00:00:44,500
+thank you for joining us all right
+
+12
+00:00:44,633 --> 00:00:46,333
+hey so apart from English
+
+13
+00:00:46,333 --> 00:00:49,433
+i also speak pudonghua
+
+14
+00:00:49,800 --> 00:00:55,466
+very pudong and Cantonese all right
+
+15
+00:00:55,466 --> 00:00:56,433
+hello
+
+16
+00:00:57,266 --> 00:00:58,066
+大家好
+
+17
+00:00:59,200 --> 00:01:00,233
+喂大家好啊
+
+18
+00:01:00,933 --> 00:01:02,133
+very good very good
+
+19
+00:01:02,133 --> 00:01:05,033
+and so feel free to talk to me if you have any questions
+
+20
+00:01:05,333 --> 00:01:07,666
+uh i am Desmond Choi
+
+21
+00:01:07,900 --> 00:01:12,266
+uh one of the instructors in com one o two three
+
+22
+00:01:12,466 --> 00:01:14,533
+i'm also the course coordinator
+
+23
+00:01:14,833 --> 00:01:17,033
+eh but it doesn't mean that i'm the king
+
+24
+00:01:17,700 --> 00:01:18,733
+i'm the worker
+
+25
+00:01:20,100 --> 00:01:26,733
+right and my duty is to coordinate many different stuff hey
+
+26
+00:01:26,733 --> 00:01:29,533
+so in case you have trouble do let me know
+
+27
+00:01:29,533 --> 00:01:32,400
+and you may also approach other instructors
+
+28
+00:01:32,400 --> 00:01:33,633
+and teaching assistant
+
+29
+00:01:33,633 --> 00:01:35,200
+as well all right
+
+30
+00:01:35,333 --> 00:01:38,933
+hey how many of you are still in the waiting list
+
+31
+00:01:43,733 --> 00:01:45,666
+okay good luck
+
+32
+00:01:46,700 --> 00:01:47,733
+good luck
+
+33
+00:01:48,600 --> 00:01:52,533
+yeah because from my understanding all the engineering students
+
+34
+00:01:53,100 --> 00:01:56,066
+um they need to take one o two three
+
+35
+00:01:56,200 --> 00:01:58,833
+to fulfill their major requirement
+
+36
+00:01:59,500 --> 00:02:02,700
+right but we cannot accommodate everyone
+
+37
+00:02:02,866 --> 00:02:07,266
+so some of you would take this course in full
+
+38
+00:02:07,733 --> 00:02:12,066
+and the remainings will take the same course in spring
+
+39
+00:02:12,300 --> 00:02:16,500
+so no worry we will help you out all right
+
+40
+00:02:16,500 --> 00:02:18,933
+but in case you cannot get enrolled
+
+41
+00:02:18,933 --> 00:02:22,933
+this time don't be discouraged come one o two three is a good
+
+42
+00:02:22,933 --> 00:02:28,066
+one lovely happy meaningful
+
+43
+00:02:28,800 --> 00:02:30,633
+helpful duh okay
+
+44
+00:02:30,633 --> 00:02:31,433
+very good
+
+45
+00:02:32,266 --> 00:02:34,133
+yeah interesting one o five ah
+
+46
+00:02:34,300 --> 00:02:36,466
+i don't know why but thank you
+
+47
+00:02:38,333 --> 00:02:39,666
+what's next
+
+48
+00:02:41,066 --> 00:02:43,733
+this is what we are going to do today
+
+49
+00:02:46,900 --> 00:02:47,433
+hey by the way
+
+50
+00:02:47,433 --> 00:02:51,633
+i just conducted a lesson for an other instructor
+
+51
+00:02:52,633 --> 00:02:55,200
+uh one o two free instructor and for some reason
+
+52
+00:02:55,333 --> 00:02:57,066
+uh so that's why now
+
+53
+00:02:57,066 --> 00:03:03,466
+i'm sweating uh yeah but i'm a good guy no worry ah alright
+
+54
+00:03:03,466 --> 00:03:04,533
+so let's start
+
+55
+00:03:04,733 --> 00:03:08,400
+uh today we are going to talk about something very boring
+
+56
+00:03:08,466 --> 00:03:10,800
+but i would say all these are very important
+
+57
+00:03:10,866 --> 00:03:15,500
+because probably you want to know what is the assessment scheme
+
+58
+00:03:16,133 --> 00:03:19,300
+right and what are we supposed to do
+
+59
+00:03:20,033 --> 00:03:21,200
+how to do a good job
+
+60
+00:03:21,200 --> 00:03:22,200
+how to get a good grade
+
+61
+00:03:22,200 --> 00:03:23,500
+et cetera et cetera
+
+62
+00:03:23,600 --> 00:03:28,866
+and i will do my best to answer all the questions okay now
+
+63
+00:03:29,133 --> 00:03:31,433
+the first one ten ten ten ten
+
+64
+00:03:33,000 --> 00:03:40,233
+my pictures i took these pictures twenty something years ago
+
+65
+00:03:42,866 --> 00:03:43,933
+wow look
+
+66
+00:03:43,933 --> 00:03:44,433
+pretty good
+
+67
+00:03:44,433 --> 00:03:49,466
+huh eh i i'm still pretty young if you believe all right
+
+68
+00:03:49,466 --> 00:03:52,700
+eh but why i don't put a more recent picture
+
+69
+00:03:52,700 --> 00:03:54,666
+because this is life
+
+70
+00:03:55,700 --> 00:03:59,033
+you are going to do something similar in the future
+
+71
+00:04:00,533 --> 00:04:04,433
+all right it's very difficult to um take good pictures
+
+72
+00:04:05,200 --> 00:04:08,000
+yeah take care all right
+
+73
+00:04:08,000 --> 00:04:12,533
+my name is Desmond Desmond Choi don't call me doctor Choi
+
+74
+00:04:12,900 --> 00:04:13,833
+because a doctor Choi
+
+75
+00:04:13,833 --> 00:04:15,066
+doctor Choi doctor Choi
+
+76
+00:04:15,066 --> 00:04:17,800
+doctor choi's vitamin
+
+77
+00:04:20,833 --> 00:04:24,933
+there is a vitamin brand called doctor choice
+
+78
+00:04:26,533 --> 00:04:28,600
+or anyway don't call me doctor choice
+
+79
+00:04:28,633 --> 00:04:29,533
+call me Desmond
+
+80
+00:04:30,133 --> 00:04:32,233
+all right simple and nice
+
+81
+00:04:32,866 --> 00:04:36,800
+uh this is my personal website if you want to know more about me
+
+82
+00:04:37,033 --> 00:04:40,400
+please check more importantly
+
+83
+00:04:40,433 --> 00:04:44,100
+you may need to ask question right for example
+
+84
+00:04:44,100 --> 00:04:48,033
+if you get stuck if you cannot do this and that talk to me
+
+85
+00:04:48,133 --> 00:04:53,866
+send me an email Desmond at USD dot HK if you remember me
+
+86
+00:04:53,866 --> 00:04:56,000
+you should be able to drop me an email
+
+87
+00:04:57,266 --> 00:04:59,233
+there is only one Desmond in Hong Kong USD
+
+88
+00:04:59,233 --> 00:05:01,400
+i'm pretty sure if there is another one
+
+89
+00:05:01,400 --> 00:05:03,866
+i will get this guy to change his name oh
+
+90
+00:05:03,866 --> 00:05:07,700
+sorry just kidding okay
+
+91
+00:05:07,700 --> 00:05:14,266
+my office room number three five five three polandrum okay
+
+92
+00:05:15,466 --> 00:05:19,433
+who took the proficiency test
+
+93
+00:05:20,733 --> 00:05:21,533
+yesterday
+
+94
+00:05:23,933 --> 00:05:25,433
+very good none of
+
+95
+00:05:26,900 --> 00:05:27,800
+okay good luck
+
+96
+00:05:27,800 --> 00:05:29,733
+we are going to release the result very soon
+
+97
+00:05:30,233 --> 00:05:31,666
+we finished the marking yeah
+
+98
+00:05:31,666 --> 00:05:33,633
+good luck okay
+
+99
+00:05:33,633 --> 00:05:36,200
+uh what does it mean by paringram
+
+100
+00:05:36,233 --> 00:05:40,133
+paringram means if you read it from left to right
+
+101
+00:05:40,933 --> 00:05:42,833
+three five five three right
+
+102
+00:05:43,300 --> 00:05:45,933
+if you read it from right to left
+
+103
+00:05:45,933 --> 00:05:53,433
+exactly the same thing so this is beautiful i love it alright
+
+104
+00:05:53,533 --> 00:05:55,666
+i don't want to move to another office
+
+105
+00:05:57,000 --> 00:05:58,333
+i will stay there forever
+
+106
+00:05:59,866 --> 00:06:02,933
+okay what else i also give you my work phone
+
+107
+00:06:03,500 --> 00:06:04,633
+what's the use of it
+
+108
+00:06:04,866 --> 00:06:07,033
+if you want to stop by my office
+
+109
+00:06:07,033 --> 00:06:11,833
+but somehow you want to confirm that i am indeed in the office
+
+110
+00:06:12,100 --> 00:06:13,033
+give me a call
+
+111
+00:06:15,466 --> 00:06:17,000
+alright finally
+
+112
+00:06:17,433 --> 00:06:20,600
+office hours to be confirmed Desmond
+
+113
+00:06:21,200 --> 00:06:23,866
+that means that you are not going to conduct your office hour
+
+114
+00:06:23,866 --> 00:06:26,633
+you naughty you bad guy no
+
+115
+00:06:26,866 --> 00:06:29,400
+because i'm going to check all your timetables
+
+116
+00:06:29,533 --> 00:06:34,066
+and to figure out the best time to conduct it
+
+117
+00:06:35,000 --> 00:06:36,433
+if none of you could come
+
+118
+00:06:36,433 --> 00:06:38,300
+then what's the point yeah
+
+119
+00:06:38,300 --> 00:06:39,800
+i would be very boring
+
+120
+00:06:40,633 --> 00:06:44,700
+no sunshine no tomorrow yeah
+
+121
+00:06:44,933 --> 00:06:46,066
+and so i need your help
+
+122
+00:06:46,066 --> 00:06:47,533
+so if you have any question
+
+123
+00:06:47,533 --> 00:06:50,033
+do stop by talk to me yeah
+
+124
+00:06:50,266 --> 00:06:51,666
+then i look young
+
+125
+00:06:53,133 --> 00:06:55,500
+good Desmond
+
+126
+00:06:58,200 --> 00:06:59,000
+ah yeah
+
+127
+00:07:00,833 --> 00:07:05,300
+okay i i taught in many different institutions
+
+128
+00:07:05,300 --> 00:07:08,100
+in the last around 20 years right
+
+129
+00:07:08,266 --> 00:07:09,700
+i'm not here to show off
+
+130
+00:07:09,700 --> 00:07:14,933
+i just want to tell you i probably could offer you some advice
+
+131
+00:07:15,900 --> 00:07:17,000
+for example
+
+132
+00:07:17,533 --> 00:07:22,433
+advice on study advice on job hunting etcetera etcetera
+
+133
+00:07:22,466 --> 00:07:26,033
+so feel free to let me know if you need advice
+
+134
+00:07:26,900 --> 00:07:28,300
+i'm your advisor
+
+135
+00:07:29,900 --> 00:07:30,833
+the default one
+
+136
+00:07:35,033 --> 00:07:37,733
+oh okay next wow
+
+137
+00:07:37,800 --> 00:07:41,866
+you see we have a super big teaching team how big
+
+138
+00:07:41,866 --> 00:07:44,733
+it is four instructors
+
+139
+00:07:44,733 --> 00:07:45,800
+i'm one of them
+
+140
+00:07:47,400 --> 00:07:51,300
+full time instructional assistant what does it mean by full time
+
+141
+00:07:51,333 --> 00:07:52,900
+twenty four hours a day
+
+142
+00:07:52,900 --> 00:07:54,400
+seven days a week
+
+143
+00:07:54,833 --> 00:07:55,800
+non stop
+
+144
+00:07:56,133 --> 00:08:00,033
+i expect them to get back to you instantly even you send them
+
+145
+00:08:00,033 --> 00:08:01,666
+an email in the midnight
+
+146
+00:08:03,666 --> 00:08:05,666
+just kidding just kidding
+
+147
+00:08:05,666 --> 00:08:08,066
+don't take it serious if you send them
+
+148
+00:08:08,066 --> 00:08:09,700
+an email in the midnight uh
+
+149
+00:08:09,700 --> 00:08:14,433
+i think they need to sleep right
+
+150
+00:08:15,466 --> 00:08:16,333
+they will get back
+
+151
+00:08:16,333 --> 00:08:18,800
+to you as early as possible right
+
+152
+00:08:18,800 --> 00:08:22,433
+but they are very good guy feel free to reach out to them okay
+
+153
+00:08:22,433 --> 00:08:26,033
+postgraduate tas how many twenty four
+
+154
+00:08:28,100 --> 00:08:32,466
+postgraduate t a means they are all doing mfu
+
+155
+00:08:32,600 --> 00:08:36,233
+master of philosophy or doctor of philosophy
+
+156
+00:08:36,700 --> 00:08:39,800
+that means they are good talk to them
+
+157
+00:08:41,466 --> 00:08:43,100
+if they don't talk to you
+
+158
+00:08:43,266 --> 00:08:48,733
+i talk to them hahaha all right that's the message
+
+159
+00:08:51,033 --> 00:08:51,833
+whoa
+
+160
+00:08:52,800 --> 00:08:57,833
+we also recruited some undergraduate pa's they are your seniors
+
+161
+00:08:57,833 --> 00:08:59,900
+they are still doing bachelor degree
+
+162
+00:09:00,633 --> 00:09:02,933
+but all of them are really good
+
+163
+00:09:02,933 --> 00:09:04,133
+very good hey
+
+164
+00:09:04,133 --> 00:09:05,733
+what do you mean by good Desmond
+
+165
+00:09:05,933 --> 00:09:07,866
+gpa very good
+
+166
+00:09:08,400 --> 00:09:09,300
+how good
+
+167
+00:09:10,000 --> 00:09:12,400
+very good super good
+
+168
+00:09:12,933 --> 00:09:15,666
+ask them all right and don't get me wrong
+
+169
+00:09:15,666 --> 00:09:18,833
+i'm not telling you for those who have really good
+
+170
+00:09:18,833 --> 00:09:24,300
+gps means very good attitude is also very important
+
+171
+00:09:24,900 --> 00:09:28,000
+all right whether you are kind whether
+
+172
+00:09:28,000 --> 00:09:30,466
+you are considerate all these are very important
+
+173
+00:09:32,200 --> 00:09:34,000
+hey by the way am i going too fast
+
+174
+00:09:36,200 --> 00:09:36,800
+alright good
+
+175
+00:09:36,800 --> 00:09:39,433
+how many of you are going to drop the course after the lecture
+
+176
+00:09:40,466 --> 00:09:42,866
+no don't drop it if you don't like me
+
+177
+00:09:42,866 --> 00:09:49,466
+no problem attend another lecture section my bad one
+
+178
+00:09:49,466 --> 00:09:50,600
+o two three is good
+
+179
+00:09:52,033 --> 00:09:54,400
+don't drop the course lovely
+
+180
+00:09:57,400 --> 00:10:00,066
+okay we are computer scientists
+
+181
+00:10:00,100 --> 00:10:03,033
+we know how to build our own website
+
+182
+00:10:03,033 --> 00:10:05,633
+so we don't really use canvas
+
+183
+00:10:06,800 --> 00:10:11,666
+we build up our own site to host all the lecture materials
+
+184
+00:10:11,666 --> 00:10:13,133
+all the lab materials
+
+185
+00:10:13,133 --> 00:10:17,500
+etc etc if you want to download the lecture notes go there
+
+186
+00:10:19,133 --> 00:10:22,066
+to access this one at home
+
+187
+00:10:22,633 --> 00:10:25,233
+you need a csd password
+
+188
+00:10:25,333 --> 00:10:30,633
+how many of you have applied for a csd password
+
+189
+00:10:32,700 --> 00:10:34,066
+very good good guy
+
+190
+00:10:34,066 --> 00:10:35,833
+you are going to get a plus plus
+
+191
+00:10:36,700 --> 00:10:37,700
+Virtual gray
+
+192
+00:10:39,133 --> 00:10:40,433
+no a plus plus right
+
+193
+00:10:40,433 --> 00:10:41,433
+virtual gray
+
+194
+00:10:42,333 --> 00:10:43,533
+eh if you haven't done
+
+195
+00:10:43,533 --> 00:10:48,400
+so please do so during the weekend apart from gaming do that
+
+196
+00:10:50,266 --> 00:10:53,833
+alright eh but we do use canvas for two things
+
+197
+00:10:53,833 --> 00:10:56,800
+one is for you to check your gray
+
+198
+00:10:57,300 --> 00:11:02,600
+second for you to post questions on piazza
+
+199
+00:11:02,800 --> 00:11:04,400
+so that we could get back to you
+
+200
+00:11:06,000 --> 00:11:08,000
+all right other than this
+
+201
+00:11:08,000 --> 00:11:11,300
+too you should always go to the official course website
+
+202
+00:11:12,900 --> 00:11:16,900
+happy so far so bad oh sorry so far so good
+
+203
+00:11:22,066 --> 00:11:22,833
+hey by the way
+
+204
+00:11:22,833 --> 00:11:30,866
+if you want to learn more about me read usd space hahaha
+
+205
+00:11:31,600 --> 00:11:32,833
+yeah you know
+
+206
+00:11:32,833 --> 00:11:34,433
+i have no control right
+
+207
+00:11:34,866 --> 00:11:35,500
+uh actually
+
+208
+00:11:35,500 --> 00:11:38,500
+you're seniors they wrote something very interesting about me
+
+209
+00:11:39,066 --> 00:11:39,866
+yeah
+
+210
+00:11:40,300 --> 00:11:41,066
+eh by the way
+
+211
+00:11:41,066 --> 00:11:45,066
+i have been offering additional classes and normally
+
+212
+00:11:45,066 --> 00:11:49,833
+they said Desmond you have no life no
+
+213
+00:11:50,400 --> 00:11:53,466
+i have two kids they are lovely right of course
+
+214
+00:11:53,466 --> 00:11:55,100
+i want to go back home
+
+215
+00:11:55,266 --> 00:11:59,666
+but i still need to take care of my students this is my job
+
+216
+00:11:59,666 --> 00:12:00,466
+thank you
+
+217
+00:12:02,300 --> 00:12:03,700
+okay um
+
+218
+00:12:03,700 --> 00:12:08,100
+i maintain an other website
+
+219
+00:12:08,100 --> 00:12:12,800
+i call this personal website or supplementary website
+
+220
+00:12:13,066 --> 00:12:14,733
+what is it about
+
+221
+00:12:15,666 --> 00:12:18,266
+i'm going to post my lecture videos there
+
+222
+00:12:19,000 --> 00:12:23,000
+i am going to post the teaching progress there
+
+223
+00:12:23,100 --> 00:12:25,066
+for example up to page baba
+
+224
+00:12:26,500 --> 00:12:30,500
+i may post commonly asked questions
+
+225
+00:12:31,400 --> 00:12:33,300
+so if you ask me good questions
+
+226
+00:12:33,300 --> 00:12:35,000
+i'm going to write up the answer
+
+227
+00:12:35,000 --> 00:12:36,533
+and post all of them
+
+228
+00:12:36,533 --> 00:12:40,933
+online for all of you to read for all of you to learn more
+
+229
+00:12:42,066 --> 00:12:47,066
+okay i may also post announcements only for my students
+
+230
+00:12:47,700 --> 00:12:49,900
+because i don't want to bother other students
+
+231
+00:12:50,000 --> 00:12:52,333
+they may say they may say bad guy
+
+232
+00:12:53,900 --> 00:12:54,866
+kick him out
+
+233
+00:12:56,100 --> 00:12:57,000
+all right hey
+
+234
+00:12:57,000 --> 00:13:02,866
+but that this website is password protected log in
+
+235
+00:13:03,133 --> 00:13:05,666
+com one o two three
+
+236
+00:13:05,833 --> 00:13:07,900
+all lowercase letters
+
+237
+00:13:08,100 --> 00:13:10,033
+com one o two three
+
+238
+00:13:10,100 --> 00:13:15,066
+this is the log in what's the password the password
+
+239
+00:13:15,400 --> 00:13:20,266
+com one o two three Desmond
+
+240
+00:13:22,033 --> 00:13:23,700
+all lowercase letters
+
+241
+00:13:24,333 --> 00:13:30,900
+p o m p one o two three d e s m o n d
+
+242
+00:13:32,033 --> 00:13:35,133
+i force you to remember me best man
+
+243
+00:13:37,700 --> 00:13:38,500
+good
+
+244
+00:13:39,000 --> 00:13:42,866
+hey i don't mind you share the password with your peers
+
+245
+00:13:44,033 --> 00:13:45,300
+in the other lecture section
+
+246
+00:13:45,300 --> 00:13:46,733
+no problem feel free
+
+247
+00:13:47,433 --> 00:13:48,933
+nothing confidential right
+
+248
+00:13:50,133 --> 00:13:53,833
+but i don't want other people watch my video
+
+249
+00:13:55,133 --> 00:13:55,833
+yeah
+
+250
+00:13:55,833 --> 00:13:59,200
+i don't know why many of you senior they watch my video yeah
+
+251
+00:13:59,200 --> 00:14:02,833
+they say yeah very cool Korean drama
+
+252
+00:14:03,666 --> 00:14:07,433
+no no no you better watch Korean drama not my video right uh
+
+253
+00:14:07,600 --> 00:14:09,033
+but it's okay yeah
+
+254
+00:14:13,900 --> 00:14:16,666
+okay how many lecture sections
+
+255
+00:14:18,600 --> 00:14:22,466
+we offer nine lecture sections i
+
+256
+00:14:22,466 --> 00:14:28,833
+i'm the instructor for l o one l o two and l o nine
+
+257
+00:14:29,500 --> 00:14:33,033
+hey how about l ten no right
+
+258
+00:14:34,233 --> 00:14:37,833
+i take good care of free lecture sections uh professor
+
+259
+00:14:37,833 --> 00:14:42,633
+Alex Lam take care of four lecture sections and Cecilia
+
+260
+00:14:42,633 --> 00:14:45,733
+one section professor essie germ
+
+261
+00:14:46,666 --> 00:14:48,533
+the remaining section all right
+
+262
+00:14:49,300 --> 00:14:50,500
+this is a big family
+
+263
+00:14:56,733 --> 00:14:58,300
+how about lab sections
+
+264
+00:15:00,733 --> 00:15:03,300
+seven seven lab sections
+
+265
+00:15:03,300 --> 00:15:07,700
+bad news for lecture section we don't really care
+
+266
+00:15:07,700 --> 00:15:11,666
+which one you attend right but for lab sections
+
+267
+00:15:11,800 --> 00:15:16,666
+you have to attend the registered section for example
+
+268
+00:15:16,666 --> 00:15:18,866
+if you register for lao2
+
+269
+00:15:18,900 --> 00:15:21,900
+you should always attend that section
+
+270
+00:15:23,266 --> 00:15:26,500
+but let's say one day and Desmond for some reason
+
+271
+00:15:26,500 --> 00:15:28,900
+i cannot attend that lecture section sorry
+
+272
+00:15:28,900 --> 00:15:30,500
+i cannot attend that lab section
+
+273
+00:15:30,500 --> 00:15:33,600
+can i attend some other lab lab section yes
+
+274
+00:15:33,733 --> 00:15:37,066
+but you need to email me and to get the approval
+
+275
+00:15:38,500 --> 00:15:39,300
+why
+
+276
+00:15:40,833 --> 00:15:44,633
+because of your tas may not be able to handle
+
+277
+00:15:44,633 --> 00:15:47,700
+a large number of students g g ah
+
+278
+00:15:49,500 --> 00:15:50,500
+yeah do you know what i'm saying
+
+279
+00:15:50,500 --> 00:15:53,533
+because they need to handle so many different questions uh
+
+280
+00:15:53,533 --> 00:15:56,500
+you they need to handle so many different students so
+
+281
+00:15:56,500 --> 00:16:01,066
+if all the students join the same section
+
+282
+00:16:02,400 --> 00:16:05,066
+then they get trouble all right
+
+283
+00:16:05,066 --> 00:16:08,266
+so make sure you attend the register section
+
+284
+00:16:08,433 --> 00:16:10,933
+if you want to join another one email me
+
+285
+00:16:11,666 --> 00:16:14,033
+that's the message okay
+
+286
+00:16:17,200 --> 00:16:18,033
+all right hey
+
+287
+00:16:18,033 --> 00:16:19,933
+you see we are carrying ah
+
+288
+00:16:22,033 --> 00:16:23,333
+if you get lost
+
+289
+00:16:23,533 --> 00:16:27,233
+please check USD path advisor
+
+290
+00:16:28,533 --> 00:16:30,300
+hey do you know path advisor
+
+291
+00:16:30,466 --> 00:16:32,100
+that is an app
+
+292
+00:16:32,100 --> 00:16:36,833
+that is an app developed by Hong Kong usd people right
+
+293
+00:16:36,833 --> 00:16:40,833
+you use it to locate the room and for example
+
+294
+00:16:40,833 --> 00:16:44,066
+you want to know how to reach
+
+295
+00:16:44,666 --> 00:16:47,200
+five four o three wow
+
+296
+00:16:47,200 --> 00:16:50,700
+then you will be able to figure out the nearest lift
+
+297
+00:16:51,066 --> 00:16:53,433
+seventeen to eighteen yeah
+
+298
+00:16:53,433 --> 00:16:56,066
+that's the point we are caring
+
+299
+00:17:00,933 --> 00:17:04,233
+okay important note
+
+300
+00:17:04,233 --> 00:17:07,833
+everyone attention suppose
+
+301
+00:17:08,433 --> 00:17:11,200
+there is a typhoon signal number eight
+
+302
+00:17:11,900 --> 00:17:16,300
+i know what you are going to do hooray enjoy my life no
+
+303
+00:17:16,466 --> 00:17:18,666
+sorry don't come back
+
+304
+00:17:19,433 --> 00:17:24,833
+but the lecture classes will be conducted on nine on sum
+
+305
+00:17:26,000 --> 00:17:27,033
+so what you have to do
+
+306
+00:17:27,033 --> 00:17:27,866
+yes
+
+307
+00:17:28,633 --> 00:17:32,266
+hey start your pc yeah
+
+308
+00:17:32,500 --> 00:17:35,133
+double click soon this
+
+309
+00:17:37,633 --> 00:17:39,866
+i want to enjoy my life no
+
+310
+00:17:39,900 --> 00:17:42,666
+i want to see you happy
+
+311
+00:17:42,666 --> 00:17:49,300
+no be happy okay now good that's the message okay
+
+312
+00:17:49,300 --> 00:17:51,233
+what about black rainstorm
+
+313
+00:17:51,233 --> 00:17:52,933
+black rainstorm storm
+
+314
+00:17:52,933 --> 00:17:57,833
+uh warning same thing if there is a black rainstorm warning
+
+315
+00:17:57,833 --> 00:17:59,600
+don't come back right
+
+316
+00:17:59,600 --> 00:18:01,133
+stay home and
+
+317
+00:18:02,600 --> 00:18:07,300
+do so i want to see you please
+
+318
+00:18:08,533 --> 00:18:09,333
+good
+
+319
+00:18:12,000 --> 00:18:14,866
+hey by the way did i scare you
+
+320
+00:18:16,433 --> 00:18:19,200
+how many of you are going to join in other lecture section
+
+321
+00:18:19,200 --> 00:18:20,600
+after this meeting
+
+322
+00:18:22,633 --> 00:18:25,266
+four nine o o is a good one yeah
+
+323
+00:18:25,266 --> 00:18:26,933
+but this one is also very good
+
+324
+00:18:28,933 --> 00:18:29,866
+okay here
+
+325
+00:18:29,866 --> 00:18:32,533
+we show you all the zoom link
+
+326
+00:18:32,933 --> 00:18:33,400
+remember
+
+327
+00:18:33,400 --> 00:18:38,466
+all these two meetings are only for bad weather in case
+
+328
+00:18:38,466 --> 00:18:39,866
+we encounter trouble
+
+329
+00:18:39,900 --> 00:18:44,133
+then we conduct all night lectures other
+
+330
+00:18:44,133 --> 00:18:46,300
+than that i have to see you
+
+331
+00:18:46,300 --> 00:18:47,100
+in person
+
+332
+00:18:48,066 --> 00:18:48,866
+all right
+
+333
+00:18:53,033 --> 00:18:58,533
+okay lecture videos release policy so what does it mean
+
+334
+00:18:58,733 --> 00:19:03,733
+we are going to release the lecture videos on every Friday
+
+335
+00:19:04,100 --> 00:19:05,533
+that means once a week
+
+336
+00:19:06,633 --> 00:19:07,433
+that means right
+
+337
+00:19:07,433 --> 00:19:08,866
+after this lecture
+
+338
+00:19:08,900 --> 00:19:12,133
+you will not see the lecture video all right
+
+339
+00:19:12,133 --> 00:19:15,800
+you will only see the lecture video on Friday
+
+340
+00:19:17,033 --> 00:19:17,900
+we are going to do
+
+341
+00:19:17,900 --> 00:19:22,233
+exactly the same thing for all the lecture sections all of them
+
+342
+00:19:22,800 --> 00:19:25,533
+yeah and but i'm a weird guy right
+
+343
+00:19:25,533 --> 00:19:28,266
+i'm sorry i'm a good guy normally
+
+344
+00:19:28,266 --> 00:19:34,400
+i will give you two lecture videos for each lecture class
+
+345
+00:19:34,633 --> 00:19:36,000
+one is RVC
+
+346
+00:19:36,000 --> 00:19:39,700
+the one prepared by the university another one would be zoom
+
+347
+00:19:39,700 --> 00:19:42,233
+recording do you know why
+
+348
+00:19:43,933 --> 00:19:47,266
+because many of your seniors they complain Desmond
+
+349
+00:19:47,266 --> 00:19:52,200
+you give me the RVC recording then i see you keep walking
+
+350
+00:19:53,600 --> 00:19:55,900
+i don't care about you right what's the point
+
+351
+00:19:55,900 --> 00:19:58,266
+i only care about the lecture materials
+
+352
+00:19:58,266 --> 00:20:01,833
+then i post another video soon video
+
+353
+00:20:02,800 --> 00:20:06,633
+they could only see the lecture notes a bad guy keep talking
+
+354
+00:20:06,633 --> 00:20:09,266
+very good yeah four four x
+
+355
+00:20:10,866 --> 00:20:12,900
+very good up to you so
+
+356
+00:20:12,900 --> 00:20:17,333
+i'm going to post two lecture videos for each class all right
+
+357
+00:20:18,100 --> 00:20:18,233
+hey
+
+358
+00:20:18,233 --> 00:20:22,666
+but it seems like there are some problem for the video setting
+
+359
+00:20:22,666 --> 00:20:23,500
+today so
+
+360
+00:20:23,500 --> 00:20:27,066
+i may not be able to give you the soon video but don't worry
+
+361
+00:20:27,066 --> 00:20:29,033
+i will give you a soon video
+
+362
+00:20:29,666 --> 00:20:32,400
+the one for the other lecture section
+
+363
+00:20:32,633 --> 00:20:36,266
+same guy different hairstyle okay
+
+364
+00:20:36,266 --> 00:20:38,333
+hopefully you do mine good
+
+365
+00:20:38,400 --> 00:20:40,900
+i will ask the technical team to fix it
+
+366
+00:20:43,700 --> 00:20:44,500
+good
+
+367
+00:20:47,933 --> 00:20:49,333
+okay good news
+
+368
+00:20:49,333 --> 00:20:51,600
+no laps this week
+
+369
+00:20:52,433 --> 00:20:56,066
+i think you should have received my email saying no laps
+
+370
+00:20:56,066 --> 00:20:57,266
+no laps don't go
+
+371
+00:20:57,266 --> 00:20:59,000
+there enjoy your life
+
+372
+00:21:00,300 --> 00:21:04,800
+ig enjoy what's up Korean drama
+
+373
+00:21:06,533 --> 00:21:12,066
+okay you don't care the first love will be conducted next week
+
+374
+00:21:12,266 --> 00:21:13,733
+so starting from next week
+
+375
+00:21:13,733 --> 00:21:17,100
+you also need to attend the labs right
+
+376
+00:21:17,500 --> 00:21:20,066
+your teaching assistant will help you out
+
+377
+00:21:20,633 --> 00:21:23,700
+will go through something important with you
+
+378
+00:21:23,733 --> 00:21:26,666
+to make sure that you are doing well
+
+379
+00:21:27,633 --> 00:21:29,500
+all right they are all good guys
+
+380
+00:21:35,200 --> 00:21:39,333
+wow this is a bit tedious please bear with me
+
+381
+00:21:41,466 --> 00:21:44,133
+how the labs
+
+382
+00:21:46,066 --> 00:21:50,200
+will be conducted how the labs be conducted
+
+383
+00:21:51,133 --> 00:21:53,633
+for a regular free credit course
+
+384
+00:21:54,100 --> 00:21:56,866
+we spend three hours on lecture per week
+
+385
+00:21:57,100 --> 00:22:01,266
+two hours no one hour
+
+386
+00:22:03,400 --> 00:22:05,600
+on lab per week alright
+
+387
+00:22:05,600 --> 00:22:07,700
+so let me tell you once again
+
+388
+00:22:08,300 --> 00:22:11,400
+listen carefully for a regular free credit course
+
+389
+00:22:11,433 --> 00:22:14,200
+we have to spend three hours lecture per week
+
+390
+00:22:14,666 --> 00:22:16,866
+and one hour on that per week
+
+391
+00:22:17,600 --> 00:22:22,800
+but this one is different free credit
+
+392
+00:22:22,900 --> 00:22:26,100
+we spend free hours on lecture per week
+
+393
+00:22:26,666 --> 00:22:30,733
+and two hours on lab per week or Desmond
+
+394
+00:22:30,733 --> 00:22:32,633
+you naughty i want to drop this course
+
+395
+00:22:32,633 --> 00:22:39,033
+no why i have a good reason and you will like it all right
+
+396
+00:22:39,700 --> 00:22:43,300
+for the first sixty minutes of the lab
+
+397
+00:22:43,900 --> 00:22:47,466
+we will give you a tutorial during the tutorial
+
+398
+00:22:47,466 --> 00:22:51,800
+we will go through the lab exercise details
+
+399
+00:22:52,400 --> 00:22:56,866
+and we will also tell you the requirements and after that
+
+400
+00:22:56,866 --> 00:23:02,600
+we will ask you questions no worry no mark deduction
+
+401
+00:23:03,400 --> 00:23:05,500
+we will give you whole bunch of questions
+
+402
+00:23:05,500 --> 00:23:08,533
+and hopefully you answer all of them to check
+
+403
+00:23:08,533 --> 00:23:10,000
+whether you are doing
+
+404
+00:23:10,266 --> 00:23:11,066
+good
+
+405
+00:23:12,166 --> 00:23:16,266
+all those would be related to the lecture materials right
+
+406
+00:23:16,266 --> 00:23:17,500
+so what is the use of that
+
+407
+00:23:17,666 --> 00:23:19,933
+if you found that wow
+
+408
+00:23:20,833 --> 00:23:22,266
+answer most of them wrongly
+
+409
+00:23:22,266 --> 00:23:24,666
+then that's the time for you to talk to me
+
+410
+00:23:24,700 --> 00:23:26,533
+i am here to help you out
+
+411
+00:23:27,900 --> 00:23:28,700
+is it okay
+
+412
+00:23:30,133 --> 00:23:33,333
+hey what if i answer all of them wrongly
+
+413
+00:23:33,400 --> 00:23:39,133
+no mark deduction feel free try all of them okay
+
+414
+00:23:39,433 --> 00:23:42,800
+and then your t a's are going to release the answer
+
+415
+00:23:42,800 --> 00:23:47,033
+and explain why the correct answer would be a or b or c or d
+
+416
+00:23:47,033 --> 00:23:47,833
+something like that
+
+417
+00:23:48,600 --> 00:23:49,400
+is it okay
+
+418
+00:23:50,500 --> 00:23:51,300
+good
+
+419
+00:23:51,666 --> 00:24:01,000
+what else we take attendance for the labs how listen carefully
+
+420
+00:24:01,100 --> 00:24:03,533
+i after each lab section
+
+421
+00:24:03,700 --> 00:24:08,400
+we are going to randomly pick half of the questions and check
+
+422
+00:24:08,400 --> 00:24:11,900
+whether each of you answer all of them
+
+423
+00:24:13,200 --> 00:24:15,533
+you answer half of the questions
+
+424
+00:24:15,533 --> 00:24:16,833
+the selected one
+
+425
+00:24:16,866 --> 00:24:22,333
+you get one point for the attendance why half of them
+
+426
+00:24:22,433 --> 00:24:23,300
+why not all
+
+427
+00:24:26,400 --> 00:24:27,833
+you could do it by luck right
+
+428
+00:24:28,400 --> 00:24:29,300
+for example
+
+429
+00:24:29,300 --> 00:24:35,500
+you only answer the first two question and then you say bye bye
+
+430
+00:24:36,466 --> 00:24:40,600
+have fun whoa okay
+
+431
+00:24:40,800 --> 00:24:42,533
+if we eventually pick the first
+
+432
+00:24:42,533 --> 00:24:45,900
+two to check you complete all of them right
+
+433
+00:24:45,933 --> 00:24:49,800
+you win otherwise GG
+
+434
+00:24:52,900 --> 00:24:53,733
+okay do you do
+
+435
+00:24:53,733 --> 00:24:55,300
+you understand what i'm saying here
+
+436
+00:24:55,800 --> 00:24:57,800
+yeah you get the idea right
+
+437
+00:24:58,700 --> 00:24:59,533
+you could do it by luck
+
+438
+00:24:59,533 --> 00:25:00,800
+please don't do it
+
+439
+00:25:00,800 --> 00:25:02,866
+please try to answer all the questions
+
+440
+00:25:03,333 --> 00:25:07,800
+you won't be penalized if you answer them wrongly
+
+441
+00:25:08,533 --> 00:25:09,133
+we are here to
+
+442
+00:25:09,133 --> 00:25:10,300
+help you out right
+
+443
+00:25:10,433 --> 00:25:11,700
+we try to be helpful
+
+444
+00:25:12,666 --> 00:25:13,466
+okay
+
+445
+00:25:14,100 --> 00:25:14,633
+hey Desmond
+
+446
+00:25:14,633 --> 00:25:15,900
+this is what you are going to do
+
+447
+00:25:15,900 --> 00:25:18,800
+in the first sixty minutes right
+
+448
+00:25:19,700 --> 00:25:22,066
+what about the remaining fifty minutes
+
+449
+00:25:22,266 --> 00:25:25,266
+Q&A question and answer
+
+450
+00:25:26,300 --> 00:25:29,100
+if you have questions about the lecture materials
+
+451
+00:25:29,133 --> 00:25:30,300
+about the labs
+
+452
+00:25:30,300 --> 00:25:31,700
+about the assignment
+
+453
+00:25:32,433 --> 00:25:36,633
+that's the time you ask the tas they have to be there
+
+454
+00:25:39,500 --> 00:25:43,666
+and you are available for sure
+
+455
+00:25:44,600 --> 00:25:48,466
+because that is your register lab right
+
+456
+00:25:48,900 --> 00:25:51,200
+you are supposed to spend two hours
+
+457
+00:25:51,200 --> 00:25:53,200
+you would be available for sure
+
+458
+00:25:53,833 --> 00:25:56,433
+and then the tas get stuck there
+
+459
+00:25:57,700 --> 00:25:59,833
+they cannot skip it if they skip it
+
+460
+00:26:00,533 --> 00:26:01,433
+i skip them
+
+461
+00:26:03,400 --> 00:26:05,733
+okay there's the message so
+
+462
+00:26:05,733 --> 00:26:06,800
+this is a trick
+
+463
+00:26:06,833 --> 00:26:08,000
+i want to make sure that all
+
+464
+00:26:08,000 --> 00:26:09,933
+the teaching assistant will be there to
+
+465
+00:26:09,933 --> 00:26:12,000
+help you out hey what
+
+466
+00:26:12,000 --> 00:26:13,200
+if you have no question
+
+467
+00:26:13,200 --> 00:26:14,200
+you are doing well
+
+468
+00:26:14,200 --> 00:26:16,033
+then enjoy your life
+
+469
+00:26:16,300 --> 00:26:17,333
+enjoy your life
+
+470
+00:26:17,333 --> 00:26:21,733
+you don't have to stay in the last fifty minutes enjoy
+
+471
+00:26:22,633 --> 00:26:23,700
+do you like it
+
+472
+00:26:24,333 --> 00:26:25,433
+that's the trick right
+
+473
+00:26:25,866 --> 00:26:29,033
+we need to be clever okay
+
+474
+00:26:29,033 --> 00:26:30,500
+don't tell your tas
+
+475
+00:26:31,100 --> 00:26:32,533
+you see destiny is a bad thing
+
+476
+00:26:33,633 --> 00:26:35,133
+you better work for other courses no
+
+477
+00:26:35,133 --> 00:26:36,533
+no no no
+
+478
+00:26:36,533 --> 00:26:36,800
+no no
+
+479
+00:26:36,800 --> 00:26:38,533
+no yeah i i i appreciate
+
+480
+00:26:38,533 --> 00:26:41,333
+i appreciate they are all good guys right i love them
+
+481
+00:26:51,133 --> 00:26:51,633
+hey by the way
+
+482
+00:26:51,633 --> 00:26:53,433
+i'm wondering whether i scare you
+
+483
+00:26:56,200 --> 00:26:57,200
+did i scare you
+
+484
+00:26:57,200 --> 00:26:57,666
+hey by the way
+
+485
+00:26:57,666 --> 00:26:59,700
+i would be your good friend
+
+486
+00:27:00,733 --> 00:27:01,733
+i would be your good friend
+
+487
+00:27:01,733 --> 00:27:02,633
+i'm a good guy
+
+488
+00:27:02,633 --> 00:27:03,333
+if you don't believe
+
+489
+00:27:03,333 --> 00:27:06,600
+ask your seniors if you don't believe your seniors
+
+490
+00:27:06,600 --> 00:27:11,200
+ask usd space hahaha
+
+491
+00:27:11,233 --> 00:27:12,300
+i'm a pretty good guy
+
+492
+00:27:12,300 --> 00:27:13,633
+not a bad guy at least
+
+493
+00:27:15,466 --> 00:27:18,433
+okay more as mentioned
+
+494
+00:27:18,433 --> 00:27:23,266
+you need to attend your registered lab section and each lab
+
+495
+00:27:23,700 --> 00:27:24,933
+we take attendance
+
+496
+00:27:25,466 --> 00:27:29,266
+one point for the attendance okay
+
+497
+00:27:29,266 --> 00:27:34,300
+how many lab meetings we are going to conduct ten lab meetings
+
+498
+00:27:34,333 --> 00:27:35,833
+ten lab meetings
+
+499
+00:27:35,866 --> 00:27:41,100
+that means we will give you ten lab exercise
+
+500
+00:27:42,466 --> 00:27:45,933
+wow it's killing me ten lab exercises later later
+
+501
+00:27:45,933 --> 00:27:48,666
+later now no worry
+
+502
+00:27:48,866 --> 00:27:51,666
+eh let me finish this part as mentioned
+
+503
+00:27:52,400 --> 00:27:54,900
+you need to answer questions right
+
+504
+00:27:55,066 --> 00:27:56,900
+at the end of the lab
+
+505
+00:27:56,900 --> 00:27:59,133
+we randomly pick half of them
+
+506
+00:27:59,133 --> 00:28:01,000
+and check whether you answer all of them
+
+507
+00:28:01,033 --> 00:28:02,133
+if you answer all of them
+
+508
+00:28:02,133 --> 00:28:03,433
+one point thank you
+
+509
+00:28:04,700 --> 00:28:06,200
+this is what i mentioned earlier
+
+510
+00:28:10,100 --> 00:28:14,433
+for lab one that means the one next week easy
+
+511
+00:28:14,433 --> 00:28:15,500
+super easy
+
+512
+00:28:15,800 --> 00:28:22,000
+you need to complete a canvas quiz ten questions there's no
+
+513
+00:28:23,833 --> 00:28:24,833
+quiz
+
+514
+00:28:25,433 --> 00:28:31,066
+that's why this is Hong Kong university of stress and tension
+
+515
+00:28:31,200 --> 00:28:34,000
+hahaha eh no
+
+516
+00:28:34,000 --> 00:28:38,500
+we are the Hong Kong university of success and transformation
+
+517
+00:28:38,633 --> 00:28:45,133
+another one Hong Kong university of sunshine and tomorrow
+
+518
+00:28:46,300 --> 00:28:48,066
+i did my bachelor degree here
+
+519
+00:28:48,066 --> 00:28:50,300
+i love Hong Kong usd definitely
+
+520
+00:28:53,700 --> 00:28:54,500
+okay good
+
+521
+00:28:56,400 --> 00:28:57,200
+okay
+
+522
+00:28:57,866 --> 00:28:58,666
+what should i do
+
+523
+00:29:02,600 --> 00:29:03,733
+ah okay hey
+
+524
+00:29:03,733 --> 00:29:08,433
+so for level one you need to complete a canvas quiz right
+
+525
+00:29:08,600 --> 00:29:12,033
+so even you answer all of them correctly
+
+526
+00:29:12,033 --> 00:29:15,266
+or wrongly doesn't matter you get one point
+
+527
+00:29:18,233 --> 00:29:21,033
+you will see this kind of question during
+
+528
+00:29:21,033 --> 00:29:24,066
+bad weather what we are going to do
+
+529
+00:29:24,633 --> 00:29:31,000
+option a option b option c option d
+
+530
+00:29:32,333 --> 00:29:35,533
+take one wrong the correct answer is
+
+531
+00:29:37,266 --> 00:29:38,633
+explain okay good
+
+532
+00:29:38,633 --> 00:29:39,733
+i know thank you
+
+533
+00:29:40,866 --> 00:29:43,333
+that means we force you to understand all the rules
+
+534
+00:29:43,333 --> 00:29:45,900
+we force you to understand what we are going to do right
+
+535
+00:29:45,900 --> 00:29:50,266
+that's the trick once again even you answer all of them wrongly
+
+536
+00:29:50,600 --> 00:29:54,633
+you're safe nobody do it easy enjoy
+
+537
+00:29:57,566 --> 00:29:59,100
+okay good
+
+538
+00:30:01,600 --> 00:30:03,066
+all right
+
+539
+00:30:04,200 --> 00:30:07,933
+ten lab meetings for each lab
+
+540
+00:30:07,933 --> 00:30:16,333
+we will give you a lab exercise so altogether ten lap exercises
+
+541
+00:30:17,200 --> 00:30:18,933
+oh my goodness Desmond
+
+542
+00:30:18,933 --> 00:30:21,100
+it's a lot of work huh free credit
+
+543
+00:30:21,300 --> 00:30:22,933
+do i need to complete all of them
+
+544
+00:30:22,933 --> 00:30:28,100
+no you only need to complete and submit five of them
+
+545
+00:30:28,100 --> 00:30:33,466
+i know what three five seven nine odd number wrong
+
+546
+00:30:33,800 --> 00:30:38,000
+two four six eight ten also wrong
+
+547
+00:30:39,733 --> 00:30:43,733
+two four six seven nine why magic numbers
+
+548
+00:30:46,033 --> 00:30:46,833
+okay
+
+549
+00:30:47,333 --> 00:30:49,700
+the beauty of this is for each one
+
+550
+00:30:49,700 --> 00:30:53,933
+you will get two weeks to complete it wow
+
+551
+00:30:53,933 --> 00:30:56,033
+two weeks a lot hmm no
+
+552
+00:30:56,033 --> 00:30:57,700
+no no no
+
+553
+00:30:57,700 --> 00:30:57,866
+no no
+
+554
+00:30:57,866 --> 00:30:58,233
+no no
+
+555
+00:30:58,233 --> 00:30:58,833
+two weeks
+
+556
+00:30:58,833 --> 00:31:04,333
+the requirement will be even you get it done in thirty minutes
+
+557
+00:31:04,600 --> 00:31:10,900
+i expect you to think why it works and how it works
+
+558
+00:31:11,266 --> 00:31:12,700
+that means that you have to completely
+
+559
+00:31:12,700 --> 00:31:14,233
+understand what is going on
+
+560
+00:31:14,266 --> 00:31:16,066
+this is the requirement all right
+
+561
+00:31:16,133 --> 00:31:17,933
+and i'm naughty
+
+562
+00:31:20,266 --> 00:31:25,333
+lab two definitely cover all the things in lab one
+
+563
+00:31:27,000 --> 00:31:31,533
+lab four definitely covers all the thing in lab
+
+564
+00:31:33,300 --> 00:31:34,733
+three
+
+565
+00:31:40,333 --> 00:31:40,700
+do you know what
+
+566
+00:31:40,700 --> 00:31:43,433
+i'm saying that's the trick so even you skip
+
+567
+00:31:43,433 --> 00:31:46,066
+let's say level one hmm hmm hmm
+
+568
+00:31:46,300 --> 00:31:48,400
+you still need to learn all the things
+
+569
+00:31:48,733 --> 00:31:50,500
+but i don't want to bother you right
+
+570
+00:31:51,033 --> 00:31:53,666
+i want to give you more time to finish the task
+
+571
+00:31:54,500 --> 00:31:58,733
+so that you could digest the the the idea etc right
+
+572
+00:31:59,266 --> 00:32:01,000
+is that good alright
+
+573
+00:32:01,800 --> 00:32:05,600
+okay so ten points for each greater lap
+
+574
+00:32:07,433 --> 00:32:08,700
+another incentive
+
+575
+00:32:09,700 --> 00:32:16,266
+we only use the best four laps to calculate your overall lab
+
+576
+00:32:16,266 --> 00:32:17,066
+score
+
+577
+00:32:17,900 --> 00:32:19,800
+you need to submit five of them right
+
+578
+00:32:19,800 --> 00:32:21,700
+but we pick the best four okay
+
+579
+00:32:21,700 --> 00:32:26,266
+interesting some of your seniors they say Desmond
+
+580
+00:32:26,266 --> 00:32:27,133
+do i need to tell you
+
+581
+00:32:27,133 --> 00:32:28,666
+which four i want to use
+
+582
+00:32:31,333 --> 00:32:32,233
+why
+
+583
+00:32:33,500 --> 00:32:34,300
+why
+
+584
+00:32:35,833 --> 00:32:37,400
+i need to be polite right
+
+585
+00:32:39,933 --> 00:32:41,100
+we are programmers
+
+586
+00:32:41,233 --> 00:32:43,633
+we know how to write a program to check the best
+
+587
+00:32:43,633 --> 00:32:46,933
+for the only scenario that you have to tell me
+
+588
+00:32:46,933 --> 00:32:47,400
+which four
+
+589
+00:32:47,400 --> 00:32:51,233
+you want to use would be you don't want to use the best four
+
+590
+00:32:52,433 --> 00:32:54,733
+because you have more than enough right
+
+591
+00:32:55,233 --> 00:32:56,500
+very good hey
+
+592
+00:32:56,500 --> 00:32:57,266
+Desmond anyway
+
+593
+00:32:57,266 --> 00:32:59,800
+i i will get a plus very good
+
+594
+00:32:59,800 --> 00:33:01,466
+thank you respect
+
+595
+00:33:03,033 --> 00:33:04,800
+other than that you don't need to tell me
+
+596
+00:33:04,800 --> 00:33:07,600
+we will do it automatically for you all right
+
+597
+00:33:08,000 --> 00:33:11,533
+okay where to submit your work
+
+598
+00:33:11,533 --> 00:33:16,000
+you need to submit your work to sink an automatic grading system
+
+599
+00:33:16,000 --> 00:33:18,466
+we use test cases to check your work
+
+600
+00:33:19,000 --> 00:33:19,533
+for example
+
+601
+00:33:19,533 --> 00:33:25,333
+we may use a ten test cases if you pass all of them you get
+
+602
+00:33:25,333 --> 00:33:30,400
+full marks if you get half of them correct
+
+603
+00:33:30,400 --> 00:33:34,066
+we give you partial credit that's the idea alright now
+
+604
+00:33:34,066 --> 00:33:38,233
+let me show you the formula for rating the overall lab score
+
+605
+00:33:38,633 --> 00:33:41,400
+lab score consists of attendance
+
+606
+00:33:43,233 --> 00:33:49,133
+and lab work attendance what is the maximum score
+
+607
+00:33:50,533 --> 00:33:51,866
+ten ten
+
+608
+00:33:51,866 --> 00:33:58,000
+lab meetings one for each right ten points best for lab score
+
+609
+00:34:00,100 --> 00:34:03,500
+what's the total forty
+
+610
+00:34:03,500 --> 00:34:05,266
+because a ten point each right
+
+611
+00:34:05,266 --> 00:34:10,066
+so four that means forty divided by fifty times ten
+
+612
+00:34:10,133 --> 00:34:12,466
+this is your overall lab score
+
+613
+00:34:14,200 --> 00:34:16,533
+is it okay yeah hey
+
+614
+00:34:16,533 --> 00:34:18,333
+do you know why we divide
+
+615
+00:34:18,333 --> 00:34:19,666
+it by fifty
+
+616
+00:34:20,133 --> 00:34:25,466
+normalize it the maximum possible score would be fifty
+
+617
+00:34:26,533 --> 00:34:29,900
+so we divided by fifty times ten that's the idea
+
+618
+00:34:31,333 --> 00:34:32,133
+okay
+
+619
+00:34:34,233 --> 00:34:35,133
+aiya
+
+620
+00:34:35,900 --> 00:34:37,100
+we are
+
+621
+00:34:38,800 --> 00:34:40,233
+okay let's move on
+
+622
+00:34:44,533 --> 00:34:45,333
+oh by the way
+
+623
+00:34:46,666 --> 00:34:48,433
+i am an introvert
+
+624
+00:34:51,900 --> 00:34:54,700
+same respond i
+
+625
+00:34:55,100 --> 00:35:03,500
+i told students the same thing earlier and they hahaha come on
+
+626
+00:35:04,200 --> 00:35:06,033
+what's wrong nothing wrong right
+
+627
+00:35:06,066 --> 00:35:07,066
+yeah i'm happy
+
+628
+00:35:07,233 --> 00:35:10,033
+very happy i'm pretty energetic i'm still young very good
+
+629
+00:35:10,900 --> 00:35:11,600
+okay enough
+
+630
+00:35:11,600 --> 00:35:14,266
+Desmond move on alright
+
+631
+00:35:14,900 --> 00:35:19,500
+you don't need to finish the lab exercises
+
+632
+00:35:19,500 --> 00:35:21,300
+before attending the lab
+
+633
+00:35:21,800 --> 00:35:27,100
+but we do expect you to read the description beforehand so that
+
+634
+00:35:27,100 --> 00:35:28,833
+when you attend the lab
+
+635
+00:35:28,833 --> 00:35:32,100
+when your ta's talk about the lab materials
+
+636
+00:35:32,100 --> 00:35:33,233
+you know oh
+
+637
+00:35:33,233 --> 00:35:34,833
+makes sense what is going on
+
+638
+00:35:34,833 --> 00:35:38,400
+no problem try to be more interactive
+
+639
+00:35:40,066 --> 00:35:40,866
+okay
+
+640
+00:35:41,633 --> 00:35:47,333
+and we will try to release the lab materials three days
+
+641
+00:35:47,333 --> 00:35:48,900
+before the first lab
+
+642
+00:35:48,900 --> 00:35:50,033
+in that week
+
+643
+00:35:50,666 --> 00:35:51,933
+alright that means we will
+
+644
+00:35:51,933 --> 00:35:55,700
+give you some time to prepare for it alright
+
+645
+00:35:55,700 --> 00:35:57,066
+and now the policy
+
+646
+00:35:57,133 --> 00:36:01,433
+this is only for lab everyone listen carefully
+
+647
+00:36:01,433 --> 00:36:04,233
+public holiday policy suppose
+
+648
+00:36:05,333 --> 00:36:07,800
+you are going to attend a lab this week
+
+649
+00:36:08,266 --> 00:36:12,733
+but there is a public holiday do you need to come back
+
+650
+00:36:13,800 --> 00:36:21,666
+no enjoy your life do we need to do soon no enjoy your life
+
+651
+00:36:21,800 --> 00:36:22,900
+that's my you bad guy
+
+652
+00:36:23,800 --> 00:36:25,866
+we miss attendance point
+
+653
+00:36:27,133 --> 00:36:30,733
+we calculate your overall attendance point
+
+654
+00:36:30,733 --> 00:36:36,100
+using all the remaining laps enjoy your life be happy
+
+655
+00:36:36,866 --> 00:36:38,300
+sunshine and tomorrow
+
+656
+00:36:42,066 --> 00:36:44,000
+but this is only for labs ah eh
+
+657
+00:36:44,000 --> 00:36:46,433
+for lecture for lecture for lecture bad weather
+
+658
+00:36:48,433 --> 00:36:49,233
+soon
+
+659
+00:36:51,433 --> 00:36:53,266
+lecture public holiday
+
+660
+00:36:55,500 --> 00:36:56,500
+enjoy your life
+
+661
+00:36:57,933 --> 00:36:59,733
+hey and this is how
+
+662
+00:36:59,733 --> 00:37:02,466
+i get you understand this and that alright
+
+663
+00:37:02,900 --> 00:37:07,266
+but if you have doubts feel free to let me know what
+
+664
+00:37:08,400 --> 00:37:09,466
+yeah yeah yeah
+
+665
+00:37:09,466 --> 00:37:10,266
+yeah oh sorry
+
+666
+00:37:12,000 --> 00:37:13,000
+too chill right
+
+667
+00:37:14,066 --> 00:37:15,666
+okay this is lovely
+
+668
+00:37:15,666 --> 00:37:20,866
+i love this pen very good happy this is a free credit course so
+
+669
+00:37:20,866 --> 00:37:23,600
+that's why you need to spend three hours on lecture per week
+
+670
+00:37:23,600 --> 00:37:25,333
+two hours on lab per week
+
+671
+00:37:26,100 --> 00:37:27,533
+no prerequisite
+
+672
+00:37:27,600 --> 00:37:31,933
+that means even you haven't learned a programming language
+
+673
+00:37:32,433 --> 00:37:34,533
+before joining Hong Kong USD
+
+674
+00:37:34,700 --> 00:37:39,000
+no problem you will be able to do a good job believe me
+
+675
+00:37:41,933 --> 00:37:45,100
+you have to trust me alright hey
+
+676
+00:37:45,100 --> 00:37:47,000
+but for some reason
+
+677
+00:37:47,033 --> 00:37:51,800
+if you have taken any of these courses you are too good
+
+678
+00:37:52,533 --> 00:37:53,900
+you are not supposed to be here
+
+679
+00:37:54,533 --> 00:37:56,666
+eh we protect you
+
+680
+00:37:57,400 --> 00:37:58,500
+we protect you
+
+681
+00:37:58,633 --> 00:38:02,500
+if we allow people who talk any of this
+
+682
+00:38:02,500 --> 00:38:05,800
+g g ah they are too good
+
+683
+00:38:07,300 --> 00:38:12,500
+they are going to get easy grade then you suffer we protect you
+
+684
+00:38:13,866 --> 00:38:14,666
+good
+
+685
+00:38:16,233 --> 00:38:17,300
+please say yes
+
+686
+00:38:20,033 --> 00:38:21,033
+okay thank you
+
+687
+00:38:26,066 --> 00:38:27,933
+alright Desmond could you skip skip
+
+688
+00:38:27,933 --> 00:38:28,466
+this no
+
+689
+00:38:28,466 --> 00:38:29,333
+no no
+
+690
+00:38:29,333 --> 00:38:32,466
+no no i have to mention this a little bit
+
+691
+00:38:34,266 --> 00:38:36,900
+suppose we want to offer a new course
+
+692
+00:38:36,900 --> 00:38:40,533
+then we need to tell the senior managements what are the course
+
+693
+00:38:40,533 --> 00:38:41,500
+objectives
+
+694
+00:38:42,200 --> 00:38:45,066
+the course objectives of this course very simple
+
+695
+00:38:45,600 --> 00:38:48,066
+we want to do all the things
+
+696
+00:38:48,133 --> 00:38:53,066
+that we need to do in one o two one hey
+
+697
+00:38:53,066 --> 00:38:55,400
+by the way how many of you know
+
+698
+00:38:55,400 --> 00:38:58,233
+we have been offering another python course
+
+699
+00:38:58,233 --> 00:38:59,633
+called one o two one
+
+700
+00:39:01,666 --> 00:39:04,233
+okay very good we call that turtle course
+
+701
+00:39:05,500 --> 00:39:10,066
+we don't do turtle here we do pandas
+
+702
+00:39:10,333 --> 00:39:13,066
+numpi math plot lab all right
+
+703
+00:39:15,600 --> 00:39:16,866
+but i have to tell you
+
+704
+00:39:16,866 --> 00:39:19,533
+we we cover all the things that
+
+705
+00:39:19,533 --> 00:39:22,200
+we are supposed to cover in one o two one
+
+706
+00:39:22,933 --> 00:39:27,933
+but in depth right and moreover
+
+707
+00:39:27,933 --> 00:39:31,466
+we will tell you how to do object oriented programming
+
+708
+00:39:31,866 --> 00:39:33,100
+that is something very important
+
+709
+00:39:33,100 --> 00:39:35,066
+for you to survive in the industry
+
+710
+00:39:36,000 --> 00:39:38,100
+we also help you to understand
+
+711
+00:39:38,100 --> 00:39:41,866
+how to make good use of the libraries lumpies
+
+712
+00:39:41,866 --> 00:39:46,233
+panda math for lip and this is good for those of you
+
+713
+00:39:46,233 --> 00:39:51,600
+who want to do ai and machine learning in the near future okay
+
+714
+00:39:52,000 --> 00:39:54,233
+all right i want to emphasize one thing
+
+715
+00:39:56,200 --> 00:39:58,033
+are you all engineering students
+
+716
+00:40:00,266 --> 00:40:02,600
+if you are engineering students sorry
+
+717
+00:40:04,000 --> 00:40:07,266
+yes very good if you are engineering students
+
+718
+00:40:07,266 --> 00:40:13,033
+you need to take one o two three you cannot take one o two one
+
+719
+00:40:14,133 --> 00:40:16,666
+but theoretically speaking you could take one o two one
+
+720
+00:40:16,666 --> 00:40:17,533
+but you GG
+
+721
+00:40:19,133 --> 00:40:22,133
+hey why because you need one o two three to fulfill
+
+722
+00:40:22,133 --> 00:40:23,400
+your major requirement
+
+723
+00:40:23,533 --> 00:40:26,933
+once you finished one o two one
+
+724
+00:40:27,066 --> 00:40:30,266
+then you are not eligible to take one o two three
+
+725
+00:40:31,066 --> 00:40:32,400
+that's why gg
+
+726
+00:40:33,233 --> 00:40:36,666
+so don't take one o two one you have to take one o two three
+
+727
+00:40:36,733 --> 00:40:39,800
+please one o two three is good
+
+728
+00:40:40,033 --> 00:40:43,733
+destiny may not be good but one to free is really good
+
+729
+00:40:44,233 --> 00:40:45,500
+if you don't like me
+
+730
+00:40:45,500 --> 00:40:49,233
+join the other lecture section taught by me
+
+731
+00:40:52,500 --> 00:40:53,300
+oh
+
+732
+00:40:54,166 --> 00:40:55,433
+yeah you see
+
+733
+00:40:57,466 --> 00:40:58,533
+i've been doing
+
+734
+00:41:00,000 --> 00:41:02,700
+i've been working really hard to make you happy yes
+
+735
+00:41:03,033 --> 00:41:04,200
+okay be happy
+
+736
+00:41:08,000 --> 00:41:08,900
+good good good
+
+737
+00:41:11,000 --> 00:41:15,100
+alright eh these are all the topics
+
+738
+00:41:15,100 --> 00:41:17,333
+we are going to cover for those of you
+
+739
+00:41:17,333 --> 00:41:20,100
+who did ict in high school
+
+740
+00:41:20,100 --> 00:41:23,066
+you should know branching looping
+
+741
+00:41:23,133 --> 00:41:25,633
+but we will do more
+
+742
+00:41:27,933 --> 00:41:29,866
+much more okay
+
+743
+00:41:29,866 --> 00:41:30,666
+you could do it
+
+744
+00:41:34,033 --> 00:41:36,466
+alright wow
+
+745
+00:41:36,733 --> 00:41:38,533
+intended learning outcomes
+
+746
+00:41:38,733 --> 00:41:41,200
+i wouldn't go through all this in details
+
+747
+00:41:41,200 --> 00:41:45,466
+the basic idea is after you finish this course
+
+748
+00:41:45,466 --> 00:41:49,033
+you should be able to do all of them
+
+749
+00:41:49,333 --> 00:41:53,133
+if you cannot do any of them blame me
+
+750
+00:41:54,800 --> 00:41:55,666
+my bad
+
+751
+00:41:57,000 --> 00:42:00,633
+okay so no point for you to read all this now
+
+752
+00:42:00,633 --> 00:42:04,400
+you need to read all this at the end of the semester
+
+753
+00:42:05,866 --> 00:42:06,700
+and then you check
+
+754
+00:42:06,700 --> 00:42:08,866
+Desmond says that after the course
+
+755
+00:42:08,866 --> 00:42:10,433
+i should be able to do this ah
+
+756
+00:42:11,000 --> 00:42:14,200
+i should be able to implement solutions to a simple problem
+
+757
+00:42:14,233 --> 00:42:16,866
+i cannot even do programming
+
+758
+00:42:19,433 --> 00:42:21,666
+my bad okay
+
+759
+00:42:22,300 --> 00:42:25,333
+there's a idea intend learning outcomes
+
+760
+00:42:30,300 --> 00:42:31,133
+hahaha
+
+761
+00:42:32,700 --> 00:42:34,300
+did i say anything wrong
+
+762
+00:42:35,133 --> 00:42:36,233
+no right
+
+763
+00:42:37,133 --> 00:42:38,133
+yes
+
+764
+00:42:41,266 --> 00:42:44,833
+okay textbook first
+
+765
+00:42:45,200 --> 00:42:47,200
+do you need to buy a textbook
+
+766
+00:42:47,200 --> 00:42:49,933
+no except you're rich
+
+767
+00:42:52,000 --> 00:42:52,733
+if you are rich
+
+768
+00:42:52,733 --> 00:42:57,300
+you want to spend money right then then buy one happy otherwise
+
+769
+00:42:57,300 --> 00:42:58,800
+this is not a must
+
+770
+00:42:59,333 --> 00:43:02,666
+we will try to make the lectures comprehensive
+
+771
+00:43:03,000 --> 00:43:04,100
+that means it's good enough
+
+772
+00:43:04,100 --> 00:43:07,200
+for you to learn all the concept yeah
+
+773
+00:43:07,200 --> 00:43:08,433
+but for some student
+
+774
+00:43:08,433 --> 00:43:14,600
+they prefer to get a textbook they feel better no problem hey
+
+775
+00:43:14,700 --> 00:43:16,233
+where to buy this one uh
+
+776
+00:43:16,233 --> 00:43:20,833
+you may go to the textbook service point at Hong Kong usd
+
+777
+00:43:21,933 --> 00:43:25,666
+three hundred something dollar each wow
+
+778
+00:43:25,666 --> 00:43:26,533
+very cheap
+
+779
+00:43:27,266 --> 00:43:29,000
+no no no expensive
+
+780
+00:43:32,800 --> 00:43:37,333
+okay another textbook this is another one talking about python
+
+781
+00:43:38,600 --> 00:43:41,033
+why i put another one
+
+782
+00:43:41,866 --> 00:43:46,033
+this is a fancy textbook color printed
+
+783
+00:43:47,633 --> 00:43:49,333
+more comprehensive
+
+784
+00:43:49,466 --> 00:43:52,200
+even more comprehensive than the first one
+
+785
+00:43:53,133 --> 00:43:59,066
+and then what's next more affordable than the first one
+
+786
+00:44:01,000 --> 00:44:03,433
+but the most important thing is it's free
+
+787
+00:44:03,933 --> 00:44:07,100
+you could get a copy at the Hong Kong usd library
+
+788
+00:44:07,233 --> 00:44:08,200
+don't buy it ah
+
+789
+00:44:10,433 --> 00:44:11,466
+it's free oh
+
+790
+00:44:11,533 --> 00:44:13,000
+absolutely legal
+
+791
+00:44:14,900 --> 00:44:16,400
+absolutely legal
+
+792
+00:44:20,300 --> 00:44:21,233
+you don't care
+
+793
+00:44:24,833 --> 00:44:27,533
+we also cover some libraries right
+
+794
+00:44:27,533 --> 00:44:29,600
+for example nginx pandas
+
+795
+00:44:29,600 --> 00:44:30,833
+MySQL so
+
+796
+00:44:30,833 --> 00:44:34,800
+that's why we need another textbook to talk about all
+
+797
+00:44:34,800 --> 00:44:38,633
+those this is also available
+
+798
+00:44:38,633 --> 00:44:41,666
+at the Hong Kong usd library it's free
+
+799
+00:44:42,800 --> 00:44:47,066
+don't buy one except you are thank you
+
+800
+00:44:53,266 --> 00:44:54,433
+wow lovely
+
+801
+00:44:54,433 --> 00:44:57,500
+eh by the way any Korean student here
+
+802
+00:44:58,866 --> 00:45:01,533
+no i love this one fighting
+
+803
+00:45:02,166 --> 00:45:03,466
+fighting fighting
+
+804
+00:45:09,200 --> 00:45:09,433
+you know
+
+805
+00:45:09,433 --> 00:45:12,300
+sometimes i feel embarrassing i don't know what is going on hey
+
+806
+00:45:12,300 --> 00:45:13,800
+hi ah sorry
+
+807
+00:45:14,266 --> 00:45:15,833
+i scared you sorry sorry
+
+808
+00:45:15,833 --> 00:45:17,000
+sorry okay
+
+809
+00:45:17,000 --> 00:45:18,500
+what else we offer
+
+810
+00:45:18,600 --> 00:45:22,433
+uh we prepared we prepared twelve self test
+
+811
+00:45:23,100 --> 00:45:24,833
+what is the use of self test
+
+812
+00:45:24,833 --> 00:45:26,600
+let's say we finished this topic
+
+813
+00:45:26,633 --> 00:45:29,400
+and that's the time for you to work on the self test
+
+814
+00:45:29,500 --> 00:45:31,533
+if you answer many of them
+
+815
+00:45:31,533 --> 00:45:33,833
+wrongly you need to talk to me right
+
+816
+00:45:34,666 --> 00:45:36,033
+i need to help you out
+
+817
+00:45:37,033 --> 00:45:39,633
+this is something for you to check your progress
+
+818
+00:45:40,733 --> 00:45:43,266
+okay this is a brand new course
+
+819
+00:45:43,266 --> 00:45:46,100
+so don't ask me to give you past papers
+
+820
+00:45:47,133 --> 00:45:52,300
+but we will prepare a sample exam paper what is the use of that
+
+821
+00:45:52,500 --> 00:45:55,700
+we show you the examination format
+
+822
+00:45:56,400 --> 00:46:01,400
+it has nothing to do about the level of difficulties alright
+
+823
+00:46:01,933 --> 00:46:02,733
+is it okay
+
+824
+00:46:03,400 --> 00:46:04,200
+good
+
+825
+00:46:05,000 --> 00:46:05,800
+hey
+
+826
+00:46:06,800 --> 00:46:12,000
+but your juniors are lucky for those who are going to take
+
+827
+00:46:12,000 --> 00:46:16,200
+this course the next semester they will get two pass papers
+
+828
+00:46:18,666 --> 00:46:20,333
+one me time paper
+
+829
+00:46:20,333 --> 00:46:21,533
+one final paper
+
+830
+00:46:22,300 --> 00:46:25,433
+the ones that you are going to attempt
+
+831
+00:46:27,100 --> 00:46:28,633
+wow risky ah
+
+832
+00:46:33,866 --> 00:46:36,733
+okay this is the tentative teaching schedule
+
+833
+00:46:36,733 --> 00:46:38,500
+what does it mean by tentative
+
+834
+00:46:39,300 --> 00:46:43,100
+we may make adjustment based on the teaching
+
+835
+00:46:43,100 --> 00:46:44,500
+and learning progress
+
+836
+00:46:45,000 --> 00:46:47,266
+eh think about it if most of you get
+
+837
+00:46:47,266 --> 00:46:48,733
+stuck at certain point
+
+838
+00:46:48,833 --> 00:46:51,833
+it's no point for me to rush through the materials right
+
+839
+00:46:51,900 --> 00:46:55,933
+then i have to stop and and elaborate a little bit more
+
+840
+00:46:57,733 --> 00:47:00,500
+hey could you tell i'm not a powerpoint reader
+
+841
+00:47:01,300 --> 00:47:03,100
+do you know what is a powerpoint reader
+
+842
+00:47:04,700 --> 00:47:05,500
+that means
+
+843
+00:47:09,266 --> 00:47:10,466
+good next page
+
+844
+00:47:12,866 --> 00:47:14,300
+like this no
+
+845
+00:47:14,600 --> 00:47:17,200
+i seldom read through all all this right
+
+846
+00:47:17,200 --> 00:47:19,266
+i will try to give you the basic idea
+
+847
+00:47:19,266 --> 00:47:20,033
+so that hopefully
+
+848
+00:47:20,033 --> 00:47:22,466
+you understand the key points when you go home
+
+849
+00:47:22,466 --> 00:47:24,233
+and read the lecture notes yeah
+
+850
+00:47:24,233 --> 00:47:26,266
+easy good job
+
+851
+00:47:30,300 --> 00:47:34,000
+I i may offer makeup classes why
+
+852
+00:47:35,333 --> 00:47:38,833
+we are going to miss some lectures due to public holiday
+
+853
+00:47:39,266 --> 00:47:40,900
+you pay tuition fee right
+
+854
+00:47:42,733 --> 00:47:46,233
+i will make sure that i give you twenty six lecture classes
+
+855
+00:47:46,266 --> 00:47:48,033
+two per week
+
+856
+00:47:50,700 --> 00:47:56,733
+Desmond i think you get extra pay huh no believe me no extra pay
+
+857
+00:47:58,233 --> 00:47:59,633
+if i get extra pay
+
+858
+00:47:59,633 --> 00:48:02,200
+because of that i wouldn't do it
+
+859
+00:48:04,100 --> 00:48:04,900
+believe me
+
+860
+00:48:09,833 --> 00:48:11,833
+oh sorry good
+
+861
+00:48:18,933 --> 00:48:20,833
+alright python version
+
+862
+00:48:22,133 --> 00:48:24,600
+there are so many different versions of python
+
+863
+00:48:24,900 --> 00:48:27,800
+which one are we going to use
+
+864
+00:48:28,033 --> 00:48:32,066
+we stick with three point thirteen point five
+
+865
+00:48:32,900 --> 00:48:34,233
+and why this is important
+
+866
+00:48:34,233 --> 00:48:36,100
+if you install a different version
+
+867
+00:48:36,100 --> 00:48:39,233
+you may end up getting different result
+
+868
+00:48:41,033 --> 00:48:42,833
+then you get trouble all right
+
+869
+00:48:42,833 --> 00:48:44,000
+so we need to make sure that
+
+870
+00:48:44,000 --> 00:48:46,866
+all of you install exactly the same version
+
+871
+00:48:46,933 --> 00:48:48,433
+then we get back something
+
+872
+00:48:48,433 --> 00:48:55,233
+consistent same thing for lumpai pandas and math plot lap
+
+873
+00:48:55,633 --> 00:49:00,233
+we use the dedicated versions all right
+
+874
+00:49:00,233 --> 00:49:02,433
+what's next ide
+
+875
+00:49:02,800 --> 00:49:05,200
+integrated development environment what is
+
+876
+00:49:05,200 --> 00:49:06,533
+it Desmond ide
+
+877
+00:49:09,833 --> 00:49:14,266
+that means a software that consists of an editor
+
+878
+00:49:15,466 --> 00:49:20,000
+that you could use it to type code and run the program
+
+879
+00:49:20,233 --> 00:49:23,933
+and then we call it an ide so let me see you one more time
+
+880
+00:49:24,066 --> 00:49:27,833
+ide means integrated development environment
+
+881
+00:49:27,833 --> 00:49:31,466
+is a piece of software with an editor
+
+882
+00:49:31,833 --> 00:49:35,666
+that you could use to type code and run your program
+
+883
+00:49:36,400 --> 00:49:38,466
+we use vs code
+
+884
+00:49:38,500 --> 00:49:40,666
+visual studio code why
+
+885
+00:49:41,600 --> 00:49:42,433
+for those of you
+
+886
+00:49:42,433 --> 00:49:47,733
+who are going to take com two o one one and two o one two
+
+887
+00:49:47,833 --> 00:49:53,133
+they use vs code i want to help you to get used to it
+
+888
+00:49:54,000 --> 00:49:57,033
+okay then starting from one o two three you use it
+
+889
+00:49:57,033 --> 00:50:01,266
+then you should have no trouble using it in one o no
+
+890
+00:50:01,300 --> 00:50:04,266
+two o one one and two o one two okay
+
+891
+00:50:05,133 --> 00:50:08,666
+hey by the way this is the first time that i teach this course
+
+892
+00:50:12,900 --> 00:50:15,666
+you should say of course of course
+
+893
+00:50:15,666 --> 00:50:17,500
+this is a brand new course eh
+
+894
+00:50:18,033 --> 00:50:20,233
+i i may do something naughty
+
+895
+00:50:20,900 --> 00:50:24,066
+because i want to test or i want to check
+
+896
+00:50:24,066 --> 00:50:25,266
+whether you are alert
+
+897
+00:50:26,266 --> 00:50:27,066
+you should say
+
+898
+00:50:30,100 --> 00:50:33,300
+yeah yeah i'm naughty could you see hey
+
+899
+00:50:33,300 --> 00:50:34,666
+i may also do this
+
+900
+00:50:37,700 --> 00:50:39,633
+wow very good vs code perfect
+
+901
+00:50:42,066 --> 00:50:43,100
+campsite
+
+902
+00:50:44,633 --> 00:50:45,433
+lectures
+
+903
+00:50:50,600 --> 00:50:51,400
+okay good
+
+904
+00:50:51,600 --> 00:50:53,833
+that's me that's me excuse me sorry
+
+905
+00:50:53,833 --> 00:50:55,066
+sorry just kidding
+
+906
+00:50:56,400 --> 00:50:59,933
+yeah this is the beauty of using a wireless microphone right
+
+907
+00:51:00,233 --> 00:51:03,900
+then i could move around talk to you are you happy
+
+908
+00:51:07,433 --> 00:51:10,000
+okay grading scheme
+
+909
+00:51:11,500 --> 00:51:15,633
+thirty five thirty five percent on course work
+
+910
+00:51:15,633 --> 00:51:18,700
+i apologize we put more on examination
+
+911
+00:51:18,700 --> 00:51:21,866
+because nowadays ai is too good
+
+912
+00:51:23,600 --> 00:51:28,300
+ChatGPT co pilot wow
+
+913
+00:51:28,300 --> 00:51:30,633
+then we have to put more on the exam
+
+914
+00:51:31,033 --> 00:51:33,433
+so forty five percent on coursework
+
+915
+00:51:33,666 --> 00:51:40,733
+which consists of ten percent for labs how many in total ten
+
+916
+00:51:40,866 --> 00:51:44,400
+how many you need to submit five
+
+917
+00:51:44,533 --> 00:51:47,200
+are we going to count all five
+
+918
+00:51:47,233 --> 00:51:50,400
+no we take the best four
+
+919
+00:51:52,233 --> 00:51:55,833
+ten percent two programming assignments
+
+920
+00:51:55,900 --> 00:51:58,033
+twenty five percent first one
+
+921
+00:51:58,433 --> 00:52:02,100
+twelve percent second one thirteen percent
+
+922
+00:52:03,466 --> 00:52:06,100
+why thirteen percent for the second one
+
+923
+00:52:06,266 --> 00:52:07,533
+because it's more
+
+924
+00:52:10,733 --> 00:52:11,700
+positive
+
+925
+00:52:13,000 --> 00:52:14,200
+interesting
+
+926
+00:52:16,366 --> 00:52:20,133
+okay don't say it's more difficult it's more challenging
+
+927
+00:52:20,533 --> 00:52:24,200
+think positive it's more interesting
+
+928
+00:52:24,700 --> 00:52:27,733
+sunshine and tomorrow you know
+
+929
+00:52:27,733 --> 00:52:31,800
+that's the trick be happy yeah okay
+
+930
+00:52:31,833 --> 00:52:33,900
+so twenty five percent for the midterm
+
+931
+00:52:33,900 --> 00:52:37,233
+forty percent for the final examination if you add up all this
+
+932
+00:52:37,233 --> 00:52:38,800
+one hundred
+
+933
+00:52:40,900 --> 00:52:41,700
+alright
+
+934
+00:52:42,400 --> 00:52:43,200
+good
+
+935
+00:52:48,333 --> 00:52:50,866
+midterm examination wow
+
+936
+00:52:50,866 --> 00:52:51,933
+you should know ah
+
+937
+00:52:51,933 --> 00:52:53,633
+i email you already
+
+938
+00:52:53,900 --> 00:52:57,433
+our midterm examination will be conducted on October
+
+939
+00:52:57,433 --> 00:53:00,200
+twenty five Saturday
+
+940
+00:53:00,933 --> 00:53:05,233
+from two to four p m drop this down on your calendar
+
+941
+00:53:06,266 --> 00:53:07,133
+your big day
+
+942
+00:53:08,833 --> 00:53:10,233
+don't scare me Desmond
+
+943
+00:53:10,233 --> 00:53:11,400
+you're your big day right
+
+944
+00:53:11,400 --> 00:53:13,266
+lovely lovely day
+
+945
+00:53:14,633 --> 00:53:15,633
+alright eh
+
+946
+00:53:15,800 --> 00:53:18,000
+how about the venue not yet decided
+
+947
+00:53:18,100 --> 00:53:19,300
+how about the coverage
+
+948
+00:53:20,633 --> 00:53:21,500
+let's see
+
+949
+00:53:25,100 --> 00:53:28,100
+oh yeah and we will try to resolve it all right
+
+950
+00:53:28,100 --> 00:53:29,000
+and from my understanding
+
+951
+00:53:29,000 --> 00:53:30,633
+i think these takes a one one
+
+952
+00:53:30,633 --> 00:53:35,900
+one two something like that sorry one one
+
+953
+00:53:35,900 --> 00:53:37,033
+oh one yeah and i
+
+954
+00:53:37,033 --> 00:53:40,600
+think we are resolving the conflict all right
+
+955
+00:53:40,600 --> 00:53:43,133
+we will let you know the arrangement nobody
+
+956
+00:53:44,900 --> 00:53:50,666
+eh we won't tell you uh choose one no no worry
+
+957
+00:53:50,866 --> 00:53:53,233
+we have to uh accommodate right
+
+958
+00:53:53,233 --> 00:53:56,700
+no worry okay and this is lovely let me show you
+
+959
+00:53:58,233 --> 00:54:00,733
+what we learn in class da
+
+960
+00:54:00,733 --> 00:54:03,933
+da what actually on the test wow
+
+961
+00:54:05,533 --> 00:54:09,300
+this is not a math course this is a programming course
+
+962
+00:54:09,300 --> 00:54:10,733
+this is only for math
+
+963
+00:54:17,000 --> 00:54:18,600
+okay the last part
+
+964
+00:54:20,100 --> 00:54:25,800
+in this topic i hate it but i have to say it don't plagiarize
+
+965
+00:54:27,300 --> 00:54:28,600
+do your own work
+
+966
+00:54:28,833 --> 00:54:33,866
+don't copy the work from other people one thing you learn
+
+967
+00:54:33,866 --> 00:54:35,200
+nothing if you copy
+
+968
+00:54:35,733 --> 00:54:38,233
+all right and more importantly
+
+969
+00:54:39,433 --> 00:54:43,733
+we use a very sophisticated software to cross
+
+970
+00:54:43,733 --> 00:54:45,333
+check all the submissions
+
+971
+00:54:46,533 --> 00:54:47,800
+it's better than ai
+
+972
+00:54:49,133 --> 00:54:51,700
+so don't patronize all right
+
+973
+00:54:51,900 --> 00:54:52,600
+hey dance man
+
+974
+00:54:52,600 --> 00:54:54,333
+i'm not sure what we should do
+
+975
+00:54:54,333 --> 00:54:57,800
+or what we shouldn't do read all this
+
+976
+00:54:57,866 --> 00:55:02,533
+you are not supposed to do any of them okay
+
+977
+00:55:02,533 --> 00:55:04,033
+let me do one with you
+
+978
+00:55:06,266 --> 00:55:12,133
+do not look at the actual program quote of another student huh
+
+979
+00:55:13,466 --> 00:55:17,400
+eh that means i'm not supposed to discuss the idea with my peers
+
+980
+00:55:17,700 --> 00:55:19,300
+ugg no
+
+981
+00:55:19,600 --> 00:55:21,533
+the reason is let's say
+
+982
+00:55:24,133 --> 00:55:26,433
+see this is my code pretty cool huh
+
+983
+00:55:28,533 --> 00:55:35,133
+for loop exactly the same thing yeah also very cool bad idea
+
+984
+00:55:36,800 --> 00:55:37,333
+okay do you know what
+
+985
+00:55:37,333 --> 00:55:41,200
+i'm saying you are welcome to discuss with your peers verbally
+
+986
+00:55:41,200 --> 00:55:43,133
+but don't show them the code
+
+987
+00:55:44,933 --> 00:55:46,833
+because the reason if yes you
+
+988
+00:55:46,833 --> 00:55:48,666
+if you show the code to other people
+
+989
+00:55:48,666 --> 00:55:52,200
+they will come up with something pretty similar then you end up
+
+990
+00:55:52,200 --> 00:55:55,700
+getting trouble and normally the one
+
+991
+00:55:58,266 --> 00:56:01,833
+let's see your code they have no idea how to get it done right
+
+992
+00:56:01,833 --> 00:56:05,033
+then they try to come up with something very similar
+
+993
+00:56:05,066 --> 00:56:08,333
+and then if you get caught g g
+
+994
+00:56:15,200 --> 00:56:16,300
+ah okay
+
+995
+00:56:17,100 --> 00:56:17,333
+okay
+
+996
+00:56:17,333 --> 00:56:20,700
+for those of you who learn programming before and you may say uh
+
+997
+00:56:20,700 --> 00:56:24,466
+i change all the variable names right
+
+998
+00:56:24,466 --> 00:56:26,533
+instead of using for loop i use while loop
+
+999
+00:56:26,600 --> 00:56:31,833
+no use they check the logic all right and to do deep analysis
+
+1000
+00:56:32,566 --> 00:56:36,133
+we also do manual check all right
+
+1001
+00:56:36,133 --> 00:56:37,100
+so don't do it
+
+1002
+00:56:41,666 --> 00:56:47,666
+okay eh there is a bug in this slide where is the bug
+
+1003
+00:56:48,500 --> 00:56:49,533
+what's the problem
+
+1004
+00:56:53,733 --> 00:56:54,700
+the bug
+
+1005
+00:56:56,266 --> 00:56:57,333
+yeah very good
+
+1006
+00:56:57,333 --> 00:57:03,466
+thank you who said that who very good a plus
+
+1007
+00:57:05,666 --> 00:57:06,466
+ah hahaha
+
+1008
+00:57:10,500 --> 00:57:12,600
+wow no no okay
+
+1009
+00:57:12,600 --> 00:57:14,900
+let me do something yeah i want to get you right
+
+1010
+00:57:15,266 --> 00:57:16,300
+you're you're you're very good
+
+1011
+00:57:16,300 --> 00:57:17,233
+you're too good
+
+1012
+00:57:19,233 --> 00:57:20,066
+what's your name
+
+1013
+00:57:21,066 --> 00:57:23,533
+huh Ron good name
+
+1014
+00:57:25,066 --> 00:57:27,266
+a plus okay
+
+1015
+00:57:28,833 --> 00:57:29,733
+how to do a good job
+
+1016
+00:57:29,733 --> 00:57:30,333
+in this course
+
+1017
+00:57:30,333 --> 00:57:31,033
+Desmond
+
+1018
+00:57:31,033 --> 00:57:35,000
+you need to spend time right for a normal free credit course
+
+1019
+00:57:35,000 --> 00:57:39,866
+you need to spend eight hours per week on it eight hours
+
+1020
+00:57:40,866 --> 00:57:46,233
+one hour to prestudy the material three hours for lectures
+
+1021
+00:57:46,800 --> 00:57:53,800
+one hour for lab three hours to post study the material
+
+1022
+00:57:53,800 --> 00:57:57,800
+that means revision that's the idea all right hey
+
+1023
+00:57:57,800 --> 00:58:01,133
+suppose you do fifteen credits
+
+1024
+00:58:01,866 --> 00:58:05,066
+then how many hours do you need to spend per week
+
+1025
+00:58:06,533 --> 00:58:07,333
+math
+
+1026
+00:58:08,400 --> 00:58:15,733
+free credit eight hours fifteen credit forty hours this is
+
+1027
+00:58:15,733 --> 00:58:18,666
+what we mean by food time
+
+1028
+00:58:18,733 --> 00:58:20,233
+full time student right
+
+1029
+00:58:20,266 --> 00:58:21,500
+if you are full time student
+
+1030
+00:58:21,500 --> 00:58:22,800
+you need to spend time
+
+1031
+00:58:22,800 --> 00:58:25,866
+you are not doing part time you're doing full time
+
+1032
+00:58:27,500 --> 00:58:28,633
+thank you work
+
+1033
+00:58:28,633 --> 00:58:35,100
+life work life work life balance
+
+1034
+00:58:36,633 --> 00:58:38,300
+but still forty
+
+1035
+00:58:41,333 --> 00:58:44,300
+okay that's all for this part any question
+
+1036
+00:58:45,533 --> 00:58:46,700
+do you have any question
+
+1037
+00:58:50,400 --> 00:58:52,233
+sorry greeting
+
+1038
+00:58:53,100 --> 00:58:56,066
+uh we mentioned the greeting scheme right
+
+1039
+00:58:56,500 --> 00:58:58,433
+i think we mentioned the greeting scheme did i
+
+1040
+00:59:04,600 --> 00:59:05,300
+did i did
+
+1041
+00:59:05,300 --> 00:59:06,333
+i go through this
+
+1042
+00:59:07,100 --> 00:59:08,833
+yeah no worry hey good
+
+1043
+00:59:08,833 --> 00:59:09,833
+if you have any question
+
+1044
+00:59:09,833 --> 00:59:10,633
+do let me know
+
+1045
+00:59:10,800 --> 00:59:13,433
+you are welcome to stop me yeah
+
+1046
+00:59:14,333 --> 00:59:15,133
+good
+
+1047
+00:59:17,300 --> 00:59:18,866
+哦okay
+
+1048
+00:59:20,133 --> 00:59:21,700
+what's next oh
+
+1049
+00:59:21,700 --> 00:59:24,633
+by the way ah yeah
+
+1050
+00:59:24,633 --> 00:59:26,866
+ah yeah now you can see this right
+
+1051
+00:59:28,000 --> 00:59:29,800
+what's the file name for this one
+
+1052
+00:59:32,066 --> 00:59:35,666
+zero haven logistics something right
+
+1053
+00:59:36,400 --> 00:59:37,400
+why zero
+
+1054
+00:59:39,300 --> 00:59:41,000
+we have to start from zero
+
+1055
+00:59:41,933 --> 00:59:44,333
+this is the analogy so that's why
+
+1056
+00:59:44,333 --> 00:59:45,400
+i make it zero
+
+1057
+00:59:45,400 --> 00:59:46,600
+hyphen logistics
+
+1058
+00:59:46,600 --> 00:59:48,466
+because we all start from zero
+
+1059
+00:59:48,933 --> 00:59:52,066
+even you don't have any background on computing on programming
+
+1060
+00:59:52,066 --> 00:59:54,333
+no worry you will be able to do fine
+
+1061
+00:59:54,466 --> 00:59:57,133
+you are able to do it right
+
+1062
+00:59:58,266 --> 00:59:59,500
+okay so next
+
+1063
+00:59:59,500 --> 01:00:01,633
+one hyphen introduction
+
+1064
+01:00:01,800 --> 01:00:06,033
+this is the real start in other words
+
+1065
+01:00:06,033 --> 01:00:11,333
+we may test you something in this topic in the exam right
+
+1066
+01:00:11,333 --> 01:00:12,733
+so you should pay attention
+
+1067
+01:00:14,566 --> 01:00:15,866
+are you ready
+
+1068
+01:00:19,866 --> 01:00:21,000
+are you ready
+
+1069
+01:00:21,433 --> 01:00:23,000
+yes very good
+
+1070
+01:00:24,600 --> 01:00:25,400
+let's start
+
+1071
+01:00:26,533 --> 01:00:27,633
+this topic
+
+1072
+01:00:27,900 --> 01:00:33,800
+i'm going to introduce you to computers and programming
+
+1073
+01:00:33,933 --> 01:00:35,033
+Desmond skip it
+
+1074
+01:00:36,100 --> 01:00:39,133
+i've been using computers for many years right
+
+1075
+01:00:39,200 --> 01:00:40,933
+i know what is a computer
+
+1076
+01:00:40,933 --> 01:00:41,900
+yeah i know
+
+1077
+01:00:41,900 --> 01:00:44,400
+but i still want to make sure that you know
+
+1078
+01:00:45,900 --> 01:00:49,600
+and you are going to do programming you need to know exactly
+
+1079
+01:00:49,600 --> 01:00:51,233
+what does it mean by programming
+
+1080
+01:00:51,300 --> 01:00:54,333
+so i have to do something please bear with me
+
+1081
+01:00:58,433 --> 01:01:05,133
+okay a computer consists of two things hardware and software
+
+1082
+01:01:06,600 --> 01:01:10,033
+let me tell you one thing i
+
+1083
+01:01:11,400 --> 01:01:13,666
+check some social media platform
+
+1084
+01:01:13,866 --> 01:01:17,466
+and i realize that some Hong Kong usd students
+
+1085
+01:01:17,466 --> 01:01:19,600
+they argue with each other
+
+1086
+01:01:21,400 --> 01:01:25,500
+they ask electronic and computer engineering
+
+1087
+01:01:26,000 --> 01:01:28,133
+computer science and engineering
+
+1088
+01:01:28,133 --> 01:01:30,066
+which one is more important
+
+1089
+01:01:33,866 --> 01:01:35,933
+both are very important right
+
+1090
+01:01:36,000 --> 01:01:40,300
+because a computer consists of both hardware and software
+
+1091
+01:01:41,000 --> 01:01:42,800
+we need computer scientists
+
+1092
+01:01:43,300 --> 01:01:45,200
+we need electronic engineers
+
+1093
+01:01:45,200 --> 01:01:47,500
+so that we have computers
+
+1094
+01:01:49,000 --> 01:01:50,033
+don't argue
+
+1095
+01:01:51,700 --> 01:01:54,900
+we are under the same roof this is what
+
+1096
+01:01:54,900 --> 01:01:56,833
+i mean alright hey
+
+1097
+01:01:56,833 --> 01:01:58,600
+so what does it mean by hardware
+
+1098
+01:01:58,700 --> 01:02:03,000
+da da this is hardware if you hit
+
+1099
+01:02:03,133 --> 01:02:04,300
+you hear sound right
+
+1100
+01:02:04,300 --> 01:02:08,600
+this is hardware what is software something invisible
+
+1101
+01:02:09,000 --> 01:02:10,400
+but still very important
+
+1102
+01:02:11,733 --> 01:02:13,033
+all right hey
+
+1103
+01:02:13,033 --> 01:02:16,800
+then in terms of hardware what could we see
+
+1104
+01:02:16,800 --> 01:02:23,433
+in a computer cpu main memory storage devices
+
+1105
+01:02:23,433 --> 01:02:25,433
+input and output devices
+
+1106
+01:02:25,433 --> 01:02:30,300
+communication devices why we need all of them
+
+1107
+01:02:30,333 --> 01:02:31,500
+basic idea
+
+1108
+01:02:32,266 --> 01:02:37,333
+cpu central processing unit just like the brain of the computer
+
+1109
+01:02:37,866 --> 01:02:41,533
+it process the data it manipulate the data
+
+1110
+01:02:42,633 --> 01:02:45,266
+make sense what is main
+
+1111
+01:02:45,266 --> 01:02:50,233
+memory we use main memory to store data or data
+
+1112
+01:02:52,500 --> 01:02:54,933
+what is the use of storage devices
+
+1113
+01:02:54,933 --> 01:02:57,466
+store data or data
+
+1114
+01:02:57,500 --> 01:02:59,300
+now you should ask
+
+1115
+01:03:01,533 --> 01:03:04,200
+what's the difference a plus plus
+
+1116
+01:03:06,066 --> 01:03:10,666
+good if you store your day in main memory after you
+
+1117
+01:03:10,666 --> 01:03:13,300
+switch off your computer g g
+
+1118
+01:03:14,666 --> 01:03:20,133
+all the data are gone if you want to store your data permanently
+
+1119
+01:03:20,233 --> 01:03:24,000
+then you have to store all of them in a storage device
+
+1120
+01:03:31,600 --> 01:03:32,066
+oh okay
+
+1121
+01:03:32,066 --> 01:03:32,833
+okay no problem okay
+
+1122
+01:03:32,833 --> 01:03:33,333
+have a nice day
+
+1123
+01:03:33,333 --> 01:03:34,133
+have a nice day
+
+1124
+01:03:37,733 --> 01:03:42,200
+hey it's not easy to be a teacher could you tell it's not easy
+
+1125
+01:03:44,433 --> 01:03:47,833
+okay then what is the use of input device
+
+1126
+01:03:47,833 --> 01:03:51,600
+you input data to the computer
+
+1127
+01:03:51,700 --> 01:03:53,933
+for example you type Desmond is a bad guy
+
+1128
+01:03:56,066 --> 01:03:57,800
+what is the use of the output device
+
+1129
+01:03:57,800 --> 01:04:03,066
+you show information or data on screen Desmond is a good guy
+
+1130
+01:04:03,266 --> 01:04:04,133
+very true
+
+1131
+01:04:05,500 --> 01:04:07,866
+is the use of a communication device
+
+1132
+01:04:07,933 --> 01:04:13,266
+you use it to communicate with another computer in other country
+
+1133
+01:04:13,266 --> 01:04:16,800
+something like that if you want to learn more about all
+
+1134
+01:04:16,800 --> 01:04:21,533
+this take com two six one
+
+1135
+01:04:21,533 --> 01:04:24,100
+one i'm doing commercial for them
+
+1136
+01:04:25,800 --> 01:04:27,000
+i'm doing marketing
+
+1137
+01:04:28,700 --> 01:04:32,733
+they don't need to pay me i'm happy to do it all right
+
+1138
+01:04:33,233 --> 01:04:35,133
+okay Desmond
+
+1139
+01:04:35,433 --> 01:04:41,666
+i think different hardware they communicate with other hardware
+
+1140
+01:04:41,666 --> 01:04:42,466
+right yes
+
+1141
+01:04:42,466 --> 01:04:45,666
+of course they have to communicate with each other right
+
+1142
+01:04:46,300 --> 01:04:49,033
+they use buts to communicate
+
+1143
+01:04:52,066 --> 01:04:53,133
+bus oh
+
+1144
+01:04:53,133 --> 01:04:58,533
+that's when i know then i need to go to bus stop now bus is the
+
+1145
+01:04:58,533 --> 01:05:04,333
+channel for them to communicate with each other all right
+
+1146
+01:05:04,800 --> 01:05:06,233
+good enough okay
+
+1147
+01:05:06,233 --> 01:05:10,100
+software as mentioned invisible instructions that means
+
+1148
+01:05:10,100 --> 01:05:14,666
+we put all the instructions for the computer in a file
+
+1149
+01:05:15,100 --> 01:05:16,933
+if we execute it
+
+1150
+01:05:16,933 --> 01:05:21,266
+that means computer computer you need to do all this
+
+1151
+01:05:22,000 --> 01:05:23,666
+for me do it now
+
+1152
+01:05:25,600 --> 01:05:27,500
+thank you i scare you huh
+
+1153
+01:05:30,533 --> 01:05:36,466
+easy this is the introduction good
+
+1154
+01:05:36,466 --> 01:05:37,233
+right
+
+1155
+01:05:37,233 --> 01:05:41,133
+and this is something you have learned in ict i know uh but uh
+
+1156
+01:05:41,133 --> 01:05:44,466
+it's good good to know happy happy happy
+
+1157
+01:05:46,133 --> 01:05:47,400
+all right more
+
+1158
+01:05:48,400 --> 01:05:52,133
+computers only understand binary stuff
+
+1159
+01:05:52,133 --> 01:05:54,033
+what does it mean by binary stuff
+
+1160
+01:05:54,033 --> 01:05:55,666
+only zero or one
+
+1161
+01:05:56,200 --> 01:05:57,733
+why zero or one
+
+1162
+01:05:57,733 --> 01:05:59,600
+Desmond this guy
+
+1163
+01:06:01,100 --> 01:06:03,200
+do you need to supply electricity
+
+1164
+01:06:03,933 --> 01:06:04,900
+yes right
+
+1165
+01:06:06,266 --> 01:06:08,133
+in order to power on your computer
+
+1166
+01:06:08,133 --> 01:06:12,833
+you need to plug it to the socket you get electricity
+
+1167
+01:06:13,800 --> 01:06:17,433
+so this guy only understand low voltage
+
+1168
+01:06:17,433 --> 01:06:19,800
+high voltage low voltage
+
+1169
+01:06:19,800 --> 01:06:23,200
+high voltage so theoretically speaking
+
+1170
+01:06:23,200 --> 01:06:25,600
+you could communicate with the computer like this
+
+1171
+01:06:25,933 --> 01:06:29,300
+high voltage high voltage high voltage low voltage high voltage
+
+1172
+01:06:29,300 --> 01:06:32,266
+low voltage high voltage low voltage low voltage
+
+1173
+01:06:35,000 --> 01:06:37,333
+low voltage means zero
+
+1174
+01:06:37,533 --> 01:06:39,933
+high voltage means one so
+
+1175
+01:06:39,933 --> 01:06:43,033
+that's why in order to communicate with our computers
+
+1176
+01:06:43,033 --> 01:06:46,666
+you put whole bunch of zero and ones
+
+1177
+01:06:50,700 --> 01:06:51,500
+okay
+
+1178
+01:06:51,933 --> 01:06:52,733
+next
+
+1179
+01:06:54,066 --> 01:06:55,500
+Desmond suppose
+
+1180
+01:06:55,500 --> 01:07:00,033
+i want to store the decimal number ten in my computer
+
+1181
+01:07:00,033 --> 01:07:00,833
+what to do
+
+1182
+01:07:01,100 --> 01:07:05,933
+you need to first convert the decimal number ten to binary
+
+1183
+01:07:05,933 --> 01:07:08,466
+that means whole bunch of zero and one done
+
+1184
+01:07:10,266 --> 01:07:15,100
+now put the binary string in ram
+
+1185
+01:07:16,100 --> 01:07:19,300
+good like this all right
+
+1186
+01:07:19,333 --> 01:07:22,233
+hey but i will not tell you how to do the conversion
+
+1187
+01:07:22,233 --> 01:07:23,900
+because you need to take another one
+
+1188
+01:07:23,900 --> 01:07:25,300
+what's the cost code
+
+1189
+01:07:25,533 --> 01:07:28,233
+two six one one
+
+1190
+01:07:28,500 --> 01:07:32,833
+you will learn how to do the conversion okay more
+
+1191
+01:07:34,400 --> 01:07:37,866
+this is one digit of the binary
+
+1192
+01:07:37,866 --> 01:07:43,600
+one digit of the binary zero or one right
+
+1193
+01:07:43,733 --> 01:07:45,200
+we call this a bit
+
+1194
+01:07:45,433 --> 01:07:49,933
+a bit one digit in the binary we called it a bit
+
+1195
+01:07:49,933 --> 01:07:50,733
+a bit
+
+1196
+01:07:51,433 --> 01:07:52,833
+how many bits
+
+1197
+01:07:54,233 --> 01:07:56,733
+here one two three four
+
+1198
+01:07:56,733 --> 01:08:00,000
+five six seven eight eight bits
+
+1199
+01:08:00,066 --> 01:08:02,233
+we call it one bite
+
+1200
+01:08:02,466 --> 01:08:04,500
+one bite one bite
+
+1201
+01:08:04,900 --> 01:08:06,633
+eight bits one bite
+
+1202
+01:08:09,100 --> 01:08:12,466
+Desmond then what is kilobyte
+
+1203
+01:08:12,466 --> 01:08:14,333
+kb i know
+
+1204
+01:08:14,333 --> 01:08:18,900
+i know what thousand bytes wrong
+
+1205
+01:08:20,233 --> 01:08:24,300
+for layman k means one thousand for computer scientists
+
+1206
+01:08:25,066 --> 01:08:27,900
+k means one o two four oh
+
+1207
+01:08:27,900 --> 01:08:32,700
+let me tell you one thing i'm serious i'm not kidding originally
+
+1208
+01:08:32,700 --> 01:08:34,466
+i want to name this course
+
+1209
+01:08:34,466 --> 01:08:38,600
+calm one o two four it's beautiful right
+
+1210
+01:08:40,200 --> 01:08:41,933
+but they don't allow me to do it
+
+1211
+01:08:42,300 --> 01:08:47,033
+they said you want to do it do it five years later
+
+1212
+01:08:49,733 --> 01:08:51,600
+aiya obviously
+
+1213
+01:08:51,600 --> 01:08:55,233
+they are not computer science people
+
+1214
+01:08:56,200 --> 01:08:57,833
+they don't know the beauty right
+
+1215
+01:08:58,700 --> 01:09:00,200
+hey but anyway from now
+
+1216
+01:09:00,200 --> 01:09:01,733
+on don't tell people
+
+1217
+01:09:01,733 --> 01:09:06,233
+k in computer science means one thousand is one o two four
+
+1218
+01:09:07,300 --> 01:09:08,100
+all right
+
+1219
+01:09:09,333 --> 01:09:12,600
+then what does it mean by one mb one megabyte
+
+1220
+01:09:12,733 --> 01:09:16,000
+Desmond i don't know megabytes i know megabytes
+
+1221
+01:09:18,300 --> 01:09:22,800
+mb megabyte means one o two four
+
+1222
+01:09:23,100 --> 01:09:29,066
+kilobyte one mb means one o two four
+
+1223
+01:09:29,066 --> 01:09:31,866
+kilobyte and so on so forth
+
+1224
+01:09:32,733 --> 01:09:37,433
+i think nowadays you don't care about kb you don't care about mb
+
+1225
+01:09:37,433 --> 01:09:39,933
+you care about gb and tb
+
+1226
+01:09:41,033 --> 01:09:42,100
+because you are rich
+
+1227
+01:09:44,866 --> 01:09:45,666
+is it okay
+
+1228
+01:09:46,466 --> 01:09:49,300
+alright let me check hey
+
+1229
+01:09:49,666 --> 01:09:50,466
+ha ha
+
+1230
+01:09:51,733 --> 01:09:57,300
+one kb how many bits just tell me how to calculate it
+
+1231
+01:09:57,300 --> 01:10:00,533
+you don't have to show me the exact number one kb
+
+1232
+01:10:00,600 --> 01:10:01,633
+how many bits
+
+1233
+01:10:03,266 --> 01:10:08,600
+one o two four times eight very good
+
+1234
+01:10:08,600 --> 01:10:11,133
+one more one mb
+
+1235
+01:10:11,133 --> 01:10:12,666
+how many bits
+
+1236
+01:10:15,833 --> 01:10:18,000
+one mb how many bits
+
+1237
+01:10:19,333 --> 01:10:26,833
+one o two four times one o two four times eighth very good
+
+1238
+01:10:27,433 --> 01:10:28,233
+good job
+
+1239
+01:10:29,200 --> 01:10:30,000
+very good
+
+1240
+01:10:30,666 --> 01:10:31,466
+thank you
+
+1241
+01:10:33,500 --> 01:10:34,700
+am i going too fast
+
+1242
+01:10:38,666 --> 01:10:40,133
+okay hey
+
+1243
+01:10:40,133 --> 01:10:42,233
+why you mention all this stupid stuff
+
+1244
+01:10:42,233 --> 01:10:47,500
+no i want to tell you what is main memory
+
+1245
+01:10:48,233 --> 01:10:56,933
+this is the logical view of the main memory logical view
+
+1246
+01:10:56,933 --> 01:10:58,533
+what does it mean by logical view
+
+1247
+01:10:59,200 --> 01:11:00,666
+it looks like a table
+
+1248
+01:11:01,266 --> 01:11:08,866
+a table with many rows and each row would store a binary okay
+
+1249
+01:11:08,866 --> 01:11:10,000
+and for example
+
+1250
+01:11:10,000 --> 01:11:12,400
+i want to store letter b
+
+1251
+01:11:12,400 --> 01:11:17,700
+c then i have to convert it to binary and put it there
+
+1252
+01:11:18,766 --> 01:11:21,033
+this one letter small r
+
+1253
+01:11:21,033 --> 01:11:25,266
+i convert it to binary and stored here and etcetera etcetera
+
+1254
+01:11:25,400 --> 01:11:28,300
+this is how we store data in our computer
+
+1255
+01:11:29,866 --> 01:11:30,933
+okay so
+
+1256
+01:11:30,933 --> 01:11:32,700
+if you write a program
+
+1257
+01:11:32,733 --> 01:11:35,800
+and you use it to store data to the memory
+
+1258
+01:11:37,500 --> 01:11:42,200
+it does this you want to store the data to the main memory right
+
+1259
+01:11:42,700 --> 01:11:46,233
+it converts the data to binary and put
+
+1260
+01:11:46,233 --> 01:11:52,800
+it another one another one another one another one
+
+1261
+01:11:54,500 --> 01:11:57,900
+okay main memory it's that simple
+
+1262
+01:12:02,200 --> 01:12:03,000
+i scare you
+
+1263
+01:12:07,400 --> 01:12:08,200
+good
+
+1264
+01:12:11,500 --> 01:12:13,800
+okay haha
+
+1265
+01:12:15,866 --> 01:12:21,066
+suppose you are being asked to write a program
+
+1266
+01:12:21,400 --> 01:12:25,000
+which is an image processing software like photoshop
+
+1267
+01:12:25,200 --> 01:12:27,333
+are you serious just kidding
+
+1268
+01:12:29,000 --> 01:12:31,066
+but suppose this is what you need to do
+
+1269
+01:12:31,066 --> 01:12:32,933
+you need to write a program
+
+1270
+01:12:32,933 --> 01:12:36,233
+which is an image processing software should you go
+
+1271
+01:12:36,233 --> 01:12:39,200
+ahead to open up vs code and start typing
+
+1272
+01:12:41,433 --> 01:12:42,233
+error
+
+1273
+01:12:44,666 --> 01:12:47,266
+okay you don't like era right you like Mira
+
+1274
+01:12:49,400 --> 01:12:50,900
+sorry okay
+
+1275
+01:12:51,833 --> 01:12:53,633
+and what should we do
+
+1276
+01:12:53,666 --> 01:12:56,000
+this is exactly what you need to do everyone
+
+1277
+01:12:56,000 --> 01:12:59,700
+please pay attention you have a problem to solve right
+
+1278
+01:13:00,433 --> 01:13:04,200
+you need to come up with one thing called algorithm
+
+1279
+01:13:04,633 --> 01:13:06,266
+what is an algorithm
+
+1280
+01:13:06,766 --> 01:13:10,933
+algorithm is a step by step description
+
+1281
+01:13:13,066 --> 01:13:16,800
+describing how to solve the problem properly
+
+1282
+01:13:18,933 --> 01:13:19,733
+okay
+
+1283
+01:13:21,000 --> 01:13:23,133
+once you come up with the algorithm
+
+1284
+01:13:23,133 --> 01:13:26,866
+it's time for you to convert your algorithm
+
+1285
+01:13:28,800 --> 01:13:31,466
+to the actual code written in python
+
+1286
+01:13:32,866 --> 01:13:35,333
+alright so the message will be
+
+1287
+01:13:35,333 --> 01:13:37,200
+you shouldn't solve the problem
+
+1288
+01:13:37,200 --> 01:13:40,633
+instantly by typing code before that
+
+1289
+01:13:40,633 --> 01:13:43,066
+you need to come up with an algorithm
+
+1290
+01:13:43,666 --> 01:13:45,866
+which is a step by step description
+
+1291
+01:13:45,900 --> 01:13:47,800
+describing how to solve the problem
+
+1292
+01:13:47,833 --> 01:13:48,833
+and then you check it yeah
+
+1293
+01:13:48,833 --> 01:13:51,000
+it works right yeah
+
+1294
+01:13:51,000 --> 01:13:56,800
+typing coding it works for small program
+
+1295
+01:13:56,800 --> 01:13:58,733
+i don't think you need to do this right
+
+1296
+01:13:59,000 --> 01:14:00,633
+for big program
+
+1297
+01:14:00,633 --> 01:14:03,733
+do you think this is important yes
+
+1298
+01:14:04,200 --> 01:14:05,233
+you have to do it
+
+1299
+01:14:07,133 --> 01:14:08,266
+you must do it
+
+1300
+01:14:12,266 --> 01:14:14,033
+okay this slide only
+
+1301
+01:14:14,033 --> 01:14:19,000
+one keyword algorithm what is an algorithm
+
+1302
+01:14:19,633 --> 01:14:28,200
+an algorithm is a step by step description of how to solve
+
+1303
+01:14:28,200 --> 01:14:29,433
+a problem
+
+1304
+01:14:29,700 --> 01:14:36,100
+properly step by step description step by step description oh
+
+1305
+01:14:36,100 --> 01:14:36,633
+by the way
+
+1306
+01:14:36,633 --> 01:14:40,100
+i forgot to tell you i am really good at doing brainwashing
+
+1307
+01:14:40,933 --> 01:14:43,266
+i will keep repeating and force you to memorize it
+
+1308
+01:14:44,200 --> 01:14:46,333
+all right algorithm
+
+1309
+01:14:46,333 --> 01:14:50,233
+step by step description thank you
+
+1310
+01:14:53,900 --> 01:14:55,800
+okay hey Desmond
+
+1311
+01:14:55,800 --> 01:14:59,700
+i know coming up with an algorithm is very important
+
+1312
+01:14:59,900 --> 01:15:00,933
+but how to do it
+
+1313
+01:15:01,500 --> 01:15:05,333
+they are many representations of Algorithm
+
+1314
+01:15:06,433 --> 01:15:11,633
+i put three here flow chart Pseudo code
+
+1315
+01:15:12,133 --> 01:15:16,233
+actual computer program okay
+
+1316
+01:15:17,000 --> 01:15:18,100
+could you show me an example
+
+1317
+01:15:18,100 --> 01:15:20,266
+Desmond of course
+
+1318
+01:15:21,033 --> 01:15:26,833
+suppose you need to calculate the discount rate for customers
+
+1319
+01:15:26,833 --> 01:15:28,200
+in a retail shop
+
+1320
+01:15:28,200 --> 01:15:29,466
+like apple store
+
+1321
+01:15:29,533 --> 01:15:31,300
+i like it apple store
+
+1322
+01:15:34,833 --> 01:15:37,066
+should you cut the cook now
+
+1323
+01:15:38,000 --> 01:15:44,300
+no you should come up with an algorithm okay how
+
+1324
+01:15:46,700 --> 01:15:51,833
+this is pseudo cold something like English alright
+
+1325
+01:15:52,233 --> 01:15:53,533
+the step by step description
+
+1326
+01:15:53,533 --> 01:15:58,533
+will be read the membership card number first step
+
+1327
+01:15:58,933 --> 01:16:00,666
+read the item price
+
+1328
+01:16:00,666 --> 01:16:01,833
+second step
+
+1329
+01:16:02,200 --> 01:16:06,666
+and check if the membership card number is valid good guy
+
+1330
+01:16:06,866 --> 01:16:11,466
+discount twenty percent off otherwise hmm
+
+1331
+01:16:12,933 --> 01:16:15,200
+original price thank you
+
+1332
+01:16:16,466 --> 01:16:17,100
+this is what
+
+1333
+01:16:17,100 --> 01:16:21,700
+we mean by step by step description algorithm in pseudo code
+
+1334
+01:16:21,700 --> 01:16:23,200
+something like English
+
+1335
+01:16:24,433 --> 01:16:27,100
+but some people they want to present exactly
+
+1336
+01:16:27,100 --> 01:16:32,300
+the same thing using flow chart why they are visual guy
+
+1337
+01:16:32,433 --> 01:16:38,833
+visual guy they love pictures all right either one is good
+
+1338
+01:16:38,933 --> 01:16:40,533
+but the last one is bad
+
+1339
+01:16:43,033 --> 01:16:48,600
+this is written in python this is bad why let me give you
+
+1340
+01:16:48,600 --> 01:16:49,400
+an example
+
+1341
+01:16:50,700 --> 01:16:55,233
+suppose i'm working for a company she's my colleague
+
+1342
+01:16:56,600 --> 01:16:58,400
+sorry you use
+
+1343
+01:16:59,700 --> 01:17:00,500
+java
+
+1344
+01:17:01,100 --> 01:17:05,600
+you use c plus plus you use vba
+
+1345
+01:17:05,733 --> 01:17:09,400
+you use javascript you use c code
+
+1346
+01:17:09,433 --> 01:17:10,800
+you use rust
+
+1347
+01:17:10,800 --> 01:17:17,000
+you use go more okay now i come up with an algorithm
+
+1348
+01:17:17,866 --> 01:17:20,200
+but written in python code and
+
+1349
+01:17:20,200 --> 01:17:22,633
+and and then i pass it to all of you
+
+1350
+01:17:24,300 --> 01:17:26,933
+i'm pretty sure you don't like it
+
+1351
+01:17:28,333 --> 01:17:30,400
+because you don't know python you don't know python
+
+1352
+01:17:30,400 --> 01:17:31,233
+you don't know python
+
+1353
+01:17:31,233 --> 01:17:33,400
+you don't know python that's why you are here
+
+1354
+01:17:33,666 --> 01:17:35,500
+that's why you are taking one two
+
+1355
+01:17:35,500 --> 01:17:36,400
+three sorry
+
+1356
+01:17:38,400 --> 01:17:39,833
+that's not good right
+
+1357
+01:17:40,433 --> 01:17:42,500
+so which one is the best option
+
+1358
+01:17:42,500 --> 01:17:46,266
+i should give you a piece of Pseudo code written in English
+
+1359
+01:17:46,266 --> 01:17:48,000
+right because you know English
+
+1360
+01:17:48,000 --> 01:17:48,833
+you know English
+
+1361
+01:17:48,833 --> 01:17:49,600
+you know English
+
+1362
+01:17:49,600 --> 01:17:50,600
+you know English
+
+1363
+01:17:50,600 --> 01:17:53,533
+you should have no problem understanding the step by step
+
+1364
+01:17:53,666 --> 01:17:58,266
+you could implement the idea using your own favorite
+
+1365
+01:17:59,933 --> 01:18:02,666
+programming language do you know what
+
+1366
+01:18:02,666 --> 01:18:03,533
+i'm saying
+
+1367
+01:18:04,600 --> 01:18:08,800
+don't do this ah but of course
+
+1368
+01:18:08,800 --> 01:18:10,233
+if one of your colleagues
+
+1369
+01:18:11,600 --> 01:18:13,600
+you use python hooray
+
+1370
+01:18:14,900 --> 01:18:16,533
+okay very good i sorry i scare you
+
+1371
+01:18:18,866 --> 01:18:21,666
+i'm too energetic sometimes i'm introvert
+
+1372
+01:18:24,700 --> 01:18:27,433
+okay good all right
+
+1373
+01:18:27,433 --> 01:18:28,466
+let me finish this
+
+1374
+01:18:28,466 --> 01:18:29,933
+and then i sip my mouth
+
+1375
+01:18:31,000 --> 01:18:35,666
+two more terminologies what is a computer program
+
+1376
+01:18:35,666 --> 01:18:38,666
+a computer program means step by step huh
+
+1377
+01:18:38,666 --> 01:18:39,866
+step by step again
+
+1378
+01:18:40,700 --> 01:18:46,066
+not description huh step by step instructions uh
+
+1379
+01:18:46,066 --> 01:18:51,866
+a computer program is a step by step instructions for computers
+
+1380
+01:18:53,633 --> 01:18:57,066
+then what does it mean by computer programming
+
+1381
+01:19:00,200 --> 01:19:05,733
+the design and implementation of computer programs
+
+1382
+01:19:07,266 --> 01:19:07,900
+okay so
+
+1383
+01:19:07,900 --> 01:19:10,266
+computer programming means two things
+
+1384
+01:19:10,333 --> 01:19:15,233
+design and implementation of computer programs
+
+1385
+01:19:15,333 --> 01:19:17,333
+if you only do implementation
+
+1386
+01:19:17,333 --> 01:19:20,233
+no if you only do design
+
+1387
+01:19:20,233 --> 01:19:24,733
+no no if you do both yes yes yes
+
+1388
+01:19:27,600 --> 01:19:29,833
+okay starting from today
+
+1389
+01:19:30,000 --> 01:19:32,333
+you could tell all the people i know programming
+
+1390
+01:19:33,100 --> 01:19:34,933
+i know what is a computer program
+
+1391
+01:19:34,933 --> 01:19:39,500
+i know what is an algorithm hmm i put all of them in my cv
+
+1392
+01:19:40,866 --> 01:19:42,533
+alright thank you very much everyone
+
+1393
+01:19:42,533 --> 01:19:47,533
+let me sip my mouth and i will see all of you again on Friday
+
+1394
+01:19:47,533 --> 01:19:49,033
+give me five thank you
+

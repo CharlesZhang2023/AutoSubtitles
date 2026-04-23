@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.flac
+*.mp4
+*.mov
+*.mkv
+*.avi
+
+*_with_subs.*
+*.atr.srt
+*.atr.txt
+*.atr_report.md
