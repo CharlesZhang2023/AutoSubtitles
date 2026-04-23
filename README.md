@@ -52,6 +52,7 @@ AUTO_SUBTITLE_ATR_MODEL="gpt-5.4-mini"
 ```
 
 `config/packy.env` 会被 git 忽略，不会推到仓库。
+`scripts/` 下的工作流和 `autosubtitle/refine_subtitles.py` 都会自动读取这个文件。
 
 在终端中运行以下指令即可处理指定的课程视频：
 
@@ -241,9 +242,16 @@ python3 -c "import ctranslate2; print(ctranslate2.__version__)"
 
 - 本地配置模板为 `config/packy.env.example:1`
 - 复制为 `config/packy.env` 后填入 `PACKY_API_KEY`
+- 推荐模型为 `gpt-5.4-mini`
 - PackyAPI 当前建议走 `stream=true`，项目内已自动处理流式 `delta.content`
 - 如果 Python 报 TLS 证书校验失败，而 `curl` 可以访问，可临时在 `config/packy.env` 设置 `PACKY_API_SSL_VERIFY="0"`
 - `PACKY_API_SSL_VERIFY="0"` 只建议用于可信网络下的临时诊断
+
+单独测试 PackyAPI ATR：
+
+```bash
+python3 autosubtitle/refine_subtitles.py output/lecture.srt --chunk_size 20
+```
 
 ## 📚 课程术语词典
 

@@ -4,6 +4,10 @@ __pycache__/
 .venv/
 venv/
 env/
+config/packy.env
+config/course_terms.memory.json
+config/*.local.env
+config/*.secret.env
 
 *.wav
 *.mp3

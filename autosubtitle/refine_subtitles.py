@@ -5,12 +5,17 @@ from datetime import datetime, timezone
 import json
 import os
 import re
+import shlex
+import ssl
 import sys
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GLOSSARY_FILE = PROJECT_ROOT / "config" / "course_terms.json"
+DEFAULT_ENV_FILE = PROJECT_ROOT / "config" / "packy.env"
 
 SYSTEM_PROMPT = """你是一位专业的学术助教，擅长将口语化的课堂转录稿转化为精准、易读的课程字幕。
 
@@ -23,6 +28,28 @@ SYSTEM_PROMPT = """你是一位专业的学术助教，擅长将口语化的课�
 6. 不要改动条目顺序，不要合并或拆分条目。
 7. 仅返回 JSON，不能返回 Markdown。
 """
+
+
+def load_env_file(path: Path) -> None:
+    if not path.is_file():
+        return
+
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+
+        key, raw_value = line.split("=", 1)
+        key = key.strip()
+        if not key or key in os.environ:
+            continue
+
+        try:
+            value = shlex.split(raw_value, comments=False, posix=True)[0]
+        except IndexError:
+            value = ""
+
+        os.environ[key] = value
 
 
 def parse_args() -> argparse.Namespace:
@@ -49,6 +76,23 @@ def parse_args() -> argparse.Namespace:
         "--model",
         default=os.environ.get("AUTO_SUBTITLE_ATR_MODEL", "gpt-5.4-mini"),
         help="OpenAI model for subtitle refinement",
+    )
+    parser.add_argument(
+        "--provider",
+        choices=["openai", "packy"],
+        default=os.environ.get("AUTO_SUBTITLE_ATR_PROVIDER", "openai"),
+        help="LLM provider for ATR refinement",
+    )
+    parser.add_argument(
+        "--packy_base_url",
+        default=os.environ.get("PACKY_API_BASE", "https://www.packyapi.com/v1"),
+        help="PackyAPI OpenAI-compatible base URL",
+    )
+    parser.add_argument(
+        "--max_tokens",
+        type=int,
+        default=int(os.environ.get("AUTO_SUBTITLE_ATR_MAX_TOKENS", "8192")),
+        help="Maximum visible output tokens for chat-completion providers",
     )
     parser.add_argument(
         "--chunk_size",
@@ -267,6 +311,38 @@ def glossary_prompt(glossary: dict[str, object]) -> str:
     )
 
 
+def build_user_prompt(entries: list[dict[str, object]], glossary: dict[str, object]) -> str:
+    input_payload = json.dumps(entries, ensure_ascii=False)
+    expected_count = len(entries)
+    return (
+        "请校对以下 SRT 文本条目。"
+        "不要修改 index，不要返回 timestamp。"
+        f"必须返回恰好 {expected_count} 个 entries，顺序必须和输入一致。"
+        "请为每个条目返回 refined text，并在 glossary 中列出关键术语修正。"
+        "输出必须是严格 JSON，不能包含 Markdown、代码块或解释文字。"
+        "JSON 格式必须是："
+        "{\"entries\":[{\"index\":1,\"text\":\"...\"}],\"glossary\":[{\"from\":\"...\",\"to\":\"...\"}]}。\n"
+        f"{glossary_prompt(glossary)}\n"
+        f"{input_payload}"
+    )
+
+
+def parse_json_response(text: str) -> dict[str, object]:
+    cleaned = text.strip()
+    if cleaned.startswith("```"):
+        cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned)
+        cleaned = re.sub(r"\s*```$", "", cleaned)
+
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        start = cleaned.find("{")
+        end = cleaned.rfind("}")
+        if start >= 0 and end > start:
+            return json.loads(cleaned[start : end + 1])
+        raise
+
+
 def call_openai(
     model: str, entries: list[dict[str, object]], glossary: dict[str, object]
 ) -> dict[str, object]:
@@ -284,7 +360,6 @@ def call_openai(
         raise SystemExit(1)
 
     client = OpenAI()
-    input_payload = json.dumps(entries, ensure_ascii=False)
 
     response = client.responses.create(
         model=model,
@@ -296,13 +371,7 @@ def call_openai(
                 "content": [
                     {
                         "type": "input_text",
-                        "text": (
-                            "请校对以下 SRT 文本条目。"
-                            "不要修改 index，不要返回 timestamp。"
-                            "请为每个条目返回一个 refined text，并在 glossary 中列出关键术语修正。\n"
-                            f"{glossary_prompt(glossary)}\n"
-                            f"{input_payload}"
-                        ),
+                        "text": build_user_prompt(entries, glossary),
                     }
                 ],
             },
@@ -317,6 +386,103 @@ def call_openai(
         },
     )
     return json.loads(response.output_text)
+
+
+def packy_ssl_context() -> ssl.SSLContext:
+    verify = os.environ.get("PACKY_API_SSL_VERIFY", "1").lower()
+    if verify in {"0", "false", "no", "off"}:
+        return ssl._create_unverified_context()
+    return ssl.create_default_context()
+
+
+def call_packy(
+    model: str,
+    entries: list[dict[str, object]],
+    glossary: dict[str, object],
+    base_url: str,
+    max_tokens: int,
+) -> dict[str, object]:
+    api_key = os.environ.get("PACKY_API_KEY")
+    if not api_key:
+        print("❌ 缺少环境变量 PACKY_API_KEY，无法执行 PackyAPI ATR 校对。", file=sys.stderr)
+        raise SystemExit(1)
+
+    url = base_url.rstrip("/") + "/chat/completions"
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": build_user_prompt(entries, glossary)},
+        ],
+        "stream": True,
+        "max_tokens": max_tokens,
+    }
+    request = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "Accept": "text/event-stream",
+            "User-Agent": "curl/8.0.1",
+        },
+    )
+
+    output_parts: list[str] = []
+    try:
+        with urllib.request.urlopen(
+            request, context=packy_ssl_context(), timeout=180
+        ) as response:
+            for raw_line in response:
+                line = raw_line.decode("utf-8", errors="replace").strip()
+                if not line or not line.startswith("data:"):
+                    continue
+
+                data = line.removeprefix("data:").strip()
+                if data == "[DONE]":
+                    break
+
+                chunk = json.loads(data)
+                choices = chunk.get("choices", [])
+                if not choices:
+                    continue
+
+                delta = choices[0].get("delta", {})
+                content = delta.get("content")
+                if content:
+                    output_parts.append(content)
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        print(f"❌ PackyAPI HTTP {exc.code}: {body[:1000]}", file=sys.stderr)
+        raise SystemExit(1)
+    except ssl.SSLError as exc:
+        print(
+            "❌ PackyAPI TLS 证书校验失败。若确认该网关可信，可临时设置 PACKY_API_SSL_VERIFY=0。",
+            file=sys.stderr,
+        )
+        print(f"   {exc}", file=sys.stderr)
+        raise SystemExit(1)
+
+    output_text = "".join(output_parts).strip()
+    if not output_text:
+        print("❌ PackyAPI stream 未返回可见文本。", file=sys.stderr)
+        raise SystemExit(1)
+
+    return parse_json_response(output_text)
+
+
+def call_refiner(
+    provider: str,
+    model: str,
+    entries: list[dict[str, object]],
+    glossary: dict[str, object],
+    packy_base_url: str,
+    max_tokens: int,
+) -> dict[str, object]:
+    if provider == "packy":
+        return call_packy(model, entries, glossary, packy_base_url, max_tokens)
+    return call_openai(model, entries, glossary)
 
 
 def apply_hard_replacements(text: str, glossary: dict[str, object]) -> str:
@@ -527,6 +693,7 @@ def write_report(
 
 
 def main() -> int:
+    load_env_file(DEFAULT_ENV_FILE)
     args = parse_args()
 
     input_path = Path(args.input_srt).expanduser().resolve()
@@ -562,6 +729,7 @@ def main() -> int:
     chunks = chunk_entries(entries, args.chunk_size)
 
     print("======================================")
+    print(f"🔌 ATR provider: {args.provider}")
     print(f"📝 ATR model: {args.model}")
     print(f"📦 chunks: {len(chunks)} chunk_size={args.chunk_size}")
     print(f"📚 glossary_file={glossary['path'] or 'none'}")
@@ -570,7 +738,14 @@ def main() -> int:
 
     for index, chunk in enumerate(chunks, start=1):
         print(f"🔄 refining chunk {index}/{len(chunks)}")
-        refined_payload = call_openai(args.model, chunk, glossary)
+        refined_payload = call_refiner(
+            args.provider,
+            args.model,
+            chunk,
+            glossary,
+            args.packy_base_url,
+            args.max_tokens,
+        )
         refined_entries, chunk_glossary = validate_chunk(chunk, refined_payload, glossary)
         all_refined_entries.extend(refined_entries)
         all_glossary.extend(chunk_glossary)

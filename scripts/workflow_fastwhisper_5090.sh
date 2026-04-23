@@ -4,6 +4,14 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+ENV_FILE="${AUTO_SUBTITLE_ENV_FILE:-$PROJECT_ROOT/config/packy.env}"
+
+if [ -f "$ENV_FILE" ]; then
+    set -a
+    # shellcheck disable=SC1090
+    source "$ENV_FILE"
+    set +a
+fi
 
 usage() {
     cat <<EOF
@@ -71,14 +79,17 @@ case "$MODE" in
     speed)
         BATCH_SIZE="${AUTO_SUBTITLE_5090_BATCH_SIZE:-48}"
         BEAM_SIZE="${AUTO_SUBTITLE_5090_BEAM_SIZE:-1}"
+        TRANSCRIBE_PROFILE="fast"
         ;;
     balanced)
         BATCH_SIZE="${AUTO_SUBTITLE_5090_BATCH_SIZE:-64}"
         BEAM_SIZE="${AUTO_SUBTITLE_5090_BEAM_SIZE:-3}"
+        TRANSCRIBE_PROFILE="balanced"
         ;;
     throughput)
         BATCH_SIZE="${AUTO_SUBTITLE_5090_BATCH_SIZE:-96}"
         BEAM_SIZE="${AUTO_SUBTITLE_5090_BEAM_SIZE:-1}"
+        TRANSCRIBE_PROFILE="max"
         ;;
     *)
         echo "❌ 不支持的模式: $MODE"
@@ -129,7 +140,7 @@ python3 "$PROJECT_ROOT/autosubtitle/transcribe_faster.py" \
     --language "$LANGUAGE" \
     --device "$DEVICE" \
     --model "$MODEL" \
-    --profile "$MODE" \
+    --profile "$TRANSCRIBE_PROFILE" \
     --compute_type "$COMPUTE_TYPE" \
     --batch_size "$BATCH_SIZE" \
     --beam_size "$BEAM_SIZE"
